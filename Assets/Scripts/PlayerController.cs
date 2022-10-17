@@ -7,25 +7,21 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rigidbody;
     private Animator animator;
     [SerializeField] private float speed;
-    public float moveInputVertical = 0;
-    public float moveInputHorizontal = 0;
+    [SerializeField] private float jumpForce;
+    private bool isGrounded = true;
+    //public float moveInputVertical = 0;
+    //public float moveInputHorizontal = 0;
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
     }
-    private void Update()
+    private void FixedUpdate()
     {
-        moveInputHorizontal = Input.GetAxis("Horizontal");
-        moveInputVertical = Input.GetAxis("Vertical");
-        if ((moveInputHorizontal > 0 || moveInputHorizontal < 0) || (moveInputVertical > 0 || moveInputVertical < 0))
-        {
-            Run();
-        }
-        else
-        {
-            Stand();
-        }
+        //moveInputHorizontal = Input.GetAxis("Horizontal");
+        //moveInputVertical = Input.GetAxis("Vertical");
+        Run();
+        Jump();
     }
     private void Stand()
     {
@@ -33,8 +29,37 @@ public class PlayerController : MonoBehaviour
     }
     private void Run()
     {
-        rigidbody.velocity = new Vector3(speed * moveInputHorizontal, rigidbody.velocity.y, rigidbody.velocity.z);
-        rigidbody.velocity = new Vector3(rigidbody.velocity.x, rigidbody.velocity.y, speed * moveInputVertical);
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.localPosition += transform.forward * speed * Time.deltaTime;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.localPosition += -transform.forward * speed * Time.deltaTime;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.localPosition += -transform.right * speed * Time.deltaTime;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.localPosition += transform.right * speed * Time.deltaTime;
+            }
+    }
+    private void Jump()
+    {
+        if (Input.GetKey(KeyCode.Space) & isGrounded)
+            rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+            isGrounded = true;
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+            isGrounded = false;
     }
     //private void Walk()
     //{
