@@ -4,66 +4,50 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody rigidbody;
-    private Animator animator;
-    [SerializeField] private float speed;
-    [SerializeField] private float jumpForce;
-    private bool isGrounded = true;
-    //public float moveInputVertical = 0;
-    //public float moveInputHorizontal = 0;
+    private Rigidbody rigibody;
+    public float w_speed, wb_speed, olw_speed, rn_speed, ro_speed;
+    public bool walking;
+
     private void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
+        rigibody = GetComponent<Rigidbody>();
     }
     private void FixedUpdate()
     {
-        //moveInputHorizontal = Input.GetAxis("Horizontal");
-        //moveInputVertical = Input.GetAxis("Vertical");
-        Run();
-        Jump();
-    }
-    private void Stand()
-    {
-        rigidbody.velocity = new Vector2(0, 0);
-    }
-    private void Run()
-    {
-            if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
+        {
+            rigibody.velocity = transform.forward * w_speed;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            rigibody.velocity = -transform.forward * wb_speed;
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            walking = true;
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            walking = false;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Rotate(0, -ro_speed, 0);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Rotate(0, ro_speed, 0);
+        }
+        if (walking == true)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                transform.localPosition += transform.forward * speed * Time.deltaTime;
+                w_speed = w_speed + rn_speed;
             }
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-                transform.localPosition += -transform.forward * speed * Time.deltaTime;
+                w_speed = olw_speed;
             }
-            if (Input.GetKey(KeyCode.A))
-            {
-                transform.localPosition += -transform.right * speed * Time.deltaTime;
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                transform.localPosition += transform.right * speed * Time.deltaTime;
-            }
+        }
     }
-    private void Jump()
-    {
-        if (Input.GetKey(KeyCode.Space) & isGrounded)
-            rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-            isGrounded = true;
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-            isGrounded = false;
-    }
-    //private void Walk()
-    //{
-    //    rigidbody.velocity = new Vector2(_speed * moveInputHorizontal, rigidbody.velocity.y);
-    //    rigidbody.velocity = new Vector2(rigidbody.velocity.x, _speed * moveInputVertical);
-    //}
 }
