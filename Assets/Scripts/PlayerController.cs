@@ -4,50 +4,62 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody rigibody;
-    public float w_speed, wb_speed, olw_speed, rn_speed, ro_speed;
-    public bool walking;
+    [SerializeField] private float speed;
+    [SerializeField] private float speedRotation;
+
+    private float distance;
+    private float widthPlayer;
+    private Vector3 target;
+    private Rigidbody rigidbody;
+    private bool isWalk = false;
 
     private void Start()
     {
-        rigibody = GetComponent<Rigidbody>();
+        rigidbody = GetComponent<Rigidbody>();
+        widthPlayer = GetComponent<MeshRenderer>().bounds.size.x;
+    }
+    private void Update()
+    {
+       ClickToWay();
     }
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (isWalk)
         {
-            rigibody.velocity = transform.forward * w_speed;
+            RotatePlayer();
+            MovePlayer();
         }
-        if (Input.GetKey(KeyCode.S))
+    }
+    private void ClickToWay()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
-            rigibody.velocity = -transform.forward * wb_speed;
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            walking = true;
-        }
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            walking = false;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Rotate(0, -ro_speed, 0);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Rotate(0, ro_speed, 0);
-        }
-        if (walking == true)
-        {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); // Рассчитываем точку касания мыши
+
+            if (Physics.Raycast(ray, out hit, 100f) && hit.transform.tag == "Ground") // Проверяем что это земля
             {
-                w_speed = w_speed + rn_speed;
-            }
-            if (Input.GetKeyUp(KeyCode.LeftShift))
-            {
-                w_speed = olw_speed;
+                target = hit.point;
+                isWalk = true;
             }
         }
+    }
+    private void MovePlayer()
+    {
+        distance = Vector3.Distance(transform.position, target);
+        if (distance > widthPlayer)
+        {
+            rigidbody.MovePosition(Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime));
+        }
+        if (distance < widthPlayer)
+        {
+            isWalk = false;
+        }
+    }
+    private void RotatePlayer()
+    {
+        Vector3 direction = target - transform.position;
+        Quaternion lookQurtinion = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Lerp(transform.rotation, lookQurtinion, speedRotation * Time.deltaTime);
     }
 }
