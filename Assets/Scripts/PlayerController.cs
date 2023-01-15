@@ -1,36 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float speedRotation;
     [SerializeField] private GameObject prefabCursorPoint;
+    [SerializeField] private float timeDetection;
 
-    private float distance;
-    private float widthPlayer;
+    private float distanceToTarget;
+    private float distanceToTargetY;
     private Vector3 target;
-    private Rigidbody rigidbody;
-    private bool isWalk = false;
     private GameObject currentCursorPoint;
+    private NavMeshAgent agent;
 
     private void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
-        widthPlayer = GetComponent<MeshRenderer>().bounds.size.x;
+        agent = GetComponent<NavMeshAgent>();
     }
     private void Update()
     {
        ClickToWay();
-    }
-    private void FixedUpdate()
-    {
-        if (isWalk)
-        {
-            RotatePlayer();
-            MovePlayer();
-        }
     }
     private void ClickToWay()
     {
@@ -42,40 +34,27 @@ public class PlayerController : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100f) && hit.transform.tag == "Ground") // Проверяем что это земля
             {
                 target = hit.point;
-                isWalk = true;
+                agent.SetDestination(target);
                 DestroyCurrentCursorPoint();
                 CreateCursorPoint(prefabCursorPoint);
             }
         }
+        CheckPositionToTarget();
     }
-    private void MovePlayer()
+    private void CheckPositionToTarget() // Проверка на достижения target
     {
-        distance = Vector3.Distance(transform.position, target);
-        if (distance > widthPlayer)
-        {
-            rigidbody.MovePosition(Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime));
-        }
-        if (distance < widthPlayer)
-        {
-            isWalk = false;
+        distanceToTarget = Vector2.Distance(transform.position, target);
+        distanceToTargetY = transform.position.y - target.y;    
+        if (distanceToTarget == distanceToTargetY)
             DestroyCurrentCursorPoint();
-        }
     }
-    private void RotatePlayer()
-    {
-        Vector3 direction = target - transform.position;
-        Quaternion lookQurtinion = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-        transform.rotation = Quaternion.Lerp(transform.rotation, lookQurtinion, speedRotation * Time.deltaTime);
-    }
-    private void CreateCursorPoint(GameObject cursorPoint)
+    private void CreateCursorPoint(GameObject cursorPoint) // Создание точки на поверхности
     {
         currentCursorPoint = Instantiate(cursorPoint, target, cursorPoint.transform.rotation);
     }
-    private void DestroyCurrentCursorPoint()
+    private void DestroyCurrentCursorPoint() // Удаление точки с поверхности
     {
         if (currentCursorPoint != null)
-        {
             Destroy(currentCursorPoint);
-        }
     }
 }
