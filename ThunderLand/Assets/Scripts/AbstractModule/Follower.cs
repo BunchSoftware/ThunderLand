@@ -16,15 +16,19 @@ public class Follower : MonoBehaviour
 
     [Header("Настройка приближения камеры")]
     [SerializeField] private float maxZoom; // Максимальное увелечение
+    [SerializeField] private float minZoom; // Минимальное увелечение
     [SerializeField] private float smoothZoomTime = 0.35f;
     private float zoom; // Увелечение
     private float zoomVelocity = 0f; // Ось Увелечения
     private float mouseScrollDeltaY = 0f;
 
 
-    private void Start()
+    private void Awake()
     {
         euler = transform.localEulerAngles;
+        mouseScrollDeltaY = minZoom;
+        transform.position = target.position;
+        transform.Translate(new Vector3(0, 0, -mouseScrollDeltaY));
     }
     private void LateUpdate()
     {

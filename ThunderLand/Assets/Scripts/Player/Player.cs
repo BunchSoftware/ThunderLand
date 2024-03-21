@@ -3,61 +3,151 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class Player : Essense
 {
+
+    public Action OnEndPvPPoint;
+
+    public event ParameterWithSlider OnPvPPointChanged;
+    public event ParameterWithSlider OnExperienceChanged;
+    public event ParameterWithSlider OnMoneyChanged;
+    public event ParameterWithSlider OnSpaceOfInventoryChanged;
+    public event ParameterWithSlider OnLevelChanged;
+
+
+    private Clane clane;
+    [HideInInspector] public Clane Clane { get => clane; }
+
+    public int maxPvPPoint = 100;
+
+    private int pvpPoint = 0;
+    [HideInInspector] public int PvPPoint { get => pvpPoint; }
+
+    public int maxExperience = 1000;
+
+    private int experience = 0;
+    [HideInInspector] public int Experience { get => experience; }
+
+    public int maxSpaceInInventory = 160;
+
+    private int spaceInInventory = 0;
+    [HideInInspector] public int SpaceInInventory { get => spaceInInventory; }
+
+    private int money = 0;
+    [HideInInspector] public int Money { get => money; }
+
+
+    [Header("Настройка передвижения")]
     [SerializeField] private GameObject prefabCursorPoint;
-    [SerializeField] private HealthModule healthModule;
-    [SerializeField] private string Name;
-    private ClientHandler clientHandler;
+    [SerializeField] private SkillPanel skillPanel;
+
+    public event Action<Vector3> OnChangePositionPlayer;
+
 
     private float distanceToTarget;
     private float distanceToTargetY;
     private Vector3 target;
     private GameObject currentCursorPoint;
     private NavMeshAgent agent;
-    [SerializeField] private ImageBar healthBar;
 
     private Animator animator;
 
     private void Start()
     {
-        healthModule.OnHealthChanged += HealthModule_OnHealthChanged;
-        clientHandler = GetComponent<ClientHandler>();
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         animator.SetFloat("speed", 0);
+
+        RecountHealth(maxHealth);
+        RecountMana(maxMana);
+        RecountPvPPoint(maxPvPPoint);
+        RecountMoney(0);
+        RecountExperience(0);
+        OnSpaceOfInventoryChanged(0);
+        OnLevelChanged(level);
+
+        for (int i = 0; i < skillPanel.cellSkills.Count; i++)
+        {
+            skillPanel.cellSkills[i].SkillPressed += (skill) =>
+            {
+                if(skill != null)
+                    print(skill.NameSkill);
+            };
+        }
     }
 
-    private void HealthModule_OnHealthChanged(float health)
+    public void RecountPvPPoint(int pvpPoint)
     {
-        healthBar.Handle.fillAmount = health / healthModule.MaxHealth;
-        healthBar.Amount.text = healthModule.Health.ToString();
+        this.pvpPoint += pvpPoint;
+        OnPvPPointChanged(this.pvpPoint);
+
+        if (this.pvpPoint > maxPvPPoint)
+            this.pvpPoint = maxPvPPoint;
+        if (this.pvpPoint <= 0)
+            OnEndPvPPoint?.Invoke();
     }
+    public void RecountExperience(int experience)
+    {
+        this.experience += experience;
+        OnExperienceChanged(this.experience);
+
+        if (this.experience > maxExperience)
+        {
+            this.experience = 0;
+            if (level <= maxLevel)
+            {
+                level++;
+                OnLevelChanged?.Invoke(level);
+            }
+        }
+        if (this.experience < 0)
+            throw new Exception("Опыт не может быть отрицательным.");
+    }
+    public void RecountMoney(int money)
+    {
+        this.money += money;
+        OnMoneyChanged(this.money);
+
+        if (this.money < 0)
+            throw new Exception("Количество денег не может быть отрицательным.");
+    }
+    public void AddToInventory()
+    {
+        spaceInInventory++;
+        OnSpaceOfInventoryChanged(spaceInInventory);
+    }
+    
 
     private void Update()
     {
-       ClickToWay();
+        ClickToWay();
     }
-    private void FixedUpdate()
+    public void OnGUI()
     {
-        if (Input.GetKey(KeyCode.W))
+        for (int i = 0; i < skillPanel.cellSkills.Count; i++)
         {
-            target = transform.position;
-            target = new Vector3(transform.position.x, transform.position.y, target.z + 1);
-            agent.SetDestination(target);
+            if (Event.current.type == EventType.KeyDown 
+                && Event.current.modifiers == skillPanel.cellSkills[i].KeyCodeCombination.keyCombination 
+                && Event.current.keyCode == skillPanel.cellSkills[i].KeyCodeCombination.keyCode)
+            {
+                skillPanel.cellSkills[i].SkillPress();           
+            }
         }
     }
     private void ClickToWay()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hit;
+            RaycastHit hit = new RaycastHit();
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); // Рассчитываем точку касания мыши
 
-            if (Physics.Raycast(ray, out hit, 100f) && hit.transform.tag == "Ground") // Проверяем что это земля
+            if (Physics.Raycast(ray, out hit, 100f) && hit.collider.tag == "Ground") // Проверяем что это земля
             {
+                if (EventSystem.current.IsPointerOverGameObject())
+                    return;
                 target = hit.point;
                 agent.SetDestination(target);
                 animator.SetFloat("speed", 1);
@@ -65,14 +155,13 @@ public class Player : MonoBehaviour
                 CreateCursorPoint(prefabCursorPoint);
             }
         }
-        CheckPositionToTarget();
+        if(currentCursorPoint != null)
+            CheckPositionToTarget();
     }
     private void CheckPositionToTarget() // Проверка на достижения target
     {
-        distanceToTarget = Vector2.Distance(transform.position, target);
-        distanceToTargetY = transform.position.y - target.y;    
-       
-        if (Math.Round(distanceToTarget, 2) == Math.Round(distanceToTargetY, 2))
+        OnChangePositionPlayer?.Invoke(transform.position);
+        if (Math.Round(transform.position.x) == Math.Round(target.x) && Math.Round(transform.position.z) == Math.Round(target.z))
         {
             DestroyCurrentCursorPoint();
             animator.SetFloat("speed", 0);
