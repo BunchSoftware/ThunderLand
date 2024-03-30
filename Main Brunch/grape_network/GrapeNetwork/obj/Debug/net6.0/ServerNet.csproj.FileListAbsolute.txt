@@ -1,0 +1,12 @@
+E:\GitHub\ServerNet\Server-Client\ServerNet\bin\Debug\net6.0\ServerNet.deps.json
+E:\GitHub\ServerNet\Server-Client\ServerNet\bin\Debug\net6.0\ServerNet.dll
+E:\GitHub\ServerNet\Server-Client\ServerNet\bin\Debug\net6.0\ClientNet.dll
+E:\GitHub\ServerNet\Server-Client\ServerNet\obj\Debug\net6.0\ServerNet.csproj.AssemblyReference.cache
+E:\GitHub\ServerNet\Server-Client\ServerNet\obj\Debug\net6.0\ServerNet.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\ServerNet\Server-Client\ServerNet\obj\Debug\net6.0\ServerNet.AssemblyInfoInputs.cache
+E:\GitHub\ServerNet\Server-Client\ServerNet\obj\Debug\net6.0\ServerNet.AssemblyInfo.cs
+E:\GitHub\ServerNet\Server-Client\ServerNet\obj\Debug\net6.0\ServerNet.csproj.CoreCompileInputs.cache
+E:\GitHub\ServerNet\Server-Client\ServerNet\obj\Debug\net6.0\ServerNet.csproj.CopyComplete
+E:\GitHub\ServerNet\Server-Client\ServerNet\obj\Debug\net6.0\ServerNet.dll
+E:\GitHub\ServerNet\Server-Client\ServerNet\obj\Debug\net6.0\refint\ServerNet.dll
+E:\GitHub\ServerNet\Server-Client\ServerNet\obj\Debug\net6.0\ref\ServerNet.dll

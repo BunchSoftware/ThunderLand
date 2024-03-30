@@ -1,0 +1,11 @@
+E:\Files\GitHub\GrapeNetwork\Server\GrapeNetwork\bin\Release\net6.0\GrapeNetwork.deps.json
+E:\Files\GitHub\GrapeNetwork\Server\GrapeNetwork\bin\Release\net6.0\GrapeNetwork.dll
+E:\Files\GitHub\GrapeNetwork\Server\GrapeNetwork\obj\Release\net6.0\GrapeNetwork.csproj.AssemblyReference.cache
+E:\Files\GitHub\GrapeNetwork\Server\GrapeNetwork\obj\Release\net6.0\GrapeNetwork.GeneratedMSBuildEditorConfig.editorconfig
+E:\Files\GitHub\GrapeNetwork\Server\GrapeNetwork\obj\Release\net6.0\GrapeNetwork.AssemblyInfoInputs.cache
+E:\Files\GitHub\GrapeNetwork\Server\GrapeNetwork\obj\Release\net6.0\GrapeNetwork.AssemblyInfo.cs
+E:\Files\GitHub\GrapeNetwork\Server\GrapeNetwork\obj\Release\net6.0\GrapeNetwork.csproj.CoreCompileInputs.cache
+E:\Files\GitHub\GrapeNetwork\Server\GrapeNetwork\obj\Release\net6.0\GrapeNetwork.sourcelink.json
+E:\Files\GitHub\GrapeNetwork\Server\GrapeNetwork\obj\Release\net6.0\GrapeNetwork.dll
+E:\Files\GitHub\GrapeNetwork\Server\GrapeNetwork\obj\Release\net6.0\refint\GrapeNetwork.dll
+E:\Files\GitHub\GrapeNetwork\Server\GrapeNetwork\obj\Release\net6.0\ref\GrapeNetwork.dll
