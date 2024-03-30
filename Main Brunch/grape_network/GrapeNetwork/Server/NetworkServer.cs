@@ -18,7 +18,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace GrapNetwork.Server
+namespace GrapeNetwork.Server
 {
     public class NetworkServer : ICommandServer, IDisposable
     {
@@ -91,7 +91,7 @@ namespace GrapNetwork.Server
             }
         }
         // Обработка потока данных от пользователя
-        private void ProcessInputData(Connection connection) 
+        private void ProcessInputData(Connection connection)
         {
             StreamPackager streamPackager = connection.streamPackager;
             while (streamPackager.PackagerCount > 0)
@@ -100,7 +100,7 @@ namespace GrapNetwork.Server
                 string data = Encoding.UTF8.GetString(streamPackager.Read());
                 Package package = JsonConvert.DeserializeObject<Package>(data);
 
-                if(packageProcessingConditions.Count > 0)
+                if (packageProcessingConditions.Count > 0)
                 {
                     // Проверяем пакет данных на соответсвие кондициям
                     foreach (var condition in packageProcessingConditions)
@@ -136,7 +136,7 @@ namespace GrapNetwork.Server
             }
             catch (Exception ex) { OnExceptionInfo?.Invoke(ex); }
         }
-        
+
         // Задаем кондиции для обработки пакетов
         public void SetCondition(List<PackageProcessingCondition> packageProcessingConditions)
         {
@@ -164,7 +164,7 @@ namespace GrapNetwork.Server
         {
             byte[] encodedPackage = PackageBuilder.ToByteArray(package);
             Connection connection = Connections.Find(connection => connection.RemoteAdressClient == localPointClient);
-            if(connection != null)
+            if (connection != null)
                 connection.WorkSocket.BeginSend(encodedPackage, 0, encodedPackage.Length, SocketFlags.None, new AsyncCallback(SendCallback), connection);
         }
 
@@ -190,7 +190,7 @@ namespace GrapNetwork.Server
                     TcpSocketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                     TcpSocketServer.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 
-                    TcpSocketServer.Bind(IPEndPoint);                   
+                    TcpSocketServer.Bind(IPEndPoint);
                     TcpSocketServer.Listen(10);
                     TcpSocketServer.BeginAccept(AcceptCallback, null);
                     isActive = true;
@@ -227,7 +227,7 @@ namespace GrapNetwork.Server
                             SendPackage(Connections[i], package);
                             DisconnectedClient(Connections[i]);
                         }
-                    }                    
+                    }
                     TcpSocketServer.Close();
                     TcpSocketServer.Dispose();
                     OnDebugInfo?.Invoke("Сервер отключен");
@@ -240,7 +240,7 @@ namespace GrapNetwork.Server
                     OnDebugInfo = null;
                 }
             }
-            catch(Exception ex) { OnExceptionInfo?.Invoke(ex); }
+            catch (Exception ex) { OnExceptionInfo?.Invoke(ex); }
         }
 
         public void Stop(int timeout)

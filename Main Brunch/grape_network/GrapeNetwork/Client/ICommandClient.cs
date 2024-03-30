@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace GrapNetwork.Client
+namespace GrapeNetwork.Client
 {
     public interface ICommandClient
     {

@@ -1,4 +1,5 @@
-﻿using GrapeNetwork.Packages;
+﻿using GrapeNetwork;
+using GrapeNetwork.Packages;
 using GrapNetwork.LogWriter;
 using Newtonsoft.Json;
 using System;
@@ -12,7 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace GrapNetwork.Client
+namespace GrapeNetwork.Client
 {
     public class NetworkClient : ICommandClient, IDisposable
     {
@@ -52,7 +53,7 @@ namespace GrapNetwork.Client
                         return false;
                     }
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     return false;
                 }
@@ -113,19 +114,19 @@ namespace GrapNetwork.Client
             _ConnectionState = ConnectionState.Waiting;
             for (int i = 0; i < CountOfNegatives & !IsConnected; i++)
             {
-                    try
-                    {
-                        TcpSocketClient.Connect(IPAddressServer, portServer);
-                        _ConnectionState = ConnectionState.Connected;
-                        OnConnectEvent?.Invoke();
-                        OnDebugInfo?.Invoke($"Произошло подключение к серверу {IPAddressServer}:{portServer}");
-                        TcpSocketClient.BeginReceive(ReceiveBuffer, 0, ReceiveBuffer.Length, SocketFlags.None, new AsyncCallback(ReceiveCallback), null);
-                        Thread.Sleep(ReconnectionTime);
-                    }
-                    catch (Exception ex)
-                    {
-                        OnExceptionInfo?.Invoke(ex);
-                    }
+                try
+                {
+                    TcpSocketClient.Connect(IPAddressServer, portServer);
+                    _ConnectionState = ConnectionState.Connected;
+                    OnConnectEvent?.Invoke();
+                    OnDebugInfo?.Invoke($"Произошло подключение к серверу {IPAddressServer}:{portServer}");
+                    TcpSocketClient.BeginReceive(ReceiveBuffer, 0, ReceiveBuffer.Length, SocketFlags.None, new AsyncCallback(ReceiveCallback), null);
+                    Thread.Sleep(ReconnectionTime);
+                }
+                catch (Exception ex)
+                {
+                    OnExceptionInfo?.Invoke(ex);
+                }
             }
         }
         public void DisconnectFromServer()
@@ -214,7 +215,7 @@ namespace GrapNetwork.Client
         {
             SendData(package);
             if (isCallSendEvent)
-               OnSendDataEvent?.Invoke(package);
+                OnSendDataEvent?.Invoke(package);
         }
 
         private void SendCallback(IAsyncResult asyncResult)

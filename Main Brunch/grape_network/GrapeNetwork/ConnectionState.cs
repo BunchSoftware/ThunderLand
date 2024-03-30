@@ -1,4 +1,4 @@
-﻿namespace GrapNetwork
+﻿namespace GrapeNetwork
 {
     public enum ConnectionState
     {

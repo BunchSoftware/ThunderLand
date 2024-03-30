@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GrapNetwork.Server
+namespace GrapeNetwork.Server
 {
     public interface ICommandServer
     {

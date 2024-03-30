@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Files\\GitHub\\GrapeNetwork\\Server\\GrapeNetwork\\GrapeNetwork.csproj": {}
+    "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\GrapeNetwork.csproj": {}
   },
   "projects": {
-    "E:\\Files\\GitHub\\GrapeNetwork\\Server\\GrapeNetwork\\GrapeNetwork.csproj": {
+    "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\GrapeNetwork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Files\\GitHub\\GrapeNetwork\\Server\\GrapeNetwork\\GrapeNetwork.csproj",
+        "projectUniqueName": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\GrapeNetwork.csproj",
         "projectName": "GrapeNetwork",
-        "projectPath": "E:\\Files\\GitHub\\GrapeNetwork\\Server\\GrapeNetwork\\GrapeNetwork.csproj",
+        "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\GrapeNetwork.csproj",
         "packagesPath": "C:\\Users\\Den4o\\.nuget\\packages\\",
-        "outputPath": "E:\\Files\\GitHub\\GrapeNetwork\\Server\\GrapeNetwork\\obj\\",
+        "outputPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
