@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GrapeNetwork.Client.Core/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.AccessLevel.Common": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Client.Core.dll": {}
+        }
+      },
+      "GrapeNetwork.AccessLevel.Common/1.0.0": {
+        "runtime": {
+          "GrapeNetwork.AccessLevel.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GrapeNetwork.Client.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.AccessLevel.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

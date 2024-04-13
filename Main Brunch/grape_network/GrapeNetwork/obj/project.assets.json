@@ -111,6 +111,16 @@
             "rid": "win"
           }
         }
+      },
+      "GrapeNetwork.Common.Checksum/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/GrapeNetwork.Common.Checksum.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GrapeNetwork.Common.Checksum.dll": {}
+        }
       }
     }
   },
@@ -305,10 +315,16 @@
         "system.io.ports.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "GrapeNetwork.Common.Checksum/1.0.0": {
+      "type": "project",
+      "path": "../GrapeNetwork.Common.Checksum/GrapeNetwork.Common.Checksum.csproj",
+      "msbuildProject": "../GrapeNetwork.Common.Checksum/GrapeNetwork.Common.Checksum.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "GrapeNetwork.Common.Checksum >= 1.0.0",
       "NLog >= 5.2.5",
       "Newtonsoft.Json >= 13.0.3",
       "System.IO.Ports >= 8.0.0"
@@ -321,9 +337,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\GrapeNetwork.csproj",
-      "projectName": "GrapeNetwork",
-      "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\GrapeNetwork.csproj",
+      "projectUniqueName": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\GrapeNetwork.Core.csproj",
+      "projectName": "GrapeNetwork.Core",
+      "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\GrapeNetwork.Core.csproj",
       "packagesPath": "C:\\Users\\Den4o\\.nuget\\packages\\",
       "outputPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\obj\\",
       "projectStyle": "PackageReference",
@@ -346,7 +362,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Common.Checksum\\GrapeNetwork.Common.Checksum.csproj": {
+              "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Common.Checksum\\GrapeNetwork.Common.Checksum.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

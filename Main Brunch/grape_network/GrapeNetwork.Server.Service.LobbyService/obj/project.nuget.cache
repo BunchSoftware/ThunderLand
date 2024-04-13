@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "rKAY4Xtvf0hejAooRCdMVsbiKQwQjwkaO0+PVVjxOA38gsxLEeKt917ciixR5RTlF/H7vUhXldXbfW3Es6oTbQ==",
+  "success": false,
+  "projectFilePath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LobbyService\\GrapeNetwork.Server.Service.LoginServer.LobbyService.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Невозможно прочитать сведения о проекте для \"GrapeNetwork.Server.Service.LoginServer.LobbyService\": Идентификатор платформы \"\" недопустим."
+    }
+  ]
+}
