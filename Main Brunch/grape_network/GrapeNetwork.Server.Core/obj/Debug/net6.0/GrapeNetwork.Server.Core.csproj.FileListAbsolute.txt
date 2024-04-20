@@ -16,3 +16,5 @@ E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\o
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\obj\Debug\net6.0\ref\GrapeNetwork.Server.Core.dll
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\bin\Debug\net6.0\GrapeNetwork.Common.Checksum.dll
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\bin\Debug\net6.0\GrapeNetwork.Common.Checksum.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\bin\Debug\net6.0\GrapeNetwork.Server.GameServer.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\bin\Debug\net6.0\GrapeNetwork.Server.GameServer.pdb

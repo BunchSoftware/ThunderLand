@@ -122,6 +122,21 @@
           "bin/placeholder/GrapeNetwork.AccessLevel.Common.dll": {}
         }
       },
+      "GrapeNetwork.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "GrapeNetwork.AccessLevel.Common": "1.0.0",
+          "GrapeNetwork.Protocol.LoginProtocol": "1.0.0",
+          "GrapeNetwork.Server.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GrapeNetwork.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GrapeNetwork.Client.Core.dll": {}
+        }
+      },
       "GrapeNetwork.Common.Checksum/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -173,6 +188,44 @@
         },
         "runtime": {
           "bin/placeholder/GrapeNetwork.Logging.dll": {}
+        }
+      },
+      "GrapeNetwork.Protocol.LoginProtocol/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "GrapeNetwork.Core": "1.0.0",
+          "GrapeNetwork.Server.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GrapeNetwork.Protocol.LoginProtocol.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GrapeNetwork.Protocol.LoginProtocol.dll": {}
+        }
+      },
+      "GrapeNetwork.Server.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "GrapeNetwork.Core": "1.0.0",
+          "GrapeNetwork.Server.GameServer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GrapeNetwork.Server.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GrapeNetwork.Server.Core.dll": {}
+        }
+      },
+      "GrapeNetwork.Server.GameServer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/GrapeNetwork.Server.GameServer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GrapeNetwork.Server.GameServer.dll": {}
         }
       }
     }
@@ -374,6 +427,11 @@
       "path": "../GrapeNetGame.AccessLevel.Common/GrapeNetwork.AccessLevel.Common.csproj",
       "msbuildProject": "../GrapeNetGame.AccessLevel.Common/GrapeNetwork.AccessLevel.Common.csproj"
     },
+    "GrapeNetwork.Client.Core/1.0.0": {
+      "type": "project",
+      "path": "../GrapeNetwork.Client.Core/GrapeNetwork.Client.Core.csproj",
+      "msbuildProject": "../GrapeNetwork.Client.Core/GrapeNetwork.Client.Core.csproj"
+    },
     "GrapeNetwork.Common.Checksum/1.0.0": {
       "type": "project",
       "path": "../GrapeNetwork.Common.Checksum/GrapeNetwork.Common.Checksum.csproj",
@@ -393,10 +451,26 @@
       "type": "project",
       "path": "../GrapeNetwork.Logging/GrapeNetwork.Logging.csproj",
       "msbuildProject": "../GrapeNetwork.Logging/GrapeNetwork.Logging.csproj"
+    },
+    "GrapeNetwork.Protocol.LoginProtocol/1.0.0": {
+      "type": "project",
+      "path": "../GrapeNetwork.Protocol.LoginProtocol/GrapeNetwork.Protocol.LoginProtocol.csproj",
+      "msbuildProject": "../GrapeNetwork.Protocol.LoginProtocol/GrapeNetwork.Protocol.LoginProtocol.csproj"
+    },
+    "GrapeNetwork.Server.Core/1.0.0": {
+      "type": "project",
+      "path": "../GrapeNetwork.Server.Core/GrapeNetwork.Server.Core.csproj",
+      "msbuildProject": "../GrapeNetwork.Server.Core/GrapeNetwork.Server.Core.csproj"
+    },
+    "GrapeNetwork.Server.GameServer/1.0.0": {
+      "type": "project",
+      "path": "../GrapeNetwork.Server.GameServer/GrapeNetwork.Server.GameServer.csproj",
+      "msbuildProject": "../GrapeNetwork.Server.GameServer/GrapeNetwork.Server.GameServer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "GrapeNetwork.Client.Core >= 1.0.0",
       "GrapeNetwork.Console.Common >= 1.0.0"
     ]
   },
@@ -433,6 +507,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Client.Core\\GrapeNetwork.Client.Core.csproj": {
+              "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Client.Core\\GrapeNetwork.Client.Core.csproj"
+            },
             "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Console.Common\\GrapeNetwork.Console.Common.csproj": {
               "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Console.Common\\GrapeNetwork.Console.Common.csproj"
             }

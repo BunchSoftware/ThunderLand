@@ -8,24 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GrapeNetwork.Core.Server
+namespace GrapeNetwork.Core
 {
     public class TransportProtocol
     {
-        private readonly MemoryStream memoryStreamRead = new MemoryStream();
-        private readonly MemoryStream memoryStreamWrite = new MemoryStream();
+        protected readonly MemoryStream memoryStreamRead = new MemoryStream();
+        protected readonly MemoryStream memoryStreamWrite = new MemoryStream();
 
-        private readonly BinaryReader binaryReader;
-        private readonly BinaryWriter binaryWriter;
+        protected readonly BinaryReader binaryReader;
+        protected readonly BinaryWriter binaryWriter;
 
-        private readonly Queue<Package> outputQueue = new Queue<Package>();
-        public int RecievePackageCount => outputQueue.Count;
+        protected readonly Queue<Package> outputQueueTransportPackage = new Queue<Package>();
+        public int RecievePackageCount => outputQueueTransportPackage.Count;
 
         public TransportProtocol()
         {
             binaryReader = new BinaryReader(memoryStreamRead);
             binaryWriter = new BinaryWriter(memoryStreamWrite);
         }
+
         public virtual void CreatePackage(byte[] data)
         {
             int countData = data.Length;
@@ -37,7 +38,7 @@ namespace GrapeNetwork.Core.Server
                     Array.Copy(data, data.Length - countData, dataPackage, 0, countData);
                     Package package = ParseHeader(dataPackage);
                     package = ParseBody(package);
-                    outputQueue.Enqueue(package);
+                    outputQueueTransportPackage.Enqueue(package);
                     countData -= (int)memoryStreamRead.Position;
                     memoryStreamRead.SetLength(0);
                 }
@@ -47,10 +48,10 @@ namespace GrapeNetwork.Core.Server
                 }
             }
         }
-        public Package GetLastPackage()
+        public virtual Package GetLastPackage()
         {
             if(RecievePackageCount != 0)
-                return outputQueue.Dequeue();
+                return outputQueueTransportPackage.Dequeue();
             else
                 return null;
         }
@@ -103,8 +104,8 @@ namespace GrapeNetwork.Core.Server
                 // Пропускаем байт длины загаловка
                 memoryStreamRead.Seek(1, SeekOrigin.Begin);
 
-                package.IPConnection = binaryReader.ReadInt32();
-                package.IDConnection = binaryReader.ReadInt32();
+                package.IPConnection = binaryReader.ReadUInt32();
+                package.IDConnection = binaryReader.ReadUInt32();
                 package.AuthAndGetRSAKey = binaryReader.ReadBoolean();
                 package.Shutdown = binaryReader.ReadBoolean();
                 package.ReconnectionOtherServer = binaryReader.ReadBoolean();

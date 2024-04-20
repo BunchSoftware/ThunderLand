@@ -9,8 +9,8 @@ namespace GrapeNetwork.Packages
     {
         // Header
         public static byte HeaderSize = 19;
-        public int IPConnection;
-        public int IDConnection;
+        public uint IPConnection;
+        public uint IDConnection;
         // Запрос на аунтефикацию и получение RSA ключа
         public bool AuthAndGetRSAKey;
         // Запрос на отключение
@@ -28,9 +28,25 @@ namespace GrapeNetwork.Packages
         public byte[] Body;
         public ushort ChecksumBody;
 
-        public void SetIPConnection(IPAddress ipAdress)
+        public static uint ConvertFromIpAddressToInteger(string ipAddress)
         {
+            var address = IPAddress.Parse(ipAddress);
+            byte[] bytes = address.GetAddressBytes();
 
+            if (BitConverter.IsLittleEndian)
+                Array.Reverse(bytes);
+
+            return BitConverter.ToUInt32(bytes, 0);
+        }
+
+        public static string ConvertFromIntegerToIpAddress(uint ipAddress)
+        {
+            byte[] bytes = BitConverter.GetBytes(ipAddress);
+
+            if (BitConverter.IsLittleEndian)
+                Array.Reverse(bytes);
+
+            return new IPAddress(bytes).ToString();
         }
     }
 }

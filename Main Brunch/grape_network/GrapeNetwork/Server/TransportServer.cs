@@ -14,7 +14,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using GrapeNetwork.Core.Server;
 
 namespace GrapeNetwork.Core.Server
 {
@@ -38,9 +37,6 @@ namespace GrapeNetwork.Core.Server
         public int MaxCountConnection = 0;
         public int SendBufferSize = 64 * 1024;
         public int RecievedBufferSize = 64 * 1024;
-
-        // Кондиции для обработки пакетов данных от клиентов
-        private List<PackageProcessingCondition> packageProcessingConditions = new List<PackageProcessingCondition>();
 
         private bool isActive = false;
         public bool IsActive { get => isActive; }
@@ -73,7 +69,7 @@ namespace GrapeNetwork.Core.Server
                 try
                 {
                     Connection connection = new Connection(TcpSocketServer.EndAccept(asyncResult), SendBufferSize, RecievedBufferSize);
-                    connection.IDConnection = Connections.Count + 1;
+                    connection.IDConnection = (uint)Connections.Count + 1;
                     Connections.Add(connection);
 
                     connection.OnDisconnect += () =>
@@ -97,21 +93,7 @@ namespace GrapeNetwork.Core.Server
             {
                 // Преобразуем пакет из массива байт в JSON формат
                 Package package = transportProtocol.GetLastPackage();
-
-                if (packageProcessingConditions.Count > 0)
-                {
-                    // Проверяем пакет данных на соответсвие кондициям
-                    foreach (var condition in packageProcessingConditions)
-                    {
-                        if (condition.CheckCondition(package))
-                        {
-                            OnRecieveDataClient?.Invoke(connection, package);
-                            break;
-                        }
-                    }
-                }
-                else
-                    OnRecieveDataClient?.Invoke(connection, package);
+                OnRecieveDataClient?.Invoke(connection, package);
             }
         }
         // Принимаем сообщение от клиента
@@ -138,19 +120,20 @@ namespace GrapeNetwork.Core.Server
             catch (Exception ex) { OnExceptionInfo?.Invoke(ex); }
         }
 
-        // Задаем кондиции для обработки пакетов
-        public void SetCondition(List<PackageProcessingCondition> packageProcessingConditions)
-        {
-            this.packageProcessingConditions = packageProcessingConditions;
-        }
-
         // Отправка пакета данных
         public void SendPackage(Connection connection, Package package)
         {
-            byte[] encodedPackage = connection.transportProtocol.CreateBinaryData(package);
-            if (package.AuthAndGetRSAKey)
-                OnDebugInfo?.Invoke($"Клиент {connection.RemoteAdressClient} авторизован");
-            connection.WorkSocket.BeginSend(encodedPackage, 0, encodedPackage.Length, SocketFlags.None, new AsyncCallback(SendCallback), connection);
+            IPEndPoint IPEndPoint = connection.WorkSocket.RemoteEndPoint as IPEndPoint;
+            if (IPEndPoint != null)
+            {
+                package.IPConnection = Package.ConvertFromIpAddressToInteger(IPEndPoint.Address.ToString());
+                package.IDConnection = connection.IDConnection;
+                byte[] encodedPackage = connection.transportProtocol.CreateBinaryData(package);
+                if (package.AuthAndGetRSAKey)
+                    OnDebugInfo?.Invoke($"Клиенту {connection.RemoteAdressClient} был отправлен RSA Key");
+                if (connection != null)
+                    connection.WorkSocket.BeginSend(encodedPackage, 0, encodedPackage.Length, SocketFlags.None, new AsyncCallback(SendCallback), connection);
+            }
         }
 
         // Отправка пакета данных
@@ -158,21 +141,14 @@ namespace GrapeNetwork.Core.Server
         {
             Connection connection = Connections.Find(connection => connection.IDConnection == IDConnection);
             byte[] encodedPackage = connection.transportProtocol.CreateBinaryData(package);
-            if (package.AuthAndGetRSAKey)
-                OnDebugInfo?.Invoke($"Клиент {connection.RemoteAdressClient} получил RSA Key");
-            if (connection != null)
-                connection.WorkSocket.BeginSend(encodedPackage, 0, encodedPackage.Length, SocketFlags.None, new AsyncCallback(SendCallback), connection);
+            SendPackage(connection, package);
         }
 
         // Отправка пакета данных
         public void SendPackage(string localPointClient, Package package)
         {
             Connection connection = Connections.Find(connection => connection.RemoteAdressClient == localPointClient);
-            byte[] encodedPackage = connection.transportProtocol.CreateBinaryData(package);
-            if (package.AuthAndGetRSAKey)
-                OnDebugInfo?.Invoke($"Клиенту {connection.RemoteAdressClient} был отправлен RSA Key");
-            if (connection != null)
-                connection.WorkSocket.BeginSend(encodedPackage, 0, encodedPackage.Length, SocketFlags.None, new AsyncCallback(SendCallback), connection);
+            SendPackage(connection, package);
         }
 
         private void SendCallback(IAsyncResult asyncResult)
@@ -184,7 +160,7 @@ namespace GrapeNetwork.Core.Server
         private void DisconnectedClient(Connection connection)
         {
             OnDebugInfo?.Invoke($"Клиент под адресом {connection.RemoteAdressClient} отключен от сервера");
-            Connections.RemoveAt(connection.IDConnection - 1);
+            Connections.RemoveAt((int)connection.IDConnection - 1);
             OnDisconnectedClient?.Invoke(connection);
         }
         // Запуск сервера

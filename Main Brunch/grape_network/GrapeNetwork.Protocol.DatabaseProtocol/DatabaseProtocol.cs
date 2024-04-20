@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GrapeNetwork.Server.Service
+namespace GrapeNetwork.Protocol.DatabaseProtocol
 {
-    internal class ServiceServeruljgfr
+    internal class DatabaseProtocol
     {
     }
 }

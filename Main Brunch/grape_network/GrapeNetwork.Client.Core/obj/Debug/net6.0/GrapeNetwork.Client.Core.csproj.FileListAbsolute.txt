@@ -14,3 +14,13 @@ E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\o
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\obj\Debug\net6.0\refint\GrapeNetwork.Client.Core.dll
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\obj\Debug\net6.0\GrapeNetwork.Client.Core.pdb
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\obj\Debug\net6.0\ref\GrapeNetwork.Client.Core.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\bin\Debug\net6.0\GrapeNetwork.Common.Checksum.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\bin\Debug\net6.0\GrapeNetwork.Core.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\bin\Debug\net6.0\GrapeNetwork.Protocol.LoginProtocol.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\bin\Debug\net6.0\GrapeNetwork.Server.Core.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\bin\Debug\net6.0\GrapeNetwork.Server.GameServer.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\bin\Debug\net6.0\GrapeNetwork.Protocol.LoginProtocol.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\bin\Debug\net6.0\GrapeNetwork.Server.Core.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\bin\Debug\net6.0\GrapeNetwork.Common.Checksum.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\bin\Debug\net6.0\GrapeNetwork.Core.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Core\bin\Debug\net6.0\GrapeNetwork.Server.GameServer.pdb

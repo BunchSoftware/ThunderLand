@@ -10,7 +10,7 @@ namespace GrapeNetwork.Core.Server
 {
     public class Connection
     {
-        public int IDConnection;
+        public uint IDConnection;
         public Socket WorkSocket;
         public string RemoteAdressClient => WorkSocket.RemoteEndPoint.ToString();
         public byte[] SendBuffer;

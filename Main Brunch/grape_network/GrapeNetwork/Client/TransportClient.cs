@@ -1,5 +1,4 @@
 ﻿using GrapeNetwork;
-using GrapeNetwork.Core.Server;
 using GrapeNetwork.Packages;
 using Newtonsoft.Json;
 using System;
@@ -69,8 +68,6 @@ namespace GrapeNetwork.Core.Client
         public event Action<string> OnDebugInfo;
         public event Action OnAuthorized;
 
-        private List<PackageProcessingCondition> packageProcessingConditions = new List<PackageProcessingCondition>();
-
         private int CountOfNegatives = 5; // Количество попыток подключений
         private int ReconnectionTime = 100;
         public string LocalAdressClient => TcpSocketClient.LocalEndPoint.ToString();
@@ -82,17 +79,6 @@ namespace GrapeNetwork.Core.Client
         public byte[] ReceiveBuffer;
 
         private TransportProtocol transportProtocol = new TransportProtocol();
-
-        public TransportClient(List<PackageProcessingCondition> packageProcessingConditions)
-        {
-            TcpSocketClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            TcpSocketClient.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
-            this.packageProcessingConditions = packageProcessingConditions;
-            TcpSocketClient.ReceiveBufferSize = RecievedBufferSize;
-            TcpSocketClient.SendBufferSize = SendBufferSize;
-            ReceiveBuffer = new byte[RecievedBufferSize];
-            SendBuffer = new byte[SendBufferSize];
-        }
 
         public TransportClient()
         {
@@ -166,14 +152,6 @@ namespace GrapeNetwork.Core.Client
                     OnDebugInfo?.Invoke($"Авторизация RSA прошла успешна, {Encoding.UTF8.GetString(package.Body)}");
                     OnAuthorized?.Invoke();
                 }
-                else if (packageProcessingConditions.Count > 0)
-                {
-                    foreach (var condition in packageProcessingConditions)
-                    {
-                        if (condition.CheckCondition(package))
-                            OnRecieveDataEvent?.Invoke(package);
-                    }
-                }
                 else
                     OnRecieveDataEvent?.Invoke(package);
             }
@@ -202,18 +180,18 @@ namespace GrapeNetwork.Core.Client
             }
         }
 
-        public void SetCondition(List<PackageProcessingCondition> packageProcessingConditions)
-        {
-            this.packageProcessingConditions = packageProcessingConditions;
-        }
-
         private void SendData(Package package)
         {
             if (IsConnected)
             {
-                byte[] encodedPackage = transportProtocol.CreateBinaryData(package);
-                Array.Copy(encodedPackage, SendBuffer, encodedPackage.Length);
-                TcpSocketClient.BeginSend(SendBuffer, 0, encodedPackage.Length, SocketFlags.None, new AsyncCallback(SendCallback), null);
+                IPEndPoint IPEndPoint = TcpSocketClient.RemoteEndPoint as IPEndPoint;
+                if(IPEndPoint != null)
+                {
+                    package.IPConnection = Package.ConvertFromIpAddressToInteger(IPEndPoint.Address.ToString());
+                    byte[] encodedPackage = transportProtocol.CreateBinaryData(package);
+                    Array.Copy(encodedPackage, SendBuffer, encodedPackage.Length);
+                    TcpSocketClient.BeginSend(SendBuffer, 0, encodedPackage.Length, SocketFlags.None, new AsyncCallback(SendCallback), null);
+                }
             }
         }
 

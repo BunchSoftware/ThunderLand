@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GrapeNetwork.Server.GameServer.Types
+namespace GrapeNetwork.Protocol.GameProtocol
 {
-    public class GameWorldState
+    internal class GameProtocol
     {
     }
 }

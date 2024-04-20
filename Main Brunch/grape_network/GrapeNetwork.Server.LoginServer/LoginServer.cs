@@ -1,149 +1,99 @@
-﻿using GrapeNetwork.Client.Core;
-using GrapeNetwork.Core.Server;
-using GrapeNetwork.Packages;
+﻿using GrapeNetwork.Packages;
 using GrapeNetwork.Server.Core;
-using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using GrapeNetwork.Protocol.LoginProtocol;
+using GrapeNetwork.Protocol.LoginProtocol.Command.Authentication;
+using GrapeNetwork.Protocol.LoginProtocol.Command.Lobby;
+using GrapeNetwork.Protocol.LoginProtocol.Command.Registration;
+using GrapeNetwork.Server.LoginServer.Service;
 
 namespace GrapeNetwork.Server.LoginServer
 {
     public class LoginServer : BaseServer
     {
-        public List<ClientState> clientStates = new List<ClientState>(); 
+        protected LoginProtocol loginProtocol;
 
         public override void Run()
         {
             base.Run();
-            List<PackageProcessingCondition> packageProcessingConditions = new List<PackageProcessingCondition>() 
-            {
-                new PackageProcessingCondition(0, 0),
-                new PackageProcessingCondition(0, 1),
-                new PackageProcessingCondition(0, 4),
-                new PackageProcessingCondition(0, 7)
-            };
-            transportServer.SetCondition(packageProcessingConditions);
             transportServer.OnRecieveDataClient += (connection, package) =>
             {
-                switch (package.Command)
+                loginProtocol.CreatePackage(package);
+                CommandProcessing commandProcessing = loginProtocol.GetLastCommandProcessing();
+                commandProcessing.Connection = connection;
+                if (commandProcessing != null)
                 {
-                    case 0:
-                        break;
-                    case 1:
+                    for (int i = 0; i < services.Count; i++)
+                    {
+                        if (services[i].nameService == commandProcessing.NameService)
                         {
-                            MemoryStream memoryStream = new MemoryStream();
-                            BinaryReader binaryReader = new BinaryReader(memoryStream);
-                            memoryStream.Write(package.Body);
-                            memoryStream.Seek(0, SeekOrigin.Begin);
-                            string login = binaryReader.ReadString();
-                            string password = binaryReader.ReadString();
-                            if (login == "Den4o" && password == "win")
-                            {
-                                clientStates.Add(new ClientState());
-                                DebugInfo($"Клиент {connection.RemoteAdressClient} направлен в лобби");
-                                Package packageLobby = new Package()
-                                {
-                                    GroupCommand = 0,
-                                    Command = 2
-                                };
-                                transportServer.SendPackage(connection, packageLobby);
-                            }
-                            else
-                            {
-                                Package packageRejection = new Package()
-                                {
-                                    GroupCommand = 0,
-                                    Command = 3
-                                };
-                                transportServer.SendPackage(connection, packageRejection);
-                            }
-                            break;
+                            services[i].AddCommandProcessing(commandProcessing, new ClientState(connection));
                         }
-                    case 4:
-                        {
-                            MemoryStream memoryStream = new MemoryStream();
-                            BinaryReader binaryReader = new BinaryReader(memoryStream);
-                            memoryStream.Write(package.Body);
-                            memoryStream.Seek(0, SeekOrigin.Begin);
-                            string login = binaryReader.ReadString();
-                            string password = binaryReader.ReadString();
-                            if (login == "Den4o" && password == "win")
-                            {
-                                clientStates.Add(new ClientState());
-                                DebugInfo($"Такой клиент уже зарегистрирован !");
-                                Package packageRehected = new Package()
-                                {
-                                    GroupCommand = 0,
-                                    Command = 6
-                                };
-                                transportServer.SendPackage(connection, packageRehected);
-                            }
-                            else
-                            {
-                                DebugInfo($"Зарегистрирован новый акаунт !");
-                                Package packageRejection = new Package()
-                                {
-                                    GroupCommand = 0,
-                                    Command = 5
-                                };
-                                transportServer.SendPackage(connection, packageRejection);
-                            }
-                            break;
-                        }
-                    case 7:
-                        {
-                            MemoryStream memoryStream = new MemoryStream();
-                            BinaryReader binaryReader = new BinaryReader(memoryStream);
-                            memoryStream.Write(package.Body);
-                            memoryStream.Seek(0, SeekOrigin.Begin);
-                            string ipAdress = binaryReader.ReadString();
-                            string port = binaryReader.ReadString();
-                            if (ipAdress == "192.168.1.100" && port == "2201")
-                            {
-                                DebugInfo($"Клиент {connection.RemoteAdressClient} был переадресован на игровой сервер");
-                                Package packageRehected = new Package()
-                                {
-                                    GroupCommand = 0,
-                                    Command = 9,
-                                    ReconnectionOtherServer = true
-                                };
-                                transportServer.SendPackage(connection, packageRehected);
-                            }
-                            else
-                            {
-                                DebugInfo($"Игровой сервер отклонил запрос на подключение");
-                                Package packageRejection = new Package()
-                                {
-                                    GroupCommand = 0,
-                                    Command = 8
-                                };
-                                transportServer.SendPackage(connection, packageRejection);
-                            }
-                            break;
-                        }
-                    default:
-                        break;
+                    }
                 }
             };
             transportServer.OnConnectedClient += (connection) =>
             {
+                clientStates.Add(new ClientState(connection));
+
                 Package package = new Package();
                 package.AuthAndGetRSAKey = true;
                 package.Body = Encoding.UTF8.GetBytes("RSA Key");
                 transportServer.SendPackage(connection, package);
             };
+            transportServer.OnDisconnectedClient += (connection) =>
+            {
+                clientStates.RemoveAt((int)connection.IDConnection - 1);
+            };
+        }
+        protected override void Tick(object nullObj)
+        {
+            base.Tick(nullObj);
+            for (int i = 0; i < queueSendCommandProcessing.Count; i++)
+            {
+                CommandProcessing commandProcessing = queueSendCommandProcessing.Dequeue();
+                Package package = new Package()
+                {
+                    GroupCommand = commandProcessing.GroupCommand,
+                    Command = commandProcessing.Command,
+                };
+                if(commandProcessing.Connection != null)
+                    transportServer.SendPackage(commandProcessing.Connection, package);
+            }
         }
         public override string ReadConfig()
         {
+            commandRegistry = new List<CommandProcessing>()
+            {
+                new RequestConnectToLoginServer(1, 1, "AuthenticationService"),
+                new RequestRegistrationUser(1, 4, "RegistrationService"),
+                new RequestToGameServerForUserConnection(1, 7, "LobbyService"),
+                new ResponseSendClientToLobby(1,2, "AuthenticationService"),
+                new ResponseRejectedLobbyConnection(1,3, "AuthenticationService"),
+                new ResponseUserRegistrationConfirmation(1,5, "RegistrationService"),
+                new ResponseRejectedRegistrationUser(1,6, "RegistrationService"),
+                new ResponseRejectedUserConnectionToGameServer(1,8, "LobbyService"),
+                new ResponseConnectingUserToGameServer(1,9, "LobbyService"),
+            };
+            services = new List<BaseService> 
+            { 
+                new AuthenticationService("AuthenticationService"),
+                new RegistrationService("RegistrationService"),
+                new LobbyService("LobbyService")
+            };
+            foreach (BaseService baseService in services)
+            {
+                baseService.ReadConfig();
+            }
+            loginProtocol = new LoginProtocol(commandRegistry);
+            NameServer = "LoginServer";
             return "config";
         }
         public override void Stop()
         {
-            transportServer.Stop();
+            base.Stop();
         }
     }
 }
