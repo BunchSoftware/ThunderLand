@@ -1,9 +1,11 @@
 ﻿using GrapeNetwork.Core;
+using GrapeNetwork.Core.Client;
 using GrapeNetwork.Core.Server;
 using GrapeNetwork.Packages;
-using GrapeNetwork.Server.GameServer.Types;
+using GrapeNetwork.Server.Core.Command;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -15,6 +17,8 @@ namespace GrapeNetwork.Server.Core
     public class BaseServer
     {
         protected TransportServer transportServer;
+        protected IPAddress IPAdressServer;
+        protected int PortServer;
         protected bool IsLog = true;
         protected int ServerID = 0;
         protected string NameServer;
@@ -27,21 +31,23 @@ namespace GrapeNetwork.Server.Core
         public event Action<Exception> OnExceptionInfo;
         public event Action<string> OnDebugInfo;
         public event Action TickServer;
-        //public event Action<CommandProcessing> OnCommandProcessingPerfomed;
-        //public event Action<CommandProcessing> OnCommandProcessingComplete;
         protected Queue<CommandProcessing> queueSendCommandProcessing = new Queue<CommandProcessing>(); 
         protected List<ClientState> clientStates = new List<ClientState>();
         protected List<BaseService> services = new List<BaseService> ();
 
         public virtual void Run()
         {
-            transportServer = new TransportServer(2200, IPAddress.Parse("192.168.1.100"));
-            transportServer.Start();
+            if (IPAdressServer != null)
+            {
+                transportServer = new TransportServer(PortServer, IPAdressServer);
+                transportServer.Start();
+            }
 
             transportServer.OnConnectedClient += ConnectedClient;
             transportServer.OnDisconnectedClient += DisconnectedClient;
             transportServer.OnRecieveDataClient += RecieveDataClient;
-            if(IsLog)
+
+            if (IsLog)
             {
                 transportServer.OnExceptionInfo += ExceptionInfo;
                 transportServer.OnDebugInfo += DebugInfo;
@@ -55,6 +61,19 @@ namespace GrapeNetwork.Server.Core
 
             timerCallback = new TimerCallback(Tick);
             timer = new Timer(timerCallback, new object(), 0, 50);
+        }
+        protected TransportClient ConnectToServer(int PortServer, IPAddress IPAdressServer)
+        {
+            TransportClient transportClient = new TransportClient();
+            transportClient.ConnectToServer(PortServer, IPAdressServer);
+            CommandProcessing commandProcessing = new CommandProcessing(4,1);
+            Package package = new Package()
+            {
+                GroupCommand = commandProcessing.GroupCommand,
+                Command = commandProcessing.Command,
+            };
+            transportClient.SendPackage(package, false);
+            return transportClient;
         }
         protected virtual void Tick(object nullObj)
         {
@@ -76,7 +95,7 @@ namespace GrapeNetwork.Server.Core
         {
             transportServer.Stop();
         }
-        protected void ConnectedClient(Connection connection) { OnConnectedClient?.Invoke(connection); }
+        protected void ConnectedClient(Connection connection) {  OnConnectedClient?.Invoke(connection); }
         protected void DisconnectedClient(Connection connection) { OnDisconnectedClient?.Invoke(connection);  }
         protected void RecieveDataClient(Connection connection, Package package) { OnRecieveDataClient?.Invoke(connection, package); }
         public void ExceptionInfo(Exception exception) { OnExceptionInfo?.Invoke(exception);  }

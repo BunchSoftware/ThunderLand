@@ -12,8 +12,6 @@ namespace GrapeNetwork.Server.Core
         protected BaseServer server;
         protected Queue<Task<CommandProcessing>> queueTaskCommandProcessing = new Queue<Task<CommandProcessing>>();
         public event Action<CommandProcessing> OnSendCommandProcessing;
-        protected event Action<Exception> OnExceptionInfo;
-        protected event Action<string> OnDebugInfo;
 
         public BaseService(string nameService) 
         { 
@@ -37,6 +35,10 @@ namespace GrapeNetwork.Server.Core
         protected void SendCommandProcessing(CommandProcessing commandProcessing)
         {
             OnSendCommandProcessing?.Invoke(commandProcessing);
+        }
+        protected void SendCommandProcessingToService()
+        {
+            
         }
 
         public void AddCommandProcessing(CommandProcessing commandProcessing, ClientState clientState)

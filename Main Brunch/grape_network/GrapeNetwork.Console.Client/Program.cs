@@ -1,7 +1,6 @@
 ﻿using GrapeNetwork.Client.Core;
 using GrapeNetwork.Core.Client;
 using GrapeNetwork.Packages;
-using NLog.Fluent;
 using System;
 using System.Collections.Generic;
 using System.IO;

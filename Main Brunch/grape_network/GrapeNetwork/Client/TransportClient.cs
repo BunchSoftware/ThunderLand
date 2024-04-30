@@ -89,6 +89,17 @@ namespace GrapeNetwork.Core.Client
             ReceiveBuffer = new byte[RecievedBufferSize];
             SendBuffer = new byte[SendBufferSize];
         }
+        public TransportClient(int Port, IPAddress iPAddress)
+        {
+            TcpSocketClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            TcpSocketClient.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+            TcpSocketClient.ReceiveBufferSize = RecievedBufferSize;
+            TcpSocketClient.SendBufferSize = SendBufferSize;
+            IPEndPoint iPEndPoint = new IPEndPoint(iPAddress, Port);
+            TcpSocketClient.Bind(iPEndPoint);
+            ReceiveBuffer = new byte[RecievedBufferSize];
+            SendBuffer = new byte[SendBufferSize];
+        }
 
         ~TransportClient()
         {

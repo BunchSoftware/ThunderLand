@@ -1,0 +1,14 @@
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.AccessLevel.AdministratorRole.deps.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.AccessLevel.AdministratorRole.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.AccessLevel.AdministratorRole.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\net6.0\GrapeNetwork.AccessLevel.AdministratorRole.csproj.AssemblyReference.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\net6.0\GrapeNetwork.AccessLevel.AdministratorRole.GeneratedMSBuildEditorConfig.editorconfig
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\net6.0\GrapeNetwork.AccessLevel.AdministratorRole.AssemblyInfoInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\net6.0\GrapeNetwork.AccessLevel.AdministratorRole.AssemblyInfo.cs
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\net6.0\GrapeNetwork.AccessLevel.AdministratorRole.csproj.CoreCompileInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\net6.0\GrapeNetwork.AccessLevel.AdministratorRole.sourcelink.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\net6.0\GrapeNetwork.AccessLevel.AdministratorRole.csproj.CopyComplete
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\net6.0\GrapeNetwork.AccessLevel.AdministratorRole.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\net6.0\refint\GrapeNetwork.AccessLevel.AdministratorRole.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\net6.0\GrapeNetwork.AccessLevel.AdministratorRole.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\net6.0\ref\GrapeNetwork.AccessLevel.AdministratorRole.dll

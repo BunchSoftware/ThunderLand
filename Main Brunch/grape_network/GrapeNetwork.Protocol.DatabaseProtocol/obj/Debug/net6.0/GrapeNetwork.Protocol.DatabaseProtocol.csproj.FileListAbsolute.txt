@@ -1,0 +1,12 @@
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Protocol.DatabaseProtocol.deps.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Protocol.DatabaseProtocol.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Protocol.DatabaseProtocol.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\net6.0\GrapeNetwork.Protocol.DatabaseProtocol.GeneratedMSBuildEditorConfig.editorconfig
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\net6.0\GrapeNetwork.Protocol.DatabaseProtocol.AssemblyInfoInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\net6.0\GrapeNetwork.Protocol.DatabaseProtocol.AssemblyInfo.cs
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\net6.0\GrapeNetwork.Protocol.DatabaseProtocol.csproj.CoreCompileInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\net6.0\GrapeNetwork.Protocol.DatabaseProtocol.sourcelink.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\net6.0\GrapeNetwork.Protocol.DatabaseProtocol.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\net6.0\refint\GrapeNetwork.Protocol.DatabaseProtocol.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\net6.0\GrapeNetwork.Protocol.DatabaseProtocol.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\net6.0\ref\GrapeNetwork.Protocol.DatabaseProtocol.dll

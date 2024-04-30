@@ -6,11 +6,11 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GrapeNetwork.Console.Common
+namespace GrapeNetwork.Console.LoginServer
 {
     class Program
     {
-        static LoginServer loginServer = new LoginServer();
+        static Server.LoginServer.LoginServer loginServer = new Server.LoginServer.LoginServer();
         private static void Main()
         {
             ConsoleManager.WriteLine("Запуск TL Login Server");

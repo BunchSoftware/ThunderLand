@@ -1,0 +1,15 @@
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\bin\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.exe
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\bin\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.deps.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\bin\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.runtimeconfig.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\bin\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\bin\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.GeneratedMSBuildEditorConfig.editorconfig
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.AssemblyInfoInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.AssemblyInfo.cs
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.csproj.CoreCompileInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.sourcelink.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\obj\Debug\net6.0\refint\GrapeNetwork.Console.DatabaseServer.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.Console.DatabaseServer.genruntimeconfig.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\obj\Debug\net6.0\ref\GrapeNetwork.Console.DatabaseServer.dll

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GrapeNetwork.Protocol.LoginProtocol")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74cea3ebae98c8a41473c23f602ca2eddf299aae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6990c92fa8cd8c911f6600e3fbc7245699cb85c")]
 [assembly: System.Reflection.AssemblyProductAttribute("GrapeNetwork.Protocol.LoginProtocol")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GrapeNetwork.Protocol.LoginProtocol")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

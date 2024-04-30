@@ -1,0 +1,12 @@
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Common.Configuration.deps.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Common.Configuration.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Common.Configuration.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Configuration\obj\Debug\net6.0\GrapeNetwork.Common.Configuration.GeneratedMSBuildEditorConfig.editorconfig
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Configuration\obj\Debug\net6.0\GrapeNetwork.Common.Configuration.AssemblyInfoInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Configuration\obj\Debug\net6.0\GrapeNetwork.Common.Configuration.AssemblyInfo.cs
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Configuration\obj\Debug\net6.0\GrapeNetwork.Common.Configuration.csproj.CoreCompileInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Configuration\obj\Debug\net6.0\GrapeNetwork.Common.Configuration.sourcelink.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Configuration\obj\Debug\net6.0\GrapeNetwork.Common.Configuration.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Configuration\obj\Debug\net6.0\refint\GrapeNetwork.Common.Configuration.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Configuration\obj\Debug\net6.0\GrapeNetwork.Common.Configuration.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Configuration\obj\Debug\net6.0\ref\GrapeNetwork.Common.Configuration.dll

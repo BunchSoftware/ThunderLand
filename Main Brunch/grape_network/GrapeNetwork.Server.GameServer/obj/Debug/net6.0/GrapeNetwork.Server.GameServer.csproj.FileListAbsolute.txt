@@ -1,6 +1,9 @@
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer\bin\Debug\net6.0\GrapeNetwork.Server.GameServer.deps.json
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer\bin\Debug\net6.0\GrapeNetwork.Server.GameServer.dll
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer\bin\Debug\net6.0\GrapeNetwork.Server.GameServer.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Server.GameServer.deps.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Server.GameServer.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Server.GameServer.pdb
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.GeneratedMSBuildEditorConfig.editorconfig
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.AssemblyInfoInputs.cache
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.AssemblyInfo.cs
@@ -10,3 +13,5 @@ E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameSe
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer\obj\Debug\net6.0\refint\GrapeNetwork.Server.GameServer.dll
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.pdb
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer\obj\Debug\net6.0\ref\GrapeNetwork.Server.GameServer.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.csproj.AssemblyReference.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.csproj.CopyComplete

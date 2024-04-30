@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "A3YczlodUomV7Gdr+o/VIebYZuiwnaA8M8KTobAfh5CbN/fRR41Dkw9E+FjJ+1aA1OpvHCz+lbffpfUuWgKo5w==",
+  "dgSpecHash": "nwg2oeDd25TxJPop3pBvAP0snJZ5WvmLwtQhUTXXjBsJeQ435SqA5BiV/cppgzf3uidaxmtgEPP5Uk/uoXMfag==",
   "success": true,
   "projectFilePath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Model\\GrapeNetwork.Server.Model.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Den4o\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

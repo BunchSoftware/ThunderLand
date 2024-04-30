@@ -8,6 +8,10 @@ using GrapeNetwork.Protocol.LoginProtocol.Command.Authentication;
 using GrapeNetwork.Protocol.LoginProtocol.Command.Lobby;
 using GrapeNetwork.Protocol.LoginProtocol.Command.Registration;
 using GrapeNetwork.Server.LoginServer.Service;
+using System.Net;
+using GrapeNetwork.Server.Core.Command;
+using GrapeNetwork.Server.Core.CommonService;
+using GrapeNetwork.Core.Server;
 
 namespace GrapeNetwork.Server.LoginServer
 {
@@ -76,12 +80,16 @@ namespace GrapeNetwork.Server.LoginServer
                 new ResponseRejectedRegistrationUser(1,6, "RegistrationService"),
                 new ResponseRejectedUserConnectionToGameServer(1,8, "LobbyService"),
                 new ResponseConnectingUserToGameServer(1,9, "LobbyService"),
+                new RequestConnectToServer(4,1,"ServerCommunicationService"),
+                new ResponseConnectToServer(4,2, "ServerCommunicationService"),
+                new ResponseRejectedConnectToServer(4,3,"ServerCommunicationService"),
             };
             services = new List<BaseService> 
             { 
                 new AuthenticationService("AuthenticationService"),
                 new RegistrationService("RegistrationService"),
-                new LobbyService("LobbyService")
+                new LobbyService("LobbyService"),
+                new ServerCommunicationService("ServerCommunicationService")
             };
             foreach (BaseService baseService in services)
             {
@@ -89,6 +97,9 @@ namespace GrapeNetwork.Server.LoginServer
             }
             loginProtocol = new LoginProtocol(commandRegistry);
             NameServer = "LoginServer";
+            PortServer = 2200;
+            IPAdressServer = IPAddress.Parse("192.168.1.100");
+
             return "config";
         }
         public override void Stop()

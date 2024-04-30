@@ -1,18 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jQl55lU/6eUPGQORmRidQgpG4l+8mEFc4rMgrNh807lT0bWqlmSOqRj+vvJObKkqVQURcYB/BcLfGVXSnfhdOg==",
+  "dgSpecHash": "Qb7ENbTSrWGiQVsxQnEq8FD13h+0yTspSMURwoV/9PETolhN73fpVfs4s2aj0VTMWvQNkjutduqOwMtlNSVhVQ==",
   "success": true,
   "projectFilePath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.LoginServer\\GrapeNetwork.Server.LoginServer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Den4o\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\Den4o\\.nuget\\packages\\nlog\\5.2.5\\nlog.5.2.5.nupkg.sha512",
-    "C:\\Users\\Den4o\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
-    "C:\\Users\\Den4o\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
-    "C:\\Users\\Den4o\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
-    "C:\\Users\\Den4o\\.nuget\\packages\\runtime.native.system.io.ports\\8.0.0\\runtime.native.system.io.ports.8.0.0.nupkg.sha512",
-    "C:\\Users\\Den4o\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
-    "C:\\Users\\Den4o\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\8.0.0\\runtime.osx-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
-    "C:\\Users\\Den4o\\.nuget\\packages\\system.io.ports\\8.0.0\\system.io.ports.8.0.0.nupkg.sha512"
+    "C:\\Users\\Den4o\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
