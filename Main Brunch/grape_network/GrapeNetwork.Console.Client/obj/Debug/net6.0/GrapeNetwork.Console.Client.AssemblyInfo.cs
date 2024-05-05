@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GrapeNetwork.Console.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6990c92fa8cd8c911f6600e3fbc7245699cb85c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("GrapeNetwork.Console.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GrapeNetwork.Console.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

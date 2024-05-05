@@ -133,9 +133,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\GrapeNetwork.Server.LoginServer.Service.csproj",
-      "projectName": "GrapeNetwork.Server.LoginServer.Service",
-      "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\GrapeNetwork.Server.LoginServer.Service.csproj",
+      "projectUniqueName": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\GrapeNetwork.Server.LoginServer.Servic.csproj",
+      "projectName": "GrapeNetwork.Server.LoginServer.Servic",
+      "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\GrapeNetwork.Server.LoginServer.Servic.csproj",
       "packagesPath": "C:\\Users\\Den4o\\.nuget\\packages\\",
       "outputPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\obj\\",
       "projectStyle": "PackageReference",

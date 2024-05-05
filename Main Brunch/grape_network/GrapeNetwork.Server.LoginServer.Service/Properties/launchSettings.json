@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "GrapeNetwork.Server.LoginServer.Service": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5102;https://localhost:7291",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

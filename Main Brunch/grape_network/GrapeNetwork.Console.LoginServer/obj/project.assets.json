@@ -126,7 +126,7 @@
           "GrapeNetwork.Core": "1.0.0",
           "GrapeNetwork.Protocol.LoginProtocol": "1.0.0",
           "GrapeNetwork.Server.Core": "1.0.0",
-          "GrapeNetwork.Server.LoginServer.Service": "1.0.0"
+          "GrapeNetwork.Server.LoginServer.Servic": "1.0.0"
         },
         "compile": {
           "bin/placeholder/GrapeNetwork.Server.LoginServer.dll": {}
@@ -135,7 +135,7 @@
           "bin/placeholder/GrapeNetwork.Server.LoginServer.dll": {}
         }
       },
-      "GrapeNetwork.Server.LoginServer.Service/1.0.0": {
+      "GrapeNetwork.Server.LoginServer.Servic/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -143,10 +143,10 @@
           "GrapeNetwork.Server.Core": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/GrapeNetwork.Server.LoginServer.Service.dll": {}
+          "bin/placeholder/GrapeNetwork.Server.LoginServer.Servic.dll": {}
         },
         "runtime": {
-          "bin/placeholder/GrapeNetwork.Server.LoginServer.Service.dll": {}
+          "bin/placeholder/GrapeNetwork.Server.LoginServer.Servic.dll": {}
         }
       }
     }
@@ -227,10 +227,10 @@
       "path": "../GrapeNetwork.Server.LoginServer/GrapeNetwork.Server.LoginServer.csproj",
       "msbuildProject": "../GrapeNetwork.Server.LoginServer/GrapeNetwork.Server.LoginServer.csproj"
     },
-    "GrapeNetwork.Server.LoginServer.Service/1.0.0": {
+    "GrapeNetwork.Server.LoginServer.Servic/1.0.0": {
       "type": "project",
-      "path": "../GrapeNetwork.Server.Service.LoginServer.LoginService/GrapeNetwork.Server.LoginServer.Service.csproj",
-      "msbuildProject": "../GrapeNetwork.Server.Service.LoginServer.LoginService/GrapeNetwork.Server.LoginServer.Service.csproj"
+      "path": "../GrapeNetwork.Server.Service.LoginServer.LoginService/GrapeNetwork.Server.LoginServer.Servic.csproj",
+      "msbuildProject": "../GrapeNetwork.Server.Service.LoginServer.LoginService/GrapeNetwork.Server.LoginServer.Servic.csproj"
     }
   },
   "projectFileDependencyGroups": {

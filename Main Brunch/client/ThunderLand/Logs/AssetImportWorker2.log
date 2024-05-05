@@ -1,0 +1,497 @@
+Using pre-set license
+Built from '2023.2/staging' branch; Version is '2023.2.20f1 (0e25a174756c) revision 927137'; Using compiler version '193431935'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 16306 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+E:\Программы\Программирование\Unity\2023.2.20f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+E:/Files/GitHub/ThunderLand/Main Brunch/client/ThunderLand
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+63991
+-job-worker-count
+5
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+Successfully changed project path to: E:/Files/GitHub/ThunderLand/Main Brunch/client/ThunderLand
+E:/Files/GitHub/ThunderLand/Main Brunch/client/ThunderLand
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [20296] Host "[IP] 192.168.1.100 [Port] 0 [Flags] 2 [Guid] 3074399668 [EditorId] 3074399668 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-GAIGRAL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [20296] Host "[IP] 192.168.1.100 [Port] 0 [Flags] 2 [Guid] 3074399668 [EditorId] 3074399668 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-GAIGRAL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
+[Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
+Library Redirect Path: Library/
+Refreshing native plugins compatible for Editor in 3.88 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2023.2.20f1 (0e25a174756c)
+[Subsystems] Discovering subsystems at path E:/Программы/Программирование/Unity/2023.2.20f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Files/GitHub/ThunderLand/Main Brunch/client/ThunderLand/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x2188)
+    Vendor:   NVIDIA
+    VRAM:     3950 MB
+    Driver:   31.0.15.4617
+Initialize mono
+Mono path[0] = 'E:/Программы/Программирование/Unity/2023.2.20f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Программы/Программирование/Unity/2023.2.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'E:/Программы/Программирование/Unity/2023.2.20f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56560
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Программы/Программирование/Unity/2023.2.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003300 seconds.
+- Loaded All Assemblies, in  0.632 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.521 seconds
+Domain Reload Profiling: 1152ms
+	BeginReloadAssembly (197ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (68ms)
+	RebuildNativeTypeToScriptingClass (27ms)
+	initialDomainReloadingComplete (75ms)
+	LoadAllAssembliesAndSetupDomain (265ms)
+		LoadAssemblies (195ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (261ms)
+			TypeCache.Refresh (259ms)
+				TypeCache.ScanAssembly (236ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (521ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (406ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (9ms)
+			BeforeProcessingInitializeOnLoad (10ms)
+			ProcessInitializeOnLoadAttributes (299ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.623 seconds
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+Refreshing native plugins compatible for Editor in 2.42 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-ThunderLand
+Refreshing native plugins compatible for Editor in 2.46 ms, found 5 plugins.
+TypeManager.Initialize took: 695ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.007 seconds
+Domain Reload Profiling: 4627ms
+	BeginReloadAssembly (594ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (60ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (885ms)
+		LoadAssemblies (648ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (409ms)
+			TypeCache.Refresh (330ms)
+				TypeCache.ScanAssembly (304ms)
+			BuildScriptInfoCaches (68ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (3007ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2666ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (386ms)
+			ProcessInitializeOnLoadAttributes (2043ms)
+			ProcessInitializeOnLoadMethodAttributes (217ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 2.29 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 176 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6776 unused Assets / (8.3 MB). Loaded Objects now: 7420.
+Memory consumption went from 247.6 MB to 239.3 MB.
+Total: 15.889900 ms (FindLiveObjects: 0.978500 ms CreateObjectMapping: 1.188700 ms MarkObjects: 9.726200 ms  DeleteObjects: 3.995000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 365554.709656 seconds.
+  path: Assets/Blink/Art/Weapons/LowPoly/FreeSwords/Sword1/Textures
+  artifactKey: Guid(91107aa736746f84fa2f6aa35dcc0e16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Blink/Art/Weapons/LowPoly/FreeSwords/Sword1/Textures using Guid(91107aa736746f84fa2f6aa35dcc0e16) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4ea8b7187fae8329d495045219528a35') in 0.0197462 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.042060 seconds.
+  path: Assets/Blink/Art/Weapons/LowPoly/FreeSwords/Sword1/Textures/Sword1_Albedo_Bronze.png
+  artifactKey: Guid(22f89556adfcc3f45a131e6be1a00e7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Blink/Art/Weapons/LowPoly/FreeSwords/Sword1/Textures/Sword1_Albedo_Bronze.png using Guid(22f89556adfcc3f45a131e6be1a00e7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fa02bebd845de1f1a613f89519e87661') in 0.0968912 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.447632 seconds.
+  path: Assets/Scenes/MeetingMenu.unity
+  artifactKey: Guid(327d413d05e91ed41bbda309b765cb34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MeetingMenu.unity using Guid(327d413d05e91ed41bbda309b765cb34) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '53d4776c9d0e11e9a6cb534d86d2e8dd') in 0.0006383 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 193.192087 seconds.
+  path: Assets/Character/Arm Stretching.fbx
+  artifactKey: Guid(502ed6f149606a141879e3b0cee576a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/Arm Stretching.fbx using Guid(502ed6f149606a141879e3b0cee576a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e89a87eb88e456bcfd49d5bbd3aed207') in 0.0255658 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 135
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Character/Ch06_1002_Normal.png
+  artifactKey: Guid(fa743ae59f5e58d458c224dd2e5d4351) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/Ch06_1002_Normal.png using Guid(fa743ae59f5e58d458c224dd2e5d4351) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd2876ace229c1d8861e9e6252b6d230e') in 0.0578672 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Character/Ch06_1002_Glossiness.png
+  artifactKey: Guid(24a45077ad1623e44a3929aa8acced85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/Ch06_1002_Glossiness.png using Guid(24a45077ad1623e44a3929aa8acced85) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6c01ab8b9a598fdbd413c398508f51de') in 0.0283676 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Character
+  artifactKey: Guid(d218cd7343458ae49b495830b7f4d178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character using Guid(d218cd7343458ae49b495830b7f4d178) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e2c002cb443bc6420f0620821196e58c') in 0.0008282 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Character/Treadmill Running.fbx
+  artifactKey: Guid(7ed0e7df743e866458a31e7fca784250) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/Treadmill Running.fbx using Guid(7ed0e7df743e866458a31e7fca784250) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd17a249f0cd2941a8191b0e96e661e52') in 0.0064284 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 135
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Character/Ch06_1001_Specular.png
+  artifactKey: Guid(ba335832b8de3e149b433ef904592726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/Ch06_1001_Specular.png using Guid(ba335832b8de3e149b433ef904592726) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'caadfbfebc7cc50e618c132d8167c745') in 0.038327 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Character/People.fbx
+  artifactKey: Guid(9407fe2d993d95947987017a9c6037ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Character/People.fbx using Guid(9407fe2d993d95947987017a9c6037ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3965c52bfdc5bb1fb0affcc29889ed2b') in 0.5479357 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 148
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.099040 seconds.
+  path: Assets/Polytope Studio
+  artifactKey: Guid(115939fafdaab3542ac9de578833169e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polytope Studio using Guid(115939fafdaab3542ac9de578833169e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '359940d00a743376507862d6ee2e2874') in 0.0007334 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.420203 seconds.
+  path: Assets/Scenes/MeetingMenu
+  artifactKey: Guid(c22d644f129745347af14602dac304ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MeetingMenu using Guid(c22d644f129745347af14602dac304ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ce350dcf033d32b75945c14644a72ca8') in 0.0005382 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.042683 seconds.
+  path: Assets/Scenes/MeetingMenu/LightingData.asset
+  artifactKey: Guid(ed1cb06c89b892d4eaa0ff28eecb2b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MeetingMenu/LightingData.asset using Guid(ed1cb06c89b892d4eaa0ff28eecb2b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5ff900769730729f1268afe19562b883') in 0.0013585 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 168.238620 seconds.
+  path: Assets/Tiny Fantasy Icons/PowerUps/Star_B.png
+  artifactKey: Guid(8d925919f3c20484ba60593a82f0356f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/PowerUps/Star_B.png using Guid(8d925919f3c20484ba60593a82f0356f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '30f6c51dbcb07765f1b2361cbe6d398d') in 0.0516792 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.337354 seconds.
+  path: Assets/Tiny Fantasy Icons/PowerUps/Star_A.png
+  artifactKey: Guid(4783956ad72334744a56f6129b11adef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/PowerUps/Star_A.png using Guid(4783956ad72334744a56f6129b11adef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ff977b68adffaae43b6b7b6ad38c2067') in 0.0183804 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.055572 seconds.
+  path: Assets/Sprite/Square.png
+  artifactKey: Guid(a47c230b914926e4cb4e0c5c1253237c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Square.png using Guid(a47c230b914926e4cb4e0c5c1253237c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8014c62b1b7808d77b7f172d2f4654c6') in 0.0210998 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.148424 seconds.
+  path: Assets/Tiny Fantasy Icons/Scrolls/Scroll_Open_Yellow.png
+  artifactKey: Guid(0d14f3b8c6af72e4eae6ce71b5263136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Scrolls/Scroll_Open_Yellow.png using Guid(0d14f3b8c6af72e4eae6ce71b5263136) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b0dff9b0a598981783c22a5afda24cda') in 0.0188835 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.047834 seconds.
+  path: Assets/Tiny Fantasy Icons/Scrolls/Scroll_Open_White.png
+  artifactKey: Guid(aed9af24ba53acf49bf3f57851ec3f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Scrolls/Scroll_Open_White.png using Guid(aed9af24ba53acf49bf3f57851ec3f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '191e4d70d8a89b9e938d4a7a6d8bebd6') in 0.0189049 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.802963 seconds.
+  path: Assets/Tiny Fantasy Icons/Scrolls/Scroll_Open_Purple.png
+  artifactKey: Guid(55c38b70b76c97046a7acba31d26d95c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Scrolls/Scroll_Open_Purple.png using Guid(55c38b70b76c97046a7acba31d26d95c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f4a2ed6f41a26f07c3dd3a6ebb251594') in 0.0204353 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009127 seconds.
+  path: Assets/Tiny Fantasy Icons/Scrolls/Scroll_Close_Red.png
+  artifactKey: Guid(3b6e251149b401e468c215e0fe2f665a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Scrolls/Scroll_Close_Red.png using Guid(3b6e251149b401e468c215e0fe2f665a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0ec4dd548a9567fa5c7c2112a49e8363') in 0.0220619 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Tiny Fantasy Icons/Scrolls/Scroll_Open_Blue.png
+  artifactKey: Guid(d53a988eba25af04687db45065165f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Scrolls/Scroll_Open_Blue.png using Guid(d53a988eba25af04687db45065165f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd8198b56e464bf969eeabcfe03c23c39') in 0.0232212 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Tiny Fantasy Icons/Scrolls/Scroll_Close_Yellow.png
+  artifactKey: Guid(649be789a0c64d1448f76dcdcdee0d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Scrolls/Scroll_Close_Yellow.png using Guid(649be789a0c64d1448f76dcdcdee0d99) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8cf3ab90856b991f83f6329aff41ecd9') in 0.023927 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Tiny Fantasy Icons/Runes/Rune_A.png
+  artifactKey: Guid(beb4181ef568e0f4fa18f06a2b4210d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Runes/Rune_A.png using Guid(beb4181ef568e0f4fa18f06a2b4210d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8ac90bf156a18bcd6d5cbe3f8a179583') in 0.0299024 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Tiny Fantasy Icons/Presents/Present_C.png
+  artifactKey: Guid(65d6bc7d8419ac9439cc0d47da5f85ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Presents/Present_C.png using Guid(65d6bc7d8419ac9439cc0d47da5f85ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ee5eba6952ed59bf6febd6761c7c03c6') in 0.0242817 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Tiny Fantasy Icons/Potions/Potion_Epic_Green.png
+  artifactKey: Guid(44fba20d83700374cb6c2d735b24284a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Potions/Potion_Epic_Green.png using Guid(44fba20d83700374cb6c2d735b24284a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fb263ee8527b3a0e18ccba69b8c2a63f') in 0.0349967 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Tiny Fantasy Icons/Potions/Potion_Epic_Blue.png
+  artifactKey: Guid(aa590f0874ea2024ea4eb284491850a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Potions/Potion_Epic_Blue.png using Guid(aa590f0874ea2024ea4eb284491850a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f982c72da0d8308fc045e82f6fcff822') in 0.0206628 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Tiny Fantasy Icons/Gems/Gems_Tiny_Diamond.png
+  artifactKey: Guid(690788c1d1c4a0b42815f8d3ed42836d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Gems/Gems_Tiny_Diamond.png using Guid(690788c1d1c4a0b42815f8d3ed42836d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fedbe5643f36f81170ae50f44449b15c') in 0.0229704 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Tiny Fantasy Icons/Gems/Gems_Medium_Ruby.png
+  artifactKey: Guid(18842ba8f15b407489e899c2adc379e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Gems/Gems_Medium_Ruby.png using Guid(18842ba8f15b407489e899c2adc379e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4a8430043e8c6612443c15c062108bd3') in 0.0225646 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Tiny Fantasy Icons/Pendants/Pendant_D.png
+  artifactKey: Guid(b66f172eac4213142b5cc932946647aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Pendants/Pendant_D.png using Guid(b66f172eac4213142b5cc932946647aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '61c23e57cb7fc2ee11480a84e9de3ce9') in 0.0205246 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Tiny Fantasy Icons/PetEggs/Egg_A.png
+  artifactKey: Guid(c045d153fa6b6f34582759928850bec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/PetEggs/Egg_A.png using Guid(c045d153fa6b6f34582759928850bec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '94d70c45a7e6834c90f651bf2dcb69f8') in 0.0198081 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Tiny Fantasy Icons/PetEggs/Egg_E.png
+  artifactKey: Guid(3835e50d2187066458ae023acaf6aa15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/PetEggs/Egg_E.png using Guid(3835e50d2187066458ae023acaf6aa15) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd4a47527a4e81fcd556fcf70e28d9559') in 0.0232717 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Tiny Fantasy Icons/Coins/Coins_Large_Copper.png
+  artifactKey: Guid(b8986d7c72d6b434ea46d1e2c8fe81b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Coins/Coins_Large_Copper.png using Guid(b8986d7c72d6b434ea46d1e2c8fe81b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fb958e97c2595d9a31f1331a2bbb7aef') in 0.0259775 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Tiny Fantasy Icons/Coins/Coins_Huge_Gold.png
+  artifactKey: Guid(33ae274aa946dfe459692bec7cecbdcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Coins/Coins_Huge_Gold.png using Guid(33ae274aa946dfe459692bec7cecbdcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'df31be49773ff9a668c29ecdf24a54f1') in 0.0211462 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Tiny Fantasy Icons/Books/Book_C_Close.png
+  artifactKey: Guid(6940f78099ab1794294323248914d4b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Books/Book_C_Close.png using Guid(6940f78099ab1794294323248914d4b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6fa45238f32e89bf249cca575c9b8c3f') in 0.0211688 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Tiny Fantasy Icons/Books/Book_C_Open.png
+  artifactKey: Guid(09dd25e74e066304ea065f3fa8d9ed26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Books/Book_C_Open.png using Guid(09dd25e74e066304ea065f3fa8d9ed26) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cdfde8ac8807272db2eadfd422566166') in 0.0217157 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Tiny Fantasy Icons/Coins/Coins_Epic_Silver.png
+  artifactKey: Guid(162e679a08db25d4993b7fb0278baa72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Coins/Coins_Epic_Silver.png using Guid(162e679a08db25d4993b7fb0278baa72) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'da4c37acdc512f4259ff1820a2a4f4bb') in 0.0227496 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Tiny Fantasy Icons/PowerUps/Bolt_B.png
+  artifactKey: Guid(864b9940aad18eb4c9b2059dc4d59164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/PowerUps/Bolt_B.png using Guid(864b9940aad18eb4c9b2059dc4d59164) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '67929f1446202c6f6aef46ebb8dcbff1') in 0.018399 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Tiny Fantasy Icons/Bones/Bones_A.png
+  artifactKey: Guid(41407543d3fbd874bbe1f81ed841bc10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Bones/Bones_A.png using Guid(41407543d3fbd874bbe1f81ed841bc10) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b7aec8afea09b75325506d84f6136c22') in 0.0200266 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Tiny Fantasy Icons/Explosives/Boom_A.png
+  artifactKey: Guid(6e8a5a55e38cd004d92820a65847d593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiny Fantasy Icons/Explosives/Boom_A.png using Guid(6e8a5a55e38cd004d92820a65847d593) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '44611aeb29a7ea2e23aa5c82b7210528') in 0.0213307 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -105,7 +105,7 @@
           "bin/placeholder/GrapeNetwork.Server.Core.dll": {}
         }
       },
-      "GrapeNetwork.Server.LoginServer.Service/1.0.0": {
+      "GrapeNetwork.Server.LoginServer.Servic/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -113,10 +113,10 @@
           "GrapeNetwork.Server.Core": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/GrapeNetwork.Server.LoginServer.Service.dll": {}
+          "bin/placeholder/GrapeNetwork.Server.LoginServer.Servic.dll": {}
         },
         "runtime": {
-          "bin/placeholder/GrapeNetwork.Server.LoginServer.Service.dll": {}
+          "bin/placeholder/GrapeNetwork.Server.LoginServer.Servic.dll": {}
         }
       }
     }
@@ -187,10 +187,10 @@
       "path": "../GrapeNetwork.Server.Core/GrapeNetwork.Server.Core.csproj",
       "msbuildProject": "../GrapeNetwork.Server.Core/GrapeNetwork.Server.Core.csproj"
     },
-    "GrapeNetwork.Server.LoginServer.Service/1.0.0": {
+    "GrapeNetwork.Server.LoginServer.Servic/1.0.0": {
       "type": "project",
-      "path": "../GrapeNetwork.Server.Service.LoginServer.LoginService/GrapeNetwork.Server.LoginServer.Service.csproj",
-      "msbuildProject": "../GrapeNetwork.Server.Service.LoginServer.LoginService/GrapeNetwork.Server.LoginServer.Service.csproj"
+      "path": "../GrapeNetwork.Server.Service.LoginServer.LoginService/GrapeNetwork.Server.LoginServer.Servic.csproj",
+      "msbuildProject": "../GrapeNetwork.Server.Service.LoginServer.LoginService/GrapeNetwork.Server.LoginServer.Servic.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -199,7 +199,7 @@
       "GrapeNetwork.Core >= 1.0.0",
       "GrapeNetwork.Protocol.GameProtocol >= 1.0.0",
       "GrapeNetwork.Server.Core >= 1.0.0",
-      "GrapeNetwork.Server.LoginServer.Service >= 1.0.0"
+      "GrapeNetwork.Server.LoginServer.Servic >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -244,8 +244,8 @@
             "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Core\\GrapeNetwork.Server.Core.csproj": {
               "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Core\\GrapeNetwork.Server.Core.csproj"
             },
-            "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\GrapeNetwork.Server.LoginServer.Service.csproj": {
-              "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\GrapeNetwork.Server.LoginServer.Service.csproj"
+            "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\GrapeNetwork.Server.LoginServer.Servic.csproj": {
+              "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\GrapeNetwork.Server.LoginServer.Servic.csproj"
             },
             "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\GrapeNetwork.Core.csproj": {
               "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\GrapeNetwork.Core.csproj"

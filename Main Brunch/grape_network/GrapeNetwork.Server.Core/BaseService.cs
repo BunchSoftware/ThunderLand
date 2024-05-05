@@ -36,10 +36,6 @@ namespace GrapeNetwork.Server.Core
         {
             OnSendCommandProcessing?.Invoke(commandProcessing);
         }
-        protected void SendCommandProcessingToService()
-        {
-            
-        }
 
         public void AddCommandProcessing(CommandProcessing commandProcessing, ClientState clientState)
         {
