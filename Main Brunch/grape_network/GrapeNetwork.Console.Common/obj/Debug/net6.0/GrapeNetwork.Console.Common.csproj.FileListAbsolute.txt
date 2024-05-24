@@ -9,11 +9,11 @@ E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.Commo
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.Common\bin\Debug\net6.0\GrapeNetwork.AccessLevel.Common.pdb
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.Common\bin\Debug\net6.0\GrapeNetwork.Common.Checksum.dll
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.Common\bin\Debug\net6.0\GrapeNetwork.Common.Checksum.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Console.Common.deps.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Console.Common.dll
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.Common\obj\Debug\net6.0\GrapeNetwork.Console.Common.csproj.AssemblyReference.cache
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.Common\obj\Debug\net6.0\GrapeNetwork.Console.Common.GeneratedMSBuildEditorConfig.editorconfig
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.Common\obj\Debug\net6.0\GrapeNetwork.Console.Common.csproj.CoreCompileInputs.cache
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.Common\obj\Debug\net6.0\GrapeNetwork.Console.Common.sourcelink.json
-E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Console.Common.deps.json
-E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Console.Common.dll
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.Common\obj\Debug\net6.0\GrapeNetwork.Console.Common.csproj.CopyComplete
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.Common\obj\Debug\net6.0\GrapeNetwork.Console.Common.dll

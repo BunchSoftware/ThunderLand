@@ -1,0 +1,7 @@
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\AuthenticationService\obj\Debug\net6.0\AuthenticationServiceGrcp.csproj.AssemblyReference.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\AuthenticationService\obj\Debug\net6.0\AuthenticationServiceGrcp.GeneratedMSBuildEditorConfig.editorconfig
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\AuthenticationService\obj\Debug\net6.0\AuthenticationServiceGrcp.AssemblyInfoInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\AuthenticationService\obj\Debug\net6.0\AuthenticationServiceGrcp.AssemblyInfo.cs
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\AuthenticationService\obj\Debug\net6.0\AuthenticationServiceGrcp.csproj.CoreCompileInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\AuthenticationService\obj\Debug\net6.0\AuthenticationServiceGrcp.MvcApplicationPartsAssemblyInfo.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\AuthenticationService\obj\Debug\net6.0\AuthenticationServiceGrcp.sourcelink.json

@@ -1,2 +1,0 @@
-obj\Debug\net6.0\Protos/AuthenicationService.cs \
-obj\Debug\net6.0\Protos/AuthenicationServiceGrpc.cs: Protos/AuthenicationService.proto

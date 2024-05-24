@@ -1,6 +1,7 @@
 ﻿using GrapeNetwork.Client.Core;
 using GrapeNetwork.Core.Client;
 using GrapeNetwork.Packages;
+using Grpc.Net.Client;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,6 +10,8 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using GrapeNetwork.Server.LoginServer.GrcpService;
+using System.Net.Http;
 
 namespace GrapeNetwork.Console.Common
 {
@@ -16,44 +19,56 @@ namespace GrapeNetwork.Console.Common
     {
         static GameClient gameClient = new GameClient();
         static bool isAuth = false;
+        private async static void A()
+        {
+            var httpHandler = new HttpClientHandler();
+            httpHandler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+            using var channel = GrpcChannel.ForAddress("https://localhost:3000", new GrpcChannelOptions { HttpHandler = httpHandler });
+            var client = new AuthenticationServiceGrcp.AuthenticationServiceGrcpClient(channel);
+            var reply = await client.SayHelloAsync(new HelloRequest { Name = "GreeterClient" });
+            ConsoleManager.WriteLine("Greeting: " + reply.Message);
+            ConsoleManager.WriteLine("Press any key to exit...");
+        }
         private static void Main()
         {
-            ConsoleManager.WriteLine("Запуск TL Client");
-            AppDomain.CurrentDomain.ProcessExit += ProcessExit;           
-            ConsoleManager.SkipLine(1);
-            gameClient.ReadConfig();
-            gameClient.ConnectToServer();
-            gameClient.OnDebugInfo += (message) =>
-            {
-                ConsoleManager.Debug(message);
-            };
-            gameClient.OnExceptionInfo += (exception) =>
-            {
-                ConsoleManager.Error(exception);
-            };
-            gameClient.OnErrorInfo += (message) =>
-            {
-                ConsoleManager.WriteLineAndEditColor(message, ConsoleColor.Red);
-            };
-            
-            while (isAuth == false)
-            {
-                //Registration();
-                //Thread.Sleep(1000);
-                Auth();
-                Thread.Sleep(1000);
-                ConsoleManager.WriteLine("Зайти на игровой сервер ? (Y/N)");
-                string request = System.Console.ReadLine();
-                if (request == "Y")
-                {
-                    gameClient.EnterLobby();
-                    isAuth = true;
-                }
-                Thread.Sleep(1000);
-            }
+            A();
             System.Console.ReadKey();
-            System.Console.ReadKey();
-            System.Console.ReadKey();
+            //ConsoleManager.WriteLine("Запуск TL Client");
+            //AppDomain.CurrentDomain.ProcessExit += ProcessExit;           
+            //ConsoleManager.SkipLine(1);
+            //gameClient.ReadConfig();
+            //gameClient.ConnectToServer();
+            //gameClient.OnDebugInfo += (message) =>
+            //{
+            //    ConsoleManager.Debug(message);
+            //};
+            //gameClient.OnExceptionInfo += (exception) =>
+            //{
+            //    ConsoleManager.Error(exception);
+            //};
+            //gameClient.OnErrorInfo += (message) =>
+            //{
+            //    ConsoleManager.WriteLineAndEditColor(message, ConsoleColor.Red);
+            //};
+
+            //while (isAuth == false)
+            //{
+            //    //Registration();
+            //    //Thread.Sleep(1000);
+            //    Auth();
+            //    Thread.Sleep(1000);
+            //    ConsoleManager.WriteLine("Зайти на игровой сервер ? (Y/N)");
+            //    string request = System.Console.ReadLine();
+            //    if (request == "Y")
+            //    {
+            //        gameClient.EnterLobby();
+            //        isAuth = true;
+            //    }
+            //    Thread.Sleep(1000);
+            //}
+            //System.Console.ReadKey();
+            //System.Console.ReadKey();
+            //System.Console.ReadKey();
         }
         private static void ProcessExit(object sender, EventArgs e)
         {

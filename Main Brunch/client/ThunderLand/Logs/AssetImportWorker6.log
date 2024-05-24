@@ -15,7 +15,7 @@ E:/Files/GitHub/ThunderLand/Main Brunch/client/ThunderLand
 -logFile
 Logs/AssetImportWorker6.log
 -srvPort
-63991
+49640
 -job-worker-count
 5
 -background-job-worker-count
@@ -58,12 +58,12 @@ E:/Files/GitHub/ThunderLand/Main Brunch/client/ThunderLand
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [11768] Host "[IP] 192.168.1.100 [Port] 0 [Flags] 2 [Guid] 76223361 [EditorId] 76223361 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-GAIGRAL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
-Player connection [11768] Host "[IP] 192.168.1.100 [Port] 0 [Flags] 2 [Guid] 76223361 [EditorId] 76223361 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-GAIGRAL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [10976] Host "[IP] 192.168.1.100 [Port] 0 [Flags] 2 [Guid] 145146448 [EditorId] 145146448 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-GAIGRAL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [10976] Host "[IP] 192.168.1.100 [Port] 0 [Flags] 2 [Guid] 145146448 [EditorId] 145146448 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-GAIGRAL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 [Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
 Library Redirect Path: Library/
-Refreshing native plugins compatible for Editor in 267.34 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 179.95 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.2.20f1 (0e25a174756c)
 [Subsystems] Discovering subsystems at path E:/Программы/Программирование/Unity/2023.2.20f1/Editor/Data/Resources/UnitySubsystems
@@ -79,43 +79,43 @@ Initialize mono
 Mono path[0] = 'E:/Программы/Программирование/Unity/2023.2.20f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Программы/Программирование/Unity/2023.2.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/Программы/Программирование/Unity/2023.2.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56920
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56148
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Программы/Программирование/Unity/2023.2.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.240939 seconds.
-- Loaded All Assemblies, in 10.902 seconds
+Registered in 0.003020 seconds.
+- Loaded All Assemblies, in  1.049 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.562 seconds
-Domain Reload Profiling: 11464ms
-	BeginReloadAssembly (8377ms)
+- Finished resetting the current domain, in  0.429 seconds
+Domain Reload Profiling: 1477ms
+	BeginReloadAssembly (170ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (590ms)
-	RebuildNativeTypeToScriptingClass (30ms)
-	initialDomainReloadingComplete (306ms)
-	LoadAllAssembliesAndSetupDomain (1599ms)
-		LoadAssemblies (8375ms)
+	RebuildCommonClasses (199ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (63ms)
+	LoadAllAssembliesAndSetupDomain (598ms)
+		LoadAssemblies (169ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1596ms)
-			TypeCache.Refresh (1593ms)
-				TypeCache.ScanAssembly (1166ms)
+		AnalyzeDomain (595ms)
+			TypeCache.Refresh (593ms)
+				TypeCache.ScanAssembly (577ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (563ms)
+	FinalizeReload (429ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (457ms)
+		SetupLoadedEditorAssemblies (346ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
-			SetLoadedEditorAssemblies (9ms)
-			BeforeProcessingInitializeOnLoad (9ms)
-			ProcessInitializeOnLoadAttributes (352ms)
-			ProcessInitializeOnLoadMethodAttributes (72ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (6ms)
+			ProcessInitializeOnLoadAttributes (251ms)
+			ProcessInitializeOnLoadMethodAttributes (68ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -127,339 +127,65 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in 15.269 seconds
+- Loaded All Assemblies, in  2.893 seconds
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-Refreshing native plugins compatible for Editor in 2.34 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 2.18 ms, found 5 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 [MODES] Loading mode Default (0) for mode-current-id-ThunderLand
-Refreshing native plugins compatible for Editor in 3.34 ms, found 5 plugins.
-TypeManager.Initialize took: 669ms
+Refreshing native plugins compatible for Editor in 2.26 ms, found 5 plugins.
+TypeManager.Initialize took: 622ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.025 seconds
-Domain Reload Profiling: 18291ms
-	BeginReloadAssembly (1868ms)
+- Finished resetting the current domain, in  2.427 seconds
+Domain Reload Profiling: 5318ms
+	BeginReloadAssembly (2008ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
+		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (49ms)
-	RebuildCommonClasses (52ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (51ms)
 	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (55ms)
-	LoadAllAssembliesAndSetupDomain (13273ms)
-		LoadAssemblies (12364ms)
+	initialDomainReloadingComplete (53ms)
+	LoadAllAssembliesAndSetupDomain (761ms)
+		LoadAssemblies (512ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1068ms)
-			TypeCache.Refresh (991ms)
-				TypeCache.ScanAssembly (914ms)
-			BuildScriptInfoCaches (65ms)
+		AnalyzeDomain (386ms)
+			TypeCache.Refresh (316ms)
+				TypeCache.ScanAssembly (247ms)
+			BuildScriptInfoCaches (60ms)
 			ResolveRequiredComponents (8ms)
-	FinalizeReload (3025ms)
+	FinalizeReload (2428ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2672ms)
+		SetupLoadedEditorAssemblies (2131ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (13ms)
-			BeforeProcessingInitializeOnLoad (280ms)
-			ProcessInitializeOnLoadAttributes (2146ms)
-			ProcessInitializeOnLoadMethodAttributes (223ms)
-			AfterProcessingInitializeOnLoad (5ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (271ms)
+			ProcessInitializeOnLoadAttributes (1648ms)
+			ProcessInitializeOnLoadMethodAttributes (193ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 2.37 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 2.23 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 176 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6777 unused Assets / (8.2 MB). Loaded Objects now: 7422.
-Memory consumption went from 249.6 MB to 241.4 MB.
-Total: 13.278200 ms (FindLiveObjects: 0.962500 ms CreateObjectMapping: 0.492000 ms MarkObjects: 8.536200 ms  DeleteObjects: 3.285900 ms)
-
-========================================================================
-Received Prepare
-Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.090 seconds
-Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-Refreshing native plugins compatible for Editor in 2.28 ms, found 5 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-ThunderLand
-TypeManager.Initialize took: 780ms
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.890 seconds
-Domain Reload Profiling: 3980ms
-	BeginReloadAssembly (333ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (16ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (101ms)
-	RebuildCommonClasses (51ms)
-	RebuildNativeTypeToScriptingClass (20ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (645ms)
-		LoadAssemblies (568ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (226ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (206ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (2890ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2524ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (11ms)
-			BeforeProcessingInitializeOnLoad (289ms)
-			ProcessInitializeOnLoadAttributes (1951ms)
-			ProcessInitializeOnLoadMethodAttributes (262ms)
-			AfterProcessingInitializeOnLoad (8ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (19ms)
-Refreshing native plugins compatible for Editor in 2.60 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 47 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6778 unused Assets / (9.0 MB). Loaded Objects now: 7423.
-Memory consumption went from 221.1 MB to 212.2 MB.
-Total: 19.391400 ms (FindLiveObjects: 1.191400 ms CreateObjectMapping: 1.380800 ms MarkObjects: 10.726300 ms  DeleteObjects: 6.091200 ms)
-
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 0 unused Assets / (3.8 MB). Loaded Objects now: 7423.
-Memory consumption went from 212.2 MB to 208.3 MB.
-Total: 13.015700 ms (FindLiveObjects: 0.657400 ms CreateObjectMapping: 0.583500 ms MarkObjects: 10.430400 ms  DeleteObjects: 1.343100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.148 seconds
-Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-Refreshing native plugins compatible for Editor in 2.31 ms, found 5 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.entities/Unity.Scenes.Editor/Internals/Properties/Unity.Properties.Internals.asmref has no target assembly definition
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-ThunderLand
-TypeManager.Initialize took: 802ms
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.849 seconds
-Domain Reload Profiling: 3999ms
-	BeginReloadAssembly (326ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (17ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (98ms)
-	RebuildCommonClasses (53ms)
-	RebuildNativeTypeToScriptingClass (22ms)
-	initialDomainReloadingComplete (50ms)
-	LoadAllAssembliesAndSetupDomain (699ms)
-		LoadAssemblies (594ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (241ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (220ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (2849ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2504ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (11ms)
-			BeforeProcessingInitializeOnLoad (279ms)
-			ProcessInitializeOnLoadAttributes (1954ms)
-			ProcessInitializeOnLoadMethodAttributes (250ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
-Refreshing native plugins compatible for Editor in 2.91 ms, found 5 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 47 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6777 unused Assets / (9.3 MB). Loaded Objects now: 7424.
-Memory consumption went from 223.0 MB to 213.8 MB.
-Total: 18.459900 ms (FindLiveObjects: 1.002100 ms CreateObjectMapping: 0.708800 ms MarkObjects: 10.660500 ms  DeleteObjects: 6.086900 ms)
-
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 0 unused Assets / (3.2 MB). Loaded Objects now: 7424.
-Memory consumption went from 213.5 MB to 210.2 MB.
-Total: 14.498600 ms (FindLiveObjects: 0.633400 ms CreateObjectMapping: 0.273800 ms MarkObjects: 12.352000 ms  DeleteObjects: 1.237700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 433307.705059 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Branch01a.fbx
-  artifactKey: Guid(aa0580ccc83dbb047bcb20ca8725a066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Branch01a.fbx using Guid(aa0580ccc83dbb047bcb20ca8725a066) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4d952e631317a669bdb3ed4e787c60c7') in 0.2697986 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
+Unloading 6780 unused Assets / (8.6 MB). Loaded Objects now: 7445.
+Memory consumption went from 257.3 MB to 248.7 MB.
+Total: 13.048300 ms (FindLiveObjects: 0.994400 ms CreateObjectMapping: 0.427800 ms MarkObjects: 8.205300 ms  DeleteObjects: 3.419200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Tree3a.fbx
-  artifactKey: Guid(aceb601719d5db1459f09b05f758ec0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Tree3a.fbx using Guid(aceb601719d5db1459f09b05f758ec0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0cb19f927c0e46f39ab721308f333595') in 0.0847881 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_rock_fence3.fbx
-  artifactKey: Guid(30d9114dd6bae8e41960c43acbddbe8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_rock_fence3.fbx using Guid(30d9114dd6bae8e41960c43acbddbe8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '958cf941f3f70dd57d363f553afaa18e') in 0.0939185 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Rock02d.fbx
-  artifactKey: Guid(691fcad1e24ddcc4f823016f31d82edc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Rock02d.fbx using Guid(691fcad1e24ddcc4f823016f31d82edc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '49da7df26506858dde926d18686a841d') in 0.0538259 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_wood_fence3b.fbx
-  artifactKey: Guid(2223d9f8e9703124db4cdffc45a17d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_wood_fence3b.fbx using Guid(2223d9f8e9703124db4cdffc45a17d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '075422cf22976bc704c57bcc50f4ebc8') in 0.0672962 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Rock01b.fbx
-  artifactKey: Guid(600bb904dd2219341b249ad10e1a9681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Rock01b.fbx using Guid(600bb904dd2219341b249ad10e1a9681) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bef87c423afd6096aff5f7bcb74efe96') in 0.0520144 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Root4a.fbx
-  artifactKey: Guid(0e749b71e39d0654a9a8e1b118717a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Root4a.fbx using Guid(0e749b71e39d0654a9a8e1b118717a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '913b912bc471248849d7ef3046f2e169') in 0.0538048 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_rock_fence4.fbx
-  artifactKey: Guid(1e0a1b3475576b04ba1f35e2696fb8a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_rock_fence4.fbx using Guid(1e0a1b3475576b04ba1f35e2696fb8a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '05464997eff5b75669a196501b055753') in 0.0540484 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Branch05a.fbx
-  artifactKey: Guid(498e469126a04f54ba8feef98bacb64a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Branch05a.fbx using Guid(498e469126a04f54ba8feef98bacb64a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fe25fa1553c69763094920322d9267ee') in 0.0492096 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Rock19.fbx
-  artifactKey: Guid(0e68c936b14b0ed478abb9cc325b01f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Rock19.fbx using Guid(0e68c936b14b0ed478abb9cc325b01f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd2f9377b9ff138c99246df53a8eb2c57') in 0.0569852 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Rock37.fbx
-  artifactKey: Guid(4d16e569dc5c73748959b570bf6f9e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Rock37.fbx using Guid(4d16e569dc5c73748959b570bf6f9e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b142aa6a6b8f51dffc5f90df0b177885') in 0.0484668 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Rock01a.fbx
-  artifactKey: Guid(37190a0ad6fadc34c869627d652046d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Rock01a.fbx using Guid(37190a0ad6fadc34c869627d652046d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6fc5d6f0abe55bff201c50e7071b5e95') in 0.0498774 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Rock02b.fbx
-  artifactKey: Guid(278672ec97fa733459902cbca5f51322) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Rock02b.fbx using Guid(278672ec97fa733459902cbca5f51322) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2ee1b30b4d59abc9ed8c74e284b103ab') in 0.0496236 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Tree9a.fbx
-  artifactKey: Guid(325f149dd82d7da4395c803622bee0b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Tree9a.fbx using Guid(325f149dd82d7da4395c803622bee0b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8e1ac7fe9644cea209b1123ff499bd14') in 0.0522685 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_wood_fence3c.fbx
-  artifactKey: Guid(6e5150349a0ca2a4fa463306d2abd3fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_wood_fence3c.fbx using Guid(6e5150349a0ca2a4fa463306d2abd3fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '17c9deb154f071b404db99a831a67d2d') in 0.0503002 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_rock_fence5.fbx
-  artifactKey: Guid(34d07a9bf2aa0dd4a971e02e7153a24e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_rock_fence5.fbx using Guid(34d07a9bf2aa0dd4a971e02e7153a24e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e4954a02b9b4f7d008c0b3c586093c9c') in 0.0475609 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Stone9.fbx
-  artifactKey: Guid(4c2f11536d79b9d4990d94c7b63a2581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Stone9.fbx using Guid(4c2f11536d79b9d4990d94c7b63a2581) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b478def99486acd8e2acfaa78ed379e5') in 0.0509249 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Stone8.fbx
-  artifactKey: Guid(f346bb1a101c1f64490f41d17077ffb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Stone8.fbx using Guid(f346bb1a101c1f64490f41d17077ffb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5dd09ff3b08486676908c784be12e77d') in 0.0503571 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Tree1b.fbx
-  artifactKey: Guid(85a89b77c470fe44ba0b1f51aefffc0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Tree1b.fbx using Guid(85a89b77c470fe44ba0b1f51aefffc0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '17e174778501908a38feb96fa499a39c') in 0.0511885 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Evriemont/Free Meadows/Meshes/EM_Tree3b.fbx
-  artifactKey: Guid(a8121e48189e84e418d4150e3f69c4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Evriemont/Free Meadows/Meshes/EM_Tree3b.fbx using Guid(a8121e48189e84e418d4150e3f69c4e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f9691d3e199c6e4df4a5fcb0e1ee0e4e') in 0.0484185 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
+  Time since last request: 366452.221381 seconds.
+  path: Assets/Skills/Food.asset
+  artifactKey: Guid(e30789d875f24724699c843cd898c596) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skills/Food.asset using Guid(e30789d875f24724699c843cd898c596) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1474dbcdaf19ad4e3dd167e2ea1a96ff') in 0.0345355 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server

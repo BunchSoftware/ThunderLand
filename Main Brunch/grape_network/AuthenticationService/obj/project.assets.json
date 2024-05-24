@@ -748,9 +748,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\AuthenticationService\\AuthenticationService.csproj",
-      "projectName": "AuthenticationService",
-      "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\AuthenticationService\\AuthenticationService.csproj",
+      "projectUniqueName": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\AuthenticationService\\AuthenticationServiceGrcp.csproj",
+      "projectName": "AuthenticationServiceGrcp",
+      "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\AuthenticationService\\AuthenticationServiceGrcp.csproj",
       "packagesPath": "C:\\Users\\Den4o\\.nuget\\packages\\",
       "outputPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\AuthenticationService\\obj\\",
       "projectStyle": "PackageReference",

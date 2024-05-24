@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrapeNetwork.Server.LoginServer.GrcpService";
+
+package AuthenticationServiceGrcp;
+
+service AuthenticationServiceGrcp {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+message HelloRequest {
+  string name = 1;
+}
+message HelloReply {
+  string message = 1;
+}

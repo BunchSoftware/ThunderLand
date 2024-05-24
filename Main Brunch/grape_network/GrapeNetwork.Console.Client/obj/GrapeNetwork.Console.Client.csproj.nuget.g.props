@@ -13,4 +13,7 @@
     <SourceRoot Include="C:\Users\Den4o\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgGrpc_Tools Condition=" '$(PkgGrpc_Tools)' == '' ">C:\Users\Den4o\.nuget\packages\grpc.tools\2.49.0</PkgGrpc_Tools>
+  </PropertyGroup>
 </Project>

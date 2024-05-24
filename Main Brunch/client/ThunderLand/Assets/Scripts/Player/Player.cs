@@ -53,12 +53,11 @@ public class Player : Essense
     private GameObject currentCursorPoint;
     private NavMeshAgent agent;
 
-    private Animator animator;
+    [SerializeField] private Animator animator;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
         animator.SetFloat("speed", 0);
 
         RecountHealth(maxHealth);

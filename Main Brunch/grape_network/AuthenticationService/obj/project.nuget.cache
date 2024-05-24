@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1XnL02DlQ3E2j/nf5pThRNo6QGveMeSyWCO/cI5mR8qVSTg9YDcFsI8EsoQdr3NrWwFPk5aeDn61naGskXJMJw==",
+  "dgSpecHash": "l7+UmPc/22zbOIYgys+Ocn1LFb6FjSwk89/7WHy/sxDwJxjumtcqbd3+gsSLSrlGfCR7LYwo7ZcFh++xruGSVQ==",
   "success": true,
-  "projectFilePath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\AuthenticationService\\AuthenticationService.csproj",
+  "projectFilePath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\AuthenticationService\\AuthenticationServiceGrcp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Den4o\\.nuget\\packages\\google.protobuf\\3.21.5\\google.protobuf.3.21.5.nupkg.sha512",
     "C:\\Users\\Den4o\\.nuget\\packages\\grpc.aspnetcore\\2.49.0\\grpc.aspnetcore.2.49.0.nupkg.sha512",

@@ -17,5 +17,5 @@ MonoBehaviour:
   levelSkill: 0
   timeRecoverySkill: 3
   timeCreationSkill: 1
-  IconSkill: {fileID: 21300000, guid: a798f0924eb1c664c94add5426a31782, type: 3}
+  IconSkill: {fileID: 21300000, guid: 5f428bd940bb7a94a81d9d39cc902086, type: 3}
   textComand: 

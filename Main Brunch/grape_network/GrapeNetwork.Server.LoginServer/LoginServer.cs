@@ -2,16 +2,14 @@
 using GrapeNetwork.Server.Core;
 using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 using GrapeNetwork.Protocol.LoginProtocol;
 using GrapeNetwork.Protocol.LoginProtocol.Command.Authentication;
 using GrapeNetwork.Protocol.LoginProtocol.Command.Lobby;
 using GrapeNetwork.Protocol.LoginProtocol.Command.Registration;
-using GrapeNetwork.Server.LoginServer.Service;
 using System.Net;
 using GrapeNetwork.Server.Core.Command;
 using GrapeNetwork.Server.Core.CommonService;
-using GrapeNetwork.Core.Server;
+using GrapeNetwork.Server.LoginServer.Service;
 
 namespace GrapeNetwork.Server.LoginServer
 {
@@ -80,16 +78,12 @@ namespace GrapeNetwork.Server.LoginServer
                 new ResponseRejectedRegistrationUser(1,6, "RegistrationService"),
                 new ResponseRejectedUserConnectionToGameServer(1,8, "LobbyService"),
                 new ResponseConnectingUserToGameServer(1,9, "LobbyService"),
-                new RequestConnectToServer(4,1,"ServerCommunicationService"),
-                new ResponseConnectToServer(4,2, "ServerCommunicationService"),
-                new ResponseRejectedConnectToServer(4,3,"ServerCommunicationService"),
             };
             services = new List<BaseService> 
-            { 
-                new AuthenticationService("AuthenticationService"),
-                new RegistrationService("RegistrationService"),
-                new LobbyService("LobbyService"),
-                new ServerCommunicationService("ServerCommunicationService")
+            {
+                new Service.AuthenticationService("AuthenticationService"),
+                new Service.RegistrationService("RegistrationService"),
+                new Service.LobbyService("LobbyService"),
             };
             foreach (BaseService baseService in services)
             {

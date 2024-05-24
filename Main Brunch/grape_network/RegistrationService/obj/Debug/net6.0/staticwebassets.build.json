@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "QmuiJGk5+beCEusaDUQn11zzSFwHTW6O6o7Eep+XOMA=",
+  "Source": "RegistrationService",
+  "BasePath": "_content/RegistrationService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

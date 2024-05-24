@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GrapeNetwork.Server.LoginServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a831845b600504289f5d8cefe8c9e6efc14c4343")]
 [assembly: System.Reflection.AssemblyProductAttribute("GrapeNetwork.Server.LoginServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GrapeNetwork.Server.LoginServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

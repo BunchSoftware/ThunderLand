@@ -1,6 +1,8 @@
 ﻿using GrapeNetwork.Packages;
 using GrapeNetwork.Protocol.LoginProtocol.Command.Authentication;
 using GrapeNetwork.Server.Core;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +17,11 @@ namespace GrapeNetwork.Server.LoginServer.Service
         public AuthenticationService(string nameService) : base(nameService)
         {
 
+        }
+
+        public override void Init(BaseServer server)
+        {
+            base.Init(server);
         }
 
         protected override void DistrubuteCommandProcessing(CommandProcessing commandProcessing, ClientState clientState)

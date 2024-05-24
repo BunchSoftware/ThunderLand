@@ -1,0 +1,12 @@
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer.Service\bin\Debug\net6.0\GrapeNetwork.Server.GameServer.Service.deps.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer.Service\bin\Debug\net6.0\GrapeNetwork.Server.GameServer.Service.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer.Service\bin\Debug\net6.0\GrapeNetwork.Server.GameServer.Service.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.Service.AssemblyInfoInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.Service.AssemblyInfo.cs
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.Service.csproj.CoreCompileInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.Service.sourcelink.json
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.Service.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer.Service\obj\Debug\net6.0\refint\GrapeNetwork.Server.GameServer.Service.dll
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.GameServer.Service.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.GameServer.Service\obj\Debug\net6.0\ref\GrapeNetwork.Server.GameServer.Service.dll

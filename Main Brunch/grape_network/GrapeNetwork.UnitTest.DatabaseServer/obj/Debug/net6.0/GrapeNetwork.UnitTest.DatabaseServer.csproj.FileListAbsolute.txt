@@ -1,10 +1,4 @@
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\bin\Debug\net6.0\CoverletSourceRootsMapping_GrapeNetwork.UnitTest.DatabaseServer
-E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.csproj.AssemblyReference.cache
-E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.GeneratedMSBuildEditorConfig.editorconfig
-E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.AssemblyInfoInputs.cache
-E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.AssemblyInfo.cs
-E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.csproj.CoreCompileInputs.cache
-E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.sourcelink.json
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\bin\Debug\net6.0\testhost.dll
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\bin\Debug\net6.0\testhost.exe
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\bin\Debug\net6.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
@@ -101,6 +95,12 @@ E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.Data
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\bin\Debug\net6.0\GrapeNetwork.Core.pdb
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\bin\Debug\net6.0\GrapeNetwork.AccessLevel.Common.pdb
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\bin\Debug\net6.0\GrapeNetwork.Common.Checksum.pdb
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.csproj.AssemblyReference.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.GeneratedMSBuildEditorConfig.editorconfig
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.AssemblyInfoInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.AssemblyInfo.cs
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.csproj.CoreCompileInputs.cache
+E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.sourcelink.json
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.csproj.CopyComplete
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\GrapeNetwork.UnitTest.DatabaseServer.dll
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.DatabaseServer\obj\Debug\net6.0\refint\GrapeNetwork.UnitTest.DatabaseServer.dll
