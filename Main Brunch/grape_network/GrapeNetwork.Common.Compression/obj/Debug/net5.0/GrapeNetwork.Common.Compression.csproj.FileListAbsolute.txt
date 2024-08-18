@@ -1,0 +1,10 @@
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net5.0\GrapeNetwork.Common.Compression.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net5.0\GrapeNetwork.Common.Compression.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Compression\obj\Debug\net5.0\GrapeNetwork.Common.Compression.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Compression\obj\Debug\net5.0\GrapeNetwork.Common.Compression.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Compression\obj\Debug\net5.0\GrapeNetwork.Common.Compression.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Compression\obj\Debug\net5.0\GrapeNetwork.Common.Compression.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Compression\obj\Debug\net5.0\GrapeNetwork.Common.Compression.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Compression\obj\Debug\net5.0\GrapeNetwork.Common.Compression.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Compression\obj\Debug\net5.0\refint\GrapeNetwork.Common.Compression.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Compression\obj\Debug\net5.0\ref\GrapeNetwork.Common.Compression.dll

@@ -1,0 +1,12 @@
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net5.0\GrapeNetwork.Protocol.LoginProtocol.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net5.0\GrapeNetwork.Protocol.LoginProtocol.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.LoginProtocol\obj\Debug\net5.0\GrapeNetwork.Protocol.LoginProtocol.csproj.AssemblyReference.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.LoginProtocol\obj\Debug\net5.0\GrapeNetwork.Protocol.LoginProtocol.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.LoginProtocol\obj\Debug\net5.0\GrapeNetwork.Protocol.LoginProtocol.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.LoginProtocol\obj\Debug\net5.0\GrapeNetwork.Protocol.LoginProtocol.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.LoginProtocol\obj\Debug\net5.0\GrapeNetwork.Protocol.LoginProtocol.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.LoginProtocol\obj\Debug\net5.0\GrapeNetwork.Protocol.LoginProtocol.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.LoginProtocol\obj\Debug\net5.0\GrapeNet.3B30288F.Up2Date
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.LoginProtocol\obj\Debug\net5.0\GrapeNetwork.Protocol.LoginProtocol.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.LoginProtocol\obj\Debug\net5.0\refint\GrapeNetwork.Protocol.LoginProtocol.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.LoginProtocol\obj\Debug\net5.0\ref\GrapeNetwork.Protocol.LoginProtocol.dll

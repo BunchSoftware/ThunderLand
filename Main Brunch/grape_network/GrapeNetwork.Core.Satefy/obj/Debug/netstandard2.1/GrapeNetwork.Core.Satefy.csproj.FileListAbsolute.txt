@@ -1,0 +1,8 @@
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.Core.Satefy.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.Core.Satefy.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Core.Satefy\obj\Debug\netstandard2.1\GrapeNetwork.Core.Satefy.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Core.Satefy\obj\Debug\netstandard2.1\GrapeNetwork.Core.Satefy.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Core.Satefy\obj\Debug\netstandard2.1\GrapeNetwork.Core.Satefy.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Core.Satefy\obj\Debug\netstandard2.1\GrapeNetwork.Core.Satefy.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Core.Satefy\obj\Debug\netstandard2.1\GrapeNetwork.Core.Satefy.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Core.Satefy\obj\Debug\netstandard2.1\GrapeNetwork.Core.Satefy.dll

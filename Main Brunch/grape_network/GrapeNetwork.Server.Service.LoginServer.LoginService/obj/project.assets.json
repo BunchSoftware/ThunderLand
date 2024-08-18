@@ -1027,11 +1027,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\GrapeNetwork.Server.LoginServer.Service.csproj",
+      "projectUniqueName": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\GrapeNetwork.Server.LoginServer.Service.csproj",
       "projectName": "GrapeNetwork.Server.LoginServer.Service",
-      "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\GrapeNetwork.Server.LoginServer.Service.csproj",
+      "projectPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\GrapeNetwork.Server.LoginServer.Service.csproj",
       "packagesPath": "C:\\Users\\Den4o\\.nuget\\packages\\",
-      "outputPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\obj\\",
+      "outputPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Service.LoginServer.LoginService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1053,11 +1053,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Protocol.LoginProtocol\\GrapeNetwork.Protocol.LoginProtocol.csproj": {
-              "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Protocol.LoginProtocol\\GrapeNetwork.Protocol.LoginProtocol.csproj"
+            "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Protocol.LoginProtocol\\GrapeNetwork.Protocol.LoginProtocol.csproj": {
+              "projectPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Protocol.LoginProtocol\\GrapeNetwork.Protocol.LoginProtocol.csproj"
             },
-            "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Core\\GrapeNetwork.Server.Core.csproj": {
-              "projectPath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Core\\GrapeNetwork.Server.Core.csproj"
+            "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Core\\GrapeNetwork.Server.Core.csproj": {
+              "projectPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Core\\GrapeNetwork.Server.Core.csproj"
             }
           }
         }
@@ -1066,6 +1066,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1107,7 +1112,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

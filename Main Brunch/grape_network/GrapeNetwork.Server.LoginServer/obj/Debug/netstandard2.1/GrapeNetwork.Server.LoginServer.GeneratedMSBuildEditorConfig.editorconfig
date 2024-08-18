@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = GrapeNetwork.Server.LoginServer
+build_property.ProjectDir = F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

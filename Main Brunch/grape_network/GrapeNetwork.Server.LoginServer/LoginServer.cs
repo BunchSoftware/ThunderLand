@@ -7,8 +7,6 @@ using GrapeNetwork.Protocol.LoginProtocol.Command.Authentication;
 using GrapeNetwork.Protocol.LoginProtocol.Command.Lobby;
 using GrapeNetwork.Protocol.LoginProtocol.Command.Registration;
 using System.Net;
-using GrapeNetwork.Server.Core.Command;
-using GrapeNetwork.Server.Core.CommonService;
 using GrapeNetwork.Server.LoginServer.Service;
 
 namespace GrapeNetwork.Server.LoginServer
@@ -39,7 +37,6 @@ namespace GrapeNetwork.Server.LoginServer
             transportServer.OnConnectedClient += (connection) =>
             {
                 clientStates.Add(new ClientState(connection));
-
                 Package package = new Package();
                 package.AuthAndGetRSAKey = true;
                 package.Body = Encoding.UTF8.GetBytes("RSA Key");
@@ -81,9 +78,9 @@ namespace GrapeNetwork.Server.LoginServer
             };
             services = new List<BaseService> 
             {
-                new Service.AuthenticationService("AuthenticationService"),
-                new Service.RegistrationService("RegistrationService"),
-                new Service.LobbyService("LobbyService"),
+                new AuthenticationService("AuthenticationService"),
+                new RegistrationService("RegistrationService"),
+                new LobbyService("LobbyService"),
             };
             foreach (BaseService baseService in services)
             {
@@ -92,7 +89,7 @@ namespace GrapeNetwork.Server.LoginServer
             loginProtocol = new LoginProtocol(commandRegistry);
             NameServer = "LoginServer";
             PortServer = 2200;
-            IPAdressServer = IPAddress.Parse("192.168.1.100");
+            IPAdressServer = IPAddress.Parse("192.168.56.1");
 
             return "config";
         }

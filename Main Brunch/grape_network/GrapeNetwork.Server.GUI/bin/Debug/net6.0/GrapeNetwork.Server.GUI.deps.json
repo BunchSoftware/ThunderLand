@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GrapeNetwork.Server.GUI/1.0.0": {
+        "runtime": {
+          "GrapeNetwork.Server.GUI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GrapeNetwork.Server.GUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

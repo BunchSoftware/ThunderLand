@@ -1,0 +1,101 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "GrapeNetwork.Console.DatabaseServer/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Console.Common": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Console.DatabaseServer.dll": {}
+        }
+      },
+      "GrapeNetwork.AccessLevel.Common/1.0.0": {
+        "runtime": {
+          "GrapeNetwork.AccessLevel.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Common.Checksum/1.0.0": {
+        "runtime": {
+          "GrapeNetwork.Common.Checksum.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Console.Common/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Core": "1.0.0",
+          "GrapeNetwork.Logging": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Console.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Core/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Common.Checksum": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Logging/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.AccessLevel.Common": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Logging.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GrapeNetwork.Console.DatabaseServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.AccessLevel.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Common.Checksum/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Console.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Logging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

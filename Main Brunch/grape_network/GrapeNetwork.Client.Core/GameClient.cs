@@ -1,5 +1,4 @@
-﻿using GrapeNetwork.AccessLevel.Common;
-using GrapeNetwork.Core.Client;
+﻿using GrapeNetwork.Core.Client;
 using GrapeNetwork.Packages;
 using GrapeNetwork.Protocol.LoginProtocol.Command.Authentication;
 using GrapeNetwork.Protocol.LoginProtocol.Command.Lobby;
@@ -8,10 +7,7 @@ using GrapeNetwork.Server.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GrapeNetwork.Client.Core
 {
@@ -19,13 +15,21 @@ namespace GrapeNetwork.Client.Core
     {
         protected List<CommandProcessing> commandRegistry;
         protected TransportClient transportClient = new TransportClient();
+        protected string IPAdressServer;
+        protected int PortServer;
         public event Action<Exception> OnExceptionInfo;
         public event Action<string> OnErrorInfo;
         public event Action<string> OnDebugInfo;
 
+        public GameClient(int PortServer, string IPAdressServer) 
+        { 
+            this.PortServer = PortServer;
+            this.IPAdressServer = IPAdressServer;
+        }
+
         public void ConnectToServer()
         {
-            transportClient.ConnectToServer(2200, IPAddress.Parse("192.168.1.100"));
+            transportClient.ConnectToServer(PortServer, IPAddress.Parse(IPAdressServer));
             transportClient.OnDebugInfo += DebugInfo;
             transportClient.OnExceptionInfo += ExceptionInfo;
 

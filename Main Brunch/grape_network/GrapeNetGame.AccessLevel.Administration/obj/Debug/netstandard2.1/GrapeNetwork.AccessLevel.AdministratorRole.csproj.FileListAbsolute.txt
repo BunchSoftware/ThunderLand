@@ -1,0 +1,10 @@
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.AccessLevel.AdministratorRole.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.AccessLevel.AdministratorRole.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\netstandard2.1\GrapeNetwork.AccessLevel.AdministratorRole.csproj.AssemblyReference.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\netstandard2.1\GrapeNetwork.AccessLevel.AdministratorRole.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\netstandard2.1\GrapeNetwork.AccessLevel.AdministratorRole.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\netstandard2.1\GrapeNetwork.AccessLevel.AdministratorRole.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\netstandard2.1\GrapeNetwork.AccessLevel.AdministratorRole.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\netstandard2.1\GrapeNetwork.AccessLevel.AdministratorRole.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\netstandard2.1\GrapeNet.8F43EA93.Up2Date
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetGame.AccessLevel.Administration\obj\Debug\netstandard2.1\GrapeNetwork.AccessLevel.AdministratorRole.dll

@@ -1,6 +1,3 @@
-E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Server.BuilderServer.deps.json
-E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Server.BuilderServer.dll
-E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Server.BuilderServer.pdb
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\GrapeNetwork.Server.BuilderServer.GeneratedMSBuildEditorConfig.editorconfig
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\GrapeNetwork.Server.BuilderServer.AssemblyInfoInputs.cache
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\GrapeNetwork.Server.BuilderServer.AssemblyInfo.cs
@@ -10,3 +7,18 @@ E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Builde
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\refint\GrapeNetwork.Server.BuilderServer.dll
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\GrapeNetwork.Server.BuilderServer.pdb
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\ref\GrapeNetwork.Server.BuilderServer.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\Library\Debug\net6.0\GrapeNetwork.Server.BuilderServer.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\Library\Debug\net6.0\GrapeNetwork.Server.BuilderServer.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\Library\Debug\net6.0\GrapeNetwork.Server.BuilderServer.pdb
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Server.BuilderServer.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Server.BuilderServer.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net6.0\GrapeNetwork.Server.BuilderServer.pdb
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\GrapeNetwork.Server.BuilderServer.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\GrapeNetwork.Server.BuilderServer.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\GrapeNetwork.Server.BuilderServer.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\GrapeNetwork.Server.BuilderServer.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\GrapeNetwork.Server.BuilderServer.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\GrapeNetwork.Server.BuilderServer.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\refint\GrapeNetwork.Server.BuilderServer.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\GrapeNetwork.Server.BuilderServer.pdb
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.BuilderServer\obj\Debug\net6.0\ref\GrapeNetwork.Server.BuilderServer.dll

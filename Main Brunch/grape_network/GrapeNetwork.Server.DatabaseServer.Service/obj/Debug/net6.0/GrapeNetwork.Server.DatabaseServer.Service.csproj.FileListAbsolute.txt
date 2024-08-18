@@ -10,3 +10,15 @@ E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Databa
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net6.0\refint\GrapeNetwork.Server.DatabaseServer.Service.dll
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.DatabaseServer.Service.pdb
 E:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net6.0\ref\GrapeNetwork.Server.DatabaseServer.Service.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\net6.0\GrapeNetwork.Server.DatabaseServer.Service.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\net6.0\GrapeNetwork.Server.DatabaseServer.Service.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\net6.0\GrapeNetwork.Server.DatabaseServer.Service.pdb
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.DatabaseServer.Service.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.DatabaseServer.Service.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.DatabaseServer.Service.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.DatabaseServer.Service.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.DatabaseServer.Service.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.DatabaseServer.Service.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net6.0\refint\GrapeNetwork.Server.DatabaseServer.Service.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net6.0\GrapeNetwork.Server.DatabaseServer.Service.pdb
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net6.0\ref\GrapeNetwork.Server.DatabaseServer.Service.dll

@@ -1,0 +1,12 @@
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net5.0\GrapeNetwork.Server.Core.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net5.0\GrapeNetwork.Server.Core.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\obj\Debug\net5.0\GrapeNetwork.Server.Core.csproj.AssemblyReference.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\obj\Debug\net5.0\GrapeNetwork.Server.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\obj\Debug\net5.0\GrapeNetwork.Server.Core.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\obj\Debug\net5.0\GrapeNetwork.Server.Core.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\obj\Debug\net5.0\GrapeNetwork.Server.Core.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\obj\Debug\net5.0\GrapeNetwork.Server.Core.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\obj\Debug\net5.0\GrapeNet.27F3C3AC.Up2Date
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\obj\Debug\net5.0\GrapeNetwork.Server.Core.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\obj\Debug\net5.0\refint\GrapeNetwork.Server.Core.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Core\obj\Debug\net5.0\ref\GrapeNetwork.Server.Core.dll

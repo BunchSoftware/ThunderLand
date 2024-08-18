@@ -1,0 +1,10 @@
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net5.0\GrapeNetwork.Client.Exception.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net5.0\GrapeNetwork.Client.Exception.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Exception\obj\Debug\net5.0\GrapeNetwork.Client.Exception.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Exception\obj\Debug\net5.0\GrapeNetwork.Client.Exception.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Exception\obj\Debug\net5.0\GrapeNetwork.Client.Exception.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Exception\obj\Debug\net5.0\GrapeNetwork.Client.Exception.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Exception\obj\Debug\net5.0\GrapeNetwork.Client.Exception.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Exception\obj\Debug\net5.0\GrapeNetwork.Client.Exception.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Exception\obj\Debug\net5.0\refint\GrapeNetwork.Client.Exception.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Client.Exception\obj\Debug\net5.0\ref\GrapeNetwork.Client.Exception.dll

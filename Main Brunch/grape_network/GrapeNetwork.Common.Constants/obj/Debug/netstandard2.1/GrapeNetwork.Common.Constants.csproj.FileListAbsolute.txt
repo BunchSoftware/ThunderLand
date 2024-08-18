@@ -1,0 +1,8 @@
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.Common.Constants.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.Common.Constants.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Constants\obj\Debug\netstandard2.1\GrapeNetwork.Common.Constants.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Constants\obj\Debug\netstandard2.1\GrapeNetwork.Common.Constants.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Constants\obj\Debug\netstandard2.1\GrapeNetwork.Common.Constants.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Constants\obj\Debug\netstandard2.1\GrapeNetwork.Common.Constants.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Constants\obj\Debug\netstandard2.1\GrapeNetwork.Common.Constants.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Common.Constants\obj\Debug\netstandard2.1\GrapeNetwork.Common.Constants.dll

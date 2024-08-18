@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1ar6vJISVdL39DAkx6lqxWBb+vSHVRGvV11DCCGkdAC1+YOeUFZgpNfIscI4/uh52wEzT5bvuMW7UXzBJVLpFA==",
+  "dgSpecHash": "zjn9Vw52frI=",
   "success": true,
-  "projectFilePath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Protocol.GameProtocol\\GrapeNetwork.Protocol.GameProtocol.csproj",
+  "projectFilePath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Protocol.GameProtocol\\GrapeNetwork.Protocol.GameProtocol.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Den4o\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Den4o\\.nuget\\packages\\netstandard.library.ref\\2.1.0\\netstandard.library.ref.2.1.0.nupkg.sha512"
   ],
   "logs": []
 }

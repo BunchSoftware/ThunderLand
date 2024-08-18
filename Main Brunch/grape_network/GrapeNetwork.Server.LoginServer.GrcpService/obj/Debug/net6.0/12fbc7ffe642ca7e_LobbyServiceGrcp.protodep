@@ -1,2 +1,0 @@
-obj\Debug\net6.0\Protos/LobbyServiceGrcp.cs \
-obj\Debug\net6.0\Protos/LobbyServiceGrcpGrpc.cs: Protos/LobbyServiceGrcp.proto

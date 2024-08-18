@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yRvWOj8t7VnOzr05R5fle/C/xRrjauAJCKUa9MlOFN928o97d/+JEhZZ5TeJJGnhJW33+ikuMVurPw1YbXhERA==",
+  "dgSpecHash": "CaLEd3Lm3Fs=",
   "success": true,
-  "projectFilePath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Configuration\\GrapeNetwork.Server.Configuration.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Server.Configuration\\GrapeNetwork.Server.Configuration.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Den4o\\.nuget\\packages\\netstandard.library.ref\\2.1.0\\netstandard.library.ref.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

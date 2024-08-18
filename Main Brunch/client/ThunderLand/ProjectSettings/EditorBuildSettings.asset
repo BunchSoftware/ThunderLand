@@ -4,15 +4,6 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/MeetingMenu.unity
-    guid: 327d413d05e91ed41bbda309b765cb34
-  - enabled: 1
-    path: Assets/Scenes/Lobby.unity
-    guid: 83c0326bd9ca26b43864ac8de999fca0
-  - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  m_Scenes: []
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

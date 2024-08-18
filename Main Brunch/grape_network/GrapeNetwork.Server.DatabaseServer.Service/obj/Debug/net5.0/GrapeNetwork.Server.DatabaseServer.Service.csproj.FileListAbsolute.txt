@@ -1,0 +1,12 @@
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net5.0\GrapeNetwork.Server.DatabaseServer.Service.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net5.0\GrapeNetwork.Server.DatabaseServer.Service.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net5.0\GrapeNetwork.Server.DatabaseServer.Service.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net5.0\GrapeNetwork.Server.DatabaseServer.Service.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net5.0\GrapeNetwork.Server.DatabaseServer.Service.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\net5.0\GrapeNetwork.Server.DatabaseServer.Service.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\net5.0\GrapeNetwork.Server.DatabaseServer.Service.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\net5.0\GrapeNetwork.Server.DatabaseServer.Service.pdb
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net5.0\GrapeNetwork.Server.DatabaseServer.Service.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net5.0\refint\GrapeNetwork.Server.DatabaseServer.Service.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net5.0\GrapeNetwork.Server.DatabaseServer.Service.pdb
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\net5.0\ref\GrapeNetwork.Server.DatabaseServer.Service.dll

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "eHTK+66ZsxeM4i8MbxtYxCCSLIIdiTZfp5hnQ+euWCFiv2DkHzV66c3BDBBADA5AWB92+CSrobADJrNo8T+ytQ==",
+  "dgSpecHash": "aShJsv1/v9w=",
   "success": true,
-  "projectFilePath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Common.Compression\\GrapeNetwork.Common.Compression.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Common.Compression\\GrapeNetwork.Common.Compression.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Den4o\\.nuget\\packages\\netstandard.library.ref\\2.1.0\\netstandard.library.ref.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

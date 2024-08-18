@@ -1,2 +1,0 @@
-obj\Debug\net6.0\Protos/RegistrationServiceGrcp.cs \
-obj\Debug\net6.0\Protos/RegistrationServiceGrcpGrpc.cs: Protos/RegistrationServiceGrcp.proto

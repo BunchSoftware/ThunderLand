@@ -1,0 +1,7 @@
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.Client\bin\Debug\net5.0\CoverletSourceRootsMapping_GrapeNetwork.UnitTest.Client
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.Client\obj\Debug\net5.0\GrapeNetwork.UnitTest.Client.csproj.AssemblyReference.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.Client\obj\Debug\net5.0\GrapeNetwork.UnitTest.Client.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.Client\obj\Debug\net5.0\GrapeNetwork.UnitTest.Client.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.Client\obj\Debug\net5.0\GrapeNetwork.UnitTest.Client.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.Client\obj\Debug\net5.0\GrapeNetwork.UnitTest.Client.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.UnitTest.Client\obj\Debug\net5.0\GrapeNetwork.UnitTest.Client.sourcelink.json

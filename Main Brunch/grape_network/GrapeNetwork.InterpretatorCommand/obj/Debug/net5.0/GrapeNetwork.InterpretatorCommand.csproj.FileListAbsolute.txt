@@ -1,0 +1,12 @@
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net5.0\GrapeNetwork.InterpretatorCommand.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net5.0\GrapeNetwork.InterpretatorCommand.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\net5.0\GrapeNetwork.InterpretatorCommand.pdb
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.InterpretatorCommand\obj\Debug\net5.0\GrapeNetwork.InterpretatorCommand.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.InterpretatorCommand\obj\Debug\net5.0\GrapeNetwork.InterpretatorCommand.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.InterpretatorCommand\obj\Debug\net5.0\GrapeNetwork.InterpretatorCommand.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.InterpretatorCommand\obj\Debug\net5.0\GrapeNetwork.InterpretatorCommand.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.InterpretatorCommand\obj\Debug\net5.0\GrapeNetwork.InterpretatorCommand.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.InterpretatorCommand\obj\Debug\net5.0\GrapeNetwork.InterpretatorCommand.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.InterpretatorCommand\obj\Debug\net5.0\refint\GrapeNetwork.InterpretatorCommand.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.InterpretatorCommand\obj\Debug\net5.0\GrapeNetwork.InterpretatorCommand.pdb
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.InterpretatorCommand\obj\Debug\net5.0\ref\GrapeNetwork.InterpretatorCommand.dll

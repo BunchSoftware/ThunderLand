@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pj5GDRp81Tzn7GLzlf5lu5XolYzbbl9s7oq0/F10H26spl4Nx2wtEEYMmx4SV7UBP84JeCeDMQTnrXx5fuItjw==",
+  "dgSpecHash": "SRZC80bzl5k=",
   "success": true,
-  "projectFilePath": "E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Core.Satefy\\GrapeNetwork.Core.Satefy.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Core.Satefy\\GrapeNetwork.Core.Satefy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Den4o\\.nuget\\packages\\netstandard.library.ref\\2.1.0\\netstandard.library.ref.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

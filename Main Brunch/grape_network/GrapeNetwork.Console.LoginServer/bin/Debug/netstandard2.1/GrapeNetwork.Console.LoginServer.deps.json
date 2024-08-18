@@ -1,0 +1,191 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "GrapeNetwork.Console.LoginServer/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Console.Common": "1.0.0",
+          "GrapeNetwork.Server.LoginServer": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Console.LoginServer.dll": {}
+        }
+      },
+      "GrapeNetwork.AccessLevel.Common/1.0.0": {
+        "runtime": {
+          "GrapeNetwork.AccessLevel.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Client.Core/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.AccessLevel.Common": "1.0.0",
+          "GrapeNetwork.Protocol.LoginProtocol": "1.0.0",
+          "GrapeNetwork.Server.Core": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Client.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Common.Checksum/1.0.0": {
+        "runtime": {
+          "GrapeNetwork.Common.Checksum.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Console.Common/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Core": "1.0.0",
+          "GrapeNetwork.Logging": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Console.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Core/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Common.Checksum": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Logging/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.AccessLevel.Common": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Logging.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Protocol.LoginProtocol/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Core": "1.0.0",
+          "GrapeNetwork.Server.Core": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Protocol.LoginProtocol.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Server.Core/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Core": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Server.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Server.LoginServer/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Client.Core": "1.0.0",
+          "GrapeNetwork.Core": "1.0.0",
+          "GrapeNetwork.Protocol.LoginProtocol": "1.0.0",
+          "GrapeNetwork.Server.Core": "1.0.0",
+          "GrapeNetwork.Server.LoginServer.Service": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Server.LoginServer.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Server.LoginServer.Service/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Protocol.LoginProtocol": "1.0.0",
+          "GrapeNetwork.Server.Core": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Server.LoginServer.Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GrapeNetwork.Console.LoginServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.AccessLevel.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Client.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Common.Checksum/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Console.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Logging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Protocol.LoginProtocol/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Server.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Server.LoginServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Server.LoginServer.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
