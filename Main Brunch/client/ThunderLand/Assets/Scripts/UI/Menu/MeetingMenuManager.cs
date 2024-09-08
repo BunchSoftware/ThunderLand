@@ -27,8 +27,12 @@ public class MeetingMenuManager : MonoBehaviour
     [Header("Exit")]
     [SerializeField] private Button exitButton;
 
+    private ClientHandler clientHandler;
+
     private void Start()
     {
+        clientHandler = FindObjectOfType<ClientHandler>();
+
         loginButton?.onClick.AddListener(() => { Login();});
         createAccountButton?.onClick.AddListener(() =>{Application.OpenURL("https://github.com/BunchSoftware/ThunderLand");});
         myAccountButton?.onClick.AddListener(() =>{Application.OpenURL("https://github.com/BunchSoftware/ThunderLand");});
@@ -44,7 +48,10 @@ public class MeetingMenuManager : MonoBehaviour
     private void Login()
     {
         if (loginText.text == "Den4o" && passwordText.text == "win")
-            SceneManager.LoadScene(1);
+        {
+            SceneManager.LoadScene(2);
+            clientHandler.Authetication(loginText.text, passwordText.text);
+        }
         else
             errorPanel?.SetActive(true);
     }

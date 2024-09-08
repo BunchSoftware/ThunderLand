@@ -1,3 +1,9 @@
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.csproj.AssemblyReference.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.sourcelink.json
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.deps.json
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.pdb
@@ -5,12 +11,6 @@ F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginS
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Core.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Protocol.LoginProtocol.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Server.Core.dll
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.csproj.AssemblyReference.cache
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.GeneratedMSBuildEditorConfig.editorconfig
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.AssemblyInfoInputs.cache
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.AssemblyInfo.cs
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.csproj.CoreCompileInputs.cache
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.sourcelink.json
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNet.D8731EA7.Up2Date
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.LoginServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.LoginServer.Service.pdb

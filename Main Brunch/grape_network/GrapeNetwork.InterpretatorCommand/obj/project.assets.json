@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.InterpretatorCommand\\GrapeNetwork.InterpretatorCommand.csproj",
-      "projectName": "GrapeNetwork.InterpretatorCommand",
-      "projectPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.InterpretatorCommand\\GrapeNetwork.InterpretatorCommand.csproj",
+      "projectUniqueName": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.InterpretatorCommand\\GrapeNetwork.InterpretatorConfiguration.csproj",
+      "projectName": "GrapeNetwork.InterpretatorConfiguration",
+      "projectPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.InterpretatorCommand\\GrapeNetwork.InterpretatorConfiguration.csproj",
       "packagesPath": "C:\\Users\\Den4o\\.nuget\\packages\\",
       "outputPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.InterpretatorCommand\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,0 +1,17 @@
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Server.Database.Service.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Server.Database.Service.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Server.Database.Service.pdb
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Common.Checksum.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Core.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Server.Core.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\bin\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.pdb
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.Database.Service.csproj.AssemblyReference.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.Database.Service.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.Database.Service.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.Database.Service.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.Database.Service.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.Database.Service.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\netstandard2.1\GrapeNet.297BC74F.Up2Date
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.Database.Service.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.DatabaseServer.Service\obj\Debug\netstandard2.1\GrapeNetwork.Server.Database.Service.pdb

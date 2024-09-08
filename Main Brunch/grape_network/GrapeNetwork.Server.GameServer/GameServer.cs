@@ -11,6 +11,7 @@ using GrapeNetwork.Core.Client;
 using GrapeNetwork.Server.Core.Command;
 using GrapeNetwork.Server.Core.CommonService;
 using System.IO;
+using GrapeNetwork.Server.Core.Protocol;
 
 namespace GrapeNetwork.Server.GameServer
 {
@@ -25,7 +26,7 @@ namespace GrapeNetwork.Server.GameServer
             transportServer.OnRecieveDataClient += (connection, package) =>
             {
                 gameProtocol.CreatePackage(package);
-                CommandProcessing commandProcessing = gameProtocol.GetLastCommandProcessing();
+                ApplicationCommand commandProcessing = gameProtocol.GetLastCommandProcessing();
                 commandProcessing.Connection = connection;
                 if (commandProcessing != null)
                 {
@@ -33,7 +34,13 @@ namespace GrapeNetwork.Server.GameServer
                     {
                         if (services[i].nameService == commandProcessing.NameService)
                         {
-                            services[i].AddCommandProcessing(commandProcessing, new ClientState(connection));
+                            ClientState clientState = new ClientState(connection);
+                            for (int j = 0; j < clientStates.Count; j++)
+                            {
+                                if (clientStates[j].connection == connection)
+                                    clientState = clientStates[j];
+                            }
+                            services[i].AddCommandProcessing(commandProcessing, clientState);
                         }
                     }
                 }
@@ -57,7 +64,7 @@ namespace GrapeNetwork.Server.GameServer
             base.Tick(nullObj);
             for (int i = 0; i < queueSendCommandProcessing.Count; i++)
             {
-                CommandProcessing commandProcessing = queueSendCommandProcessing.Dequeue();
+                ApplicationCommand commandProcessing = queueSendCommandProcessing.Dequeue();
                 Package package = new Package()
                 {
                     GroupCommand = commandProcessing.GroupCommand,
@@ -69,53 +76,33 @@ namespace GrapeNetwork.Server.GameServer
         }
         public override string ReadConfig()
         {
-            commandRegistry = new List<CommandProcessing>()
+            commandRegistry = new List<ApplicationCommand>()
             {
-                new RequestConnectToLoginServer(1, 1, "AuthenticationService"),
-                new RequestRegistrationUser(1, 4, "RegistrationService"),
-                new RequestToGameServerForUserConnection(1, 7, "LobbyService"),
-                new ResponseSendClientToLobby(1,2, "AuthenticationService"),
-                new ResponseRejectedLobbyConnection(1,3, "AuthenticationService"),
-                new ResponseUserRegistrationConfirmation(1,5, "RegistrationService"),
-                new ResponseRejectedRegistrationUser(1,6, "RegistrationService"),
-                new ResponseRejectedUserConnectionToGameServer(1,8, "LobbyService"),
-                new ResponseConnectingUserToGameServer(1,9, "LobbyService"),
-                new RequestConnectToServer(4,1,"ServerCommunicationService"),
-                new ResponseConnectToServer(4,2, "ServerCommunicationService"),
-                new ResponseRejectedConnectToServer(4,3,"ServerCommunicationService"),
+                //new RequestConnectToLoginServer(1, 1, "AuthenticationService"),
+                //new RequestRegistrationUser(1, 4, "RegistrationService"),
+                //new RequestToGameServerForUserConnection(1, 7, "LobbyService"),
+                //new ResponseSendClientToLobby(1,2, "AuthenticationService"),
+                //new ResponseRejectedLobbyConnection(1,3, "AuthenticationService"),
+                //new ResponseUserRegistrationConfirmation(1,5, "RegistrationService"),
+                //new ResponseRejectedRegistrationUser(1,6, "RegistrationService"),
+                //new ResponseRejectedUserConnectionToGameServer(1,8, "LobbyService"),
+                //new ResponseConnectingUserToGameServer(1,9, "LobbyService"),
+                //new RequestConnectToServer(4,1,"ServerCommunicationService"),
+                //new ResponseConnectToServer(4,2, "ServerCommunicationService"),
+                //new ResponseRejectedConnectToServer(4,3,"ServerCommunicationService"),
             };
-            services = new List<BaseService>
+            services = new List<Service>
             {
-                new ServerCommunicationService("ServerCommunicationService")
+                //new ServerCommunicationService("ServerCommunicationService")
             };
-            foreach (BaseService baseService in services)
+            foreach (Service baseService in services)
             {
                 baseService.ReadConfig();
             }
             gameProtocol = new GameProtocol(commandRegistry);
             NameServer = "GameServer";
             PortServer = 2201;
-            IPAdressServer = IPAddress.Parse("192.168.1.100");
-
-
-            CommandProcessing commandProcessing = new CommandProcessing(4, 1, "ServerCommunicationService");
-            MemoryStream memoryStream = new MemoryStream();
-            BinaryWriter writer = new BinaryWriter(memoryStream);
-            writer.Write(2201);
-            writer.Write("192.168.1.100");
-            writer.Write(2200);
-            writer.Write("192.168.1.100");
-            commandProcessing.CommandData = memoryStream.ToArray();
-            if (commandProcessing != null)
-            {
-                for (int i = 0; i < services.Count; i++)
-                {
-                    if (services[i].nameService == commandProcessing.NameService)
-                    {
-                        services[i].AddCommandProcessing(commandProcessing, null);
-                    }
-                }
-            }
+            IPAdressServer = IPAddress.Parse("192.168.56.1");           
 
             return "config";
         }

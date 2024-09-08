@@ -5,14 +5,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClientHandler : MonoBehaviour
 {
+    private GameClient gameClient = new GameClient();
 
     private void Start()
     {
-        GameClient gameClient = new GameClient(2200, "192.168.56.1");
-
         gameClient.ReadConfig();
 
         gameClient.OnDebugInfo += (message) =>
@@ -27,11 +27,28 @@ public class ClientHandler : MonoBehaviour
         {
             Debug.LogError(message);
         };
+        gameClient.OnConnectEvent += () =>
+        {
+            SceneManager.LoadScene(1);
+        };
 
-        gameClient.ConnectToServer();
+        gameClient.ConnectToLoginServer();
         //player.OnChangePositionPlayer += (position) =>
         //{
 
         //}
+    }
+
+    public void Registration(string login, string password)
+    {
+        gameClient.Registration(login, password);
+    }
+    public void Authetication(string login, string password)
+    {
+        gameClient.Authetication(login, password);
+    }
+    public void ConnectToGameServer()
+    {
+        gameClient.ConnectToGameServer();
     }
 }

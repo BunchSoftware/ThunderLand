@@ -7,7 +7,6 @@ F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.Datab
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\bin\Debug\net5.0\GrapeNetwork.AccessLevel.Common.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\bin\Debug\net5.0\GrapeNetwork.Common.Checksum.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\bin\Debug\net5.0\GrapeNetwork.Console.Common.dll
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\bin\Debug\net5.0\GrapeNetwork.Core.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\bin\Debug\net5.0\GrapeNetwork.Logging.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\bin\Debug\net5.0\GrapeNetwork.Logging.pdb
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Console.DatabaseServer\obj\Debug\net5.0\GrapeNetwork.Console.DatabaseServer.csproj.AssemblyReference.cache

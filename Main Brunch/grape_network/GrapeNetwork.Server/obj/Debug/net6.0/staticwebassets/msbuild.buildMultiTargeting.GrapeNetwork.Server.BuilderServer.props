@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GrapeNetwork.Server.BuilderServer.props" />
+</Project>

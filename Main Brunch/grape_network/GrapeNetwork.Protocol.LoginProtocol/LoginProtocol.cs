@@ -1,44 +1,27 @@
 ﻿using GrapeNetwork.Core;
 using GrapeNetwork.Packages;
-using GrapeNetwork.Server.Core;
+using GrapeNetwork.Server.Core.Protocol;
 using System.Collections.Generic;
+using System.Net.Security;
 
 namespace GrapeNetwork.Protocol.LoginProtocol
 {
-    public class LoginProtocol : TransportProtocol
+    public class LoginProtocol : ApplicationProtocol
     {
-        protected List<CommandProcessing> commandRegistry = new List<CommandProcessing>();
-
-        public LoginProtocol(List<CommandProcessing> commandRegistry)
+        public LoginProtocol()
         {
-            this.commandRegistry = commandRegistry;
-        }
-
-        public void CreatePackage(Package package)
-        {
-            outputQueueTransportPackage.Enqueue(package);
-        }
-        public CommandProcessing GetLastCommandProcessing()
-        {
-            Package package = GetLastPackage();
-            CommandProcessing commandProcessing = null;
-            foreach (CommandProcessing command in commandRegistry)
+            commandRegistry = new List<ApplicationCommand>
             {
-                if (command.GroupCommand == package.GroupCommand && command.Command == package.Command)
-                {
-                    commandProcessing = new CommandProcessing(package.GroupCommand, package.Command, command.NameService);
-                    commandProcessing.CommandData = package.Body;
-                }
-            }
-            return commandProcessing;
+                new Command.Authentication.RequestConnectToLoginServer(1, 1, "AuthenticationService"),
+                new Command.Registration.RequestRegistrationUser(1, 4, "RegistrationService"),
+                new Command.Lobby.RequestToGameServerForUserConnection(1, 7, "LobbyService"),
+                new Command.Authentication.ResponseSendClientToLobby(1, 2, "AuthenticationService"),
+                new Command.Authentication.ResponseRejectedLobbyConnection(1, 3, "AuthenticationService"),
+                new Command.Registration.ResponseUserRegistrationConfirmation(1, 5, "RegistrationService"),
+                new Command.Registration.ResponseRejectedRegistrationUser(1, 6, "RegistrationService"),
+                new Command.Lobby.ResponseRejectedUserConnectionToGameServer(1, 8, "LobbyService"),
+                new Command.Lobby.ResponseConnectingUserToGameServer(1, 9, "LobbyService"),
+            };
         }
-        //public virtual CommandProcessing GetLastCommandProcessing()
-        //{
-        //    CommandProcessing commandProcessing = new CommandProcessing();
-        //    if (RecievePackageCount != 0)
-        //        return commandProcessing;
-        //    else
-        //        return null;
-        //}
     }
 }

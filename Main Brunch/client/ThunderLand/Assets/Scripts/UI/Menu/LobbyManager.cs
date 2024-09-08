@@ -17,8 +17,12 @@ public class LobbyManager : MonoBehaviour
     [SerializeField] private Button createPersonageButton;
     [SerializeField] private Button deletePersonageButton;
 
+    private ClientHandler clientHandler;
+
     private void Start()
     {
+        clientHandler = FindObjectOfType<ClientHandler>();
+
         enterToGameWorldButton?.onClick.AddListener(() => { EnterToGameWorld(); });
         optionsButton?.onClick.AddListener(() => { Options(); });
         supportButton?.onClick.AddListener(() => { Application.OpenURL("https://github.com/BunchSoftware/ThunderLand"); });
@@ -37,7 +41,8 @@ public class LobbyManager : MonoBehaviour
     }
     private void EnterToGameWorld()
     {
-        SceneManager.LoadScene(2);
+        clientHandler.ConnectToGameServer();
+        SceneManager.LoadScene(3);
     }
     private void Options()
     {
@@ -45,7 +50,7 @@ public class LobbyManager : MonoBehaviour
     }
     private void Return()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     private void Exit()

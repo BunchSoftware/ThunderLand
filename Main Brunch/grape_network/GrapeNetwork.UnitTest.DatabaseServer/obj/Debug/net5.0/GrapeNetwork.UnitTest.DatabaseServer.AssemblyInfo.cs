@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GrapeNetwork.UnitTest.DatabaseServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aab709aff703efc16f6ec1663bd12895e75309d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db370cb2ad3b7b7075c2cde875399aaa84619fc7")]
 [assembly: System.Reflection.AssemblyProductAttribute("GrapeNetwork.UnitTest.DatabaseServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GrapeNetwork.UnitTest.DatabaseServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

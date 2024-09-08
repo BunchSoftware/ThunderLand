@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package grape;
+
+service Game {
+	rpc GetAccountData (stream RequestGetDataAccount) returns (stream ResponseGetDataAccount);
+}
+service Login {
+	rpc GetAccountData (stream RequestGetDataAccount) returns (stream ResponseGetDataAccount);
+}
+service Database {
+    rpc GetAccountData (stream RequestGetDataAccount) returns (stream ResponseGetDataAccount);
+}
+
+message RequestGetDataAccount
+{
+	uint32 GroupCommand = 1;
+	uint32 Command = 2;
+	string NameService = 3;
+}
+message ResponseGetDataAccount
+{
+	uint32 GroupCommand = 1;
+	uint32 Command = 2;
+	string NameService = 3;
+}
+

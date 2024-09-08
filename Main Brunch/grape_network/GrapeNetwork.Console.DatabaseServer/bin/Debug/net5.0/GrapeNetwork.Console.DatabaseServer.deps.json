@@ -42,17 +42,6 @@
           }
         }
       },
-      "GrapeNetwork.Core/1.0.0": {
-        "dependencies": {
-          "GrapeNetwork.Common.Checksum": "1.0.0"
-        },
-        "runtime": {
-          "GrapeNetwork.Core.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "GrapeNetwork.Logging/1.0.0": {
         "dependencies": {
           "GrapeNetwork.AccessLevel.Common": "1.0.0"
@@ -83,11 +72,6 @@
       "sha512": ""
     },
     "GrapeNetwork.Console.Common/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "GrapeNetwork.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

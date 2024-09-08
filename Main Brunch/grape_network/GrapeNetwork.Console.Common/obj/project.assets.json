@@ -63,8 +63,8 @@
     },
     "GrapeNetwork.Core/1.0.0": {
       "type": "project",
-      "path": "../GrapeNetwork/GrapeNetwork.Core.csproj",
-      "msbuildProject": "../GrapeNetwork/GrapeNetwork.Core.csproj"
+      "path": "../GrapeNetwork.Core/GrapeNetwork.Core.csproj",
+      "msbuildProject": "../GrapeNetwork.Core/GrapeNetwork.Core.csproj"
     },
     "GrapeNetwork.Logging/1.0.0": {
       "type": "project",
@@ -111,11 +111,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Core\\GrapeNetwork.Core.csproj": {
+              "projectPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Core\\GrapeNetwork.Core.csproj"
+            },
             "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Logging\\GrapeNetwork.Logging.csproj": {
               "projectPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Logging\\GrapeNetwork.Logging.csproj"
-            },
-            "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\GrapeNetwork.Core.csproj": {
-              "projectPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork\\GrapeNetwork.Core.csproj"
             }
           }
         }
