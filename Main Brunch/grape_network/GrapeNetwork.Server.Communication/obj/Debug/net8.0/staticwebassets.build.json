@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "kA44FtTJmsIccVdwcKOq85zZKNdjv781nr3UuCAdXEk=",
+  "Source": "GrapeNetwork.Server.Communication",
+  "BasePath": "_content/GrapeNetwork.Server.Communication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

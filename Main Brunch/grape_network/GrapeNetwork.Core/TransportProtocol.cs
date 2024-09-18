@@ -1,4 +1,4 @@
-﻿using GrapeNetwork.Packages;
+﻿using GrapeNetwork.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -62,10 +62,8 @@ namespace GrapeNetwork.Core
         {
             binaryWriter.Write(Package.HeaderSize);
             binaryWriter.Write(package.IPConnection);
-            binaryWriter.Write(package.IDConnection);
             binaryWriter.Write(package.AuthAndGetRSAKey);
             binaryWriter.Write(package.Shutdown);
-            binaryWriter.Write(package.ReconnectionOtherServer);
             binaryWriter.Write(package.GroupCommand);
             binaryWriter.Write(package.Command);
             ushort ChecksumHeader =  CRC16.ComputeChecksum(memoryStreamWrite.ToArray());
@@ -100,10 +98,8 @@ namespace GrapeNetwork.Core
                 memoryStreamRead.Seek(1, SeekOrigin.Begin);
 
                 package.IPConnection = binaryReader.ReadUInt32();
-                package.IDConnection = binaryReader.ReadUInt32();
                 package.AuthAndGetRSAKey = binaryReader.ReadBoolean();
                 package.Shutdown = binaryReader.ReadBoolean();
-                package.ReconnectionOtherServer = binaryReader.ReadBoolean();
                 package.GroupCommand = binaryReader.ReadUInt16();
                 package.Command = binaryReader.ReadUInt32();
                 ushort ChecksumHeader = CRC16.ComputeChecksum(memoryStreamRead.ToArray());

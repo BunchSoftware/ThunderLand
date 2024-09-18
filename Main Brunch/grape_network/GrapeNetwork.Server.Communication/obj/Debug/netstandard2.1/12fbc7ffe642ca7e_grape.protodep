@@ -1,0 +1,2 @@
+obj\Debug\netstandard2.1\Protos/Grape.cs \
+obj\Debug\netstandard2.1\Protos/GrapeGrpc.cs: Protos/grape.proto

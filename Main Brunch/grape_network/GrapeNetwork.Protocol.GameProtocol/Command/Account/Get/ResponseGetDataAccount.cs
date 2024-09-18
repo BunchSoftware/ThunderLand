@@ -1,5 +1,5 @@
-﻿using GrapeNetwork.Core.Client;
-using GrapeNetwork.Packages;
+﻿using GrapeNetwork.Core;
+using GrapeNetwork.Core.Client;
 using GrapeNetwork.Server.Core.Protocol;
 using System;
 using System.IO;
@@ -30,7 +30,6 @@ namespace GrapeNetwork.Protocol.GameProtocol.Command.Account.Get
                 {
                     IPConnection = Package.ConvertFromIpAddressToInteger(IPAdressClient),
                     Body = memoryStream.ToArray(),
-                    IDConnection = 1,
                     GroupCommand = 2,
                     Command = 7,
                 };

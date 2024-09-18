@@ -1,14 +1,12 @@
-﻿using GrapeNetwork.Core.Client;
-using GrapeNetwork.Core.Server;
-using GrapeNetwork.Packages;
+﻿using GrapeNetwork.Core.Server;
 using GrapeNetwork.Server.Core.Protocol;
-using Microsoft.Extensions.Hosting;
+using GrapeNetwork.Server.Core.Grpc;
 using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+using GrapeNetwork.Core;
 
 namespace GrapeNetwork.Server.Core
 {
@@ -43,18 +41,16 @@ namespace GrapeNetwork.Server.Core
         protected List<ClientState> clientStates = new List<ClientState>();
         protected List<Service> services = new List<Service> ();
 
-        private ApplicationProtocol applicationProtocol;
-        private IHostBuilder hostBuilder;
-
+        private ApplicationProtocol ApplicationProtocol;
+        private GrpcServer GrpcServer;
 
         public virtual void Run()
         {
             if (IPAdressServer != null)
             {
-                hostBuilder.Build().StartAsync();
-
                 transportServer = new TransportServer(PortServer, IPAdressServer);
-                transportServer.Start();
+                GrpcServer.Run();
+                GrpcServer.SendPackage(new Package(), NameServer);
 
                 transportServer.OnConnectedClient += ConnectedClient;
                 transportServer.OnDisconnectedClient += DisconnectedClient;
@@ -65,6 +61,8 @@ namespace GrapeNetwork.Server.Core
                     transportServer.OnExceptionInfo += ExceptionInfo;
                     transportServer.OnDebugInfo += DebugInfo;
                 }
+
+                transportServer.Start();
 
                 foreach (Service service in services)
                 {
@@ -77,8 +75,8 @@ namespace GrapeNetwork.Server.Core
 
                 transportServer.OnRecieveDataClient += (connection, package) =>
                 {
-                    applicationProtocol.CreatePackage(package);
-                    ApplicationCommand commandProcessing = applicationProtocol.GetLastCommandProcessing();
+                    ApplicationProtocol.CreatePackage(package);
+                    ApplicationCommand commandProcessing = ApplicationProtocol.GetLastCommandProcessing();
                     commandProcessing.Connection = connection;
                     if (commandProcessing != null)
                     {
@@ -107,7 +105,11 @@ namespace GrapeNetwork.Server.Core
                 };
                 transportServer.OnDisconnectedClient += (connection) =>
                 {
-                    clientStates.RemoveAt((int)connection.IDConnection - 1);
+                    for (int i = 0; i < clientStates.Count; i++)
+                    {
+                        if (clientStates[i].connection == connection)
+                            clientStates.Remove(clientStates[i]);
+                    }
                 };
             }
             else
@@ -123,11 +125,8 @@ namespace GrapeNetwork.Server.Core
                 ApplicationCommand applicationCommand = queueSendApplicationCommand.Dequeue();
                 if (applicationCommand.RedirectToService == false)
                 {
-                    Package package = new Package()
-                    {
-                        GroupCommand = applicationCommand.GroupCommand,
-                        Command = applicationCommand.Command,
-                    };
+                    IPEndPoint IPEndPoint = (IPEndPoint)applicationCommand.Connection.WorkSocket.RemoteEndPoint;
+                    Package package = new Package(IPEndPoint.Address, applicationCommand.GroupCommand, applicationCommand.Command);
                     if (applicationCommand.Connection != null)
                         transportServer.SendPackage(applicationCommand.Connection, package);
                 }
@@ -144,6 +143,10 @@ namespace GrapeNetwork.Server.Core
                                     clientState = clientStates[j];
                             }
                             services[i].AddApplicationCommand(applicationCommand, clientState);
+                        }
+                        else
+                        {
+
                         }
                     }
                 }
@@ -164,14 +167,16 @@ namespace GrapeNetwork.Server.Core
             {
                 services[i].ReadConfig(configServer.ConfigServices[i]);
             }
-            hostBuilder = configServer.hostBuilder;
-            applicationProtocol = configServer.ApplicationProtocol;
+            ApplicationProtocol = configServer.ApplicationProtocol;
             NameServer = configServer.NameServer;
             PortServer = configServer.PortServer;
             IPAdressServer = configServer.IPAdressServer;
+            GrpcServer = configServer.GrpcServer;
+            OnDebugInfo?.Invoke("Конфигурации сервера прочитаны и сервер настроен");
         }
         public void Stop()
         {
+            GrpcServer.Stop();
             transportServer.Stop();
         }
         private void ConnectedClient(Connection connection) {  OnConnectedClient?.Invoke(connection); }

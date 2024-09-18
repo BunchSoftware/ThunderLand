@@ -1,0 +1,2 @@
+obj\Debug\netstandard2.1/Grape.cs \
+obj\Debug\netstandard2.1/GrapeGrpc.cs: ../GrapeNetwork.Server.Communication/Protos/grape.proto

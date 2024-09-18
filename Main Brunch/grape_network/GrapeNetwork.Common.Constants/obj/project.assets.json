@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Common.Constants\\GrapeNetwork.Common.Constants.csproj",
-      "projectName": "GrapeNetwork.Common.Constants",
-      "projectPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Common.Constants\\GrapeNetwork.Common.Constants.csproj",
+      "projectUniqueName": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Common.Constants\\GrapeNetwork.Common.csproj",
+      "projectName": "GrapeNetwork.Common",
+      "projectPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Common.Constants\\GrapeNetwork.Common.csproj",
       "packagesPath": "C:\\Users\\Den4o\\.nuget\\packages\\",
       "outputPath": "F:\\Files\\GitHub\\ThunderLand\\Main Brunch\\grape_network\\GrapeNetwork.Common.Constants\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,12 +1,14 @@
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.deps.json
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.dll
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.pdb
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.csproj.AssemblyReference.cache
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.GeneratedMSBuildEditorConfig.editorconfig
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.AssemblyInfoInputs.cache
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.AssemblyInfo.cs
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.csproj.CoreCompileInputs.cache
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\appsettings.Development.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\appsettings.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.pdb
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\netstandard2.1\GrapeNet.09B09838.Up2Date
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Protocol.DatabaseProtocol\obj\Debug\netstandard2.1\GrapeNetwork.Protocol.DatabaseProtocol.pdb

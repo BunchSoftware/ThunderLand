@@ -1,5 +1,4 @@
 ﻿using GrapeNetwork.Core;
-using GrapeNetwork.Packages;
 using GrapeNetwork.Protocol.GameProtocol;
 using GrapeNetwork.Protocol.GameProtocol.Command.Account.Get;
 using GrapeNetwork.Protocol.GameProtocol.Command.Account.Set;

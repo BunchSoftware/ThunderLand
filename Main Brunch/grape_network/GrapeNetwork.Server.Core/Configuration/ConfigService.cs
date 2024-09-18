@@ -6,5 +6,6 @@ namespace GrapeNetwork.Server.Core.Configuration
 {
     public class ConfigService
     {
+        public string NameService;
     }
 }

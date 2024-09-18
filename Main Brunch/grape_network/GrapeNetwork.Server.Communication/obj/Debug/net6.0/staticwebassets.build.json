@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tU8LhBxiYR21uYUFePpZUJp5WhPryXB7VXvGF0iCdLY=",
+  "Source": "GrapeNetwork.Server.BuilderServer",
+  "BasePath": "_content/GrapeNetwork.Server.BuilderServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Text;
+using GrapeNetwork.Server.Core.Grpc;
 using GrapeNetwork.Server.Core.Protocol;
-using Microsoft.Extensions.Hosting;
 
 namespace GrapeNetwork.Server.Core.Configuration
 {
@@ -15,12 +16,18 @@ namespace GrapeNetwork.Server.Core.Configuration
         public string NameServer;
         public IPAddress IPAdressServer;
         public int PortServer;
-        public IPAddress IPAdressLogin;
-        public int PortLogin;
-        public IPAddress IPAdressGame;
-        public int PortGame;
-        public IPAddress IPAdressDatabase;
-        public int PortDatabase;
-        public IHostBuilder hostBuilder;
+        public List<ConfigCommunicationService> ConfigCommunicationServices;
+        public GrpcServer GrpcServer;
+    }
+    public class ConfigCommunicationService
+    {
+        public int Port;
+        public IPAddress IPAdress;
+
+        public ConfigCommunicationService(IPAddress IPAdress, int Port)
+        {
+            this.Port = Port;
+            this.IPAdress = IPAdress;
+        }
     }
 }

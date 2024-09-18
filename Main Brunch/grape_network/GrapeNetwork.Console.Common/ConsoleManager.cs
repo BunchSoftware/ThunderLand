@@ -169,7 +169,7 @@ namespace GrapeNetwork.Console.Common
 
         private static string GetInfoAboutRecord()
         {
-            return $"{DateTime.Now.ToString("MMM dd.MM.yyyy HH:mm:ss K")} {accessLevel.ToString()}:";
+            return $"{DateTime.Now.ToString("MMM dd.MM.yyyy HH:mm:ss K")} {accessLevel.Status}:";
         }
     }
 }

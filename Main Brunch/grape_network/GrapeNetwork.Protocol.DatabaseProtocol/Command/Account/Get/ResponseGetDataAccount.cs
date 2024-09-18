@@ -1,5 +1,5 @@
-﻿using GrapeNetwork.Core.Client;
-using GrapeNetwork.Packages;
+﻿using GrapeNetwork.Core;
+using GrapeNetwork.Core.Client;
 using GrapeNetwork.Server.Core.Protocol;
 using System;
 using System.IO;

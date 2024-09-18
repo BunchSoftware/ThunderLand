@@ -3,7 +3,6 @@ using GrapeNetwork.Protocol.GameProtocol;
 using GrapeNetwork.Server.BuilderServer;
 using GrapeNetwork.Server.Core;
 using GrapeNetwork.Server.Core.Configuration;
-using GrapeNetwork.Server.Core.Protocol;
 using System;
 using System.Net;
 
@@ -11,13 +10,12 @@ namespace GrapeNetwork.Console.GameServer
 {
     class Program
     {
-        static Server.Core.Server gameServer;
+        static Server.Core.Server gameServer = new Server.Core.Server();
         private static void Main()
         {
             ConsoleManager.WriteLine("Запуск TL Game Server");
             AppDomain.CurrentDomain.ProcessExit += ProcessExit;
             ConsoleManager.SkipLine(1);
-            BuilderServer builderServer = new BuilderServer();
             ConfigServer configServer = new ConfigServer()
             {
                 Services = new System.Collections.Generic.List<Service>()
@@ -34,9 +32,16 @@ namespace GrapeNetwork.Console.GameServer
                 NameServer = "GameServer",
                 PortServer = 2201,
                 IPAdressServer = IPAddress.Parse("192.168.1.100"),
+
+                ConfigCommunicationServices = new System.Collections.Generic.List<ConfigCommunicationService>()
+                {
+                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3200),
+                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3201),
+                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3202),
+                },
             };
-            gameServer = builderServer.CreateServer(configServer, TypeProtocol.GameProtocol);
             AppDomain.CurrentDomain.ProcessExit += ProcessExit;
+            gameServer = BuilderServer.CreateServer(configServer);
             gameServer.OnDebugInfo += (message) =>
             {
                 ConsoleManager.Debug(message);
@@ -46,7 +51,6 @@ namespace GrapeNetwork.Console.GameServer
                 ConsoleManager.Error(exception);
             };
             gameServer.Run();
-            ConsoleManager.Debug("Сервер запущен");
             ConsoleManager.ReadKey();
             gameServer.Stop();
             ConsoleManager.ReadKey();

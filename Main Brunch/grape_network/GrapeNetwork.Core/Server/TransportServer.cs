@@ -1,4 +1,4 @@
-﻿using GrapeNetwork.Packages;
+﻿using GrapeNetwork.Core;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -60,7 +60,6 @@ namespace GrapeNetwork.Core.Server
                 try
                 {
                     Connection connection = new Connection(TcpSocketServer.EndAccept(asyncResult), SendBufferSize, RecievedBufferSize);
-                    connection.IDConnection = (uint)Connections.Count + 1;
                     Connections.Add(connection);
 
                     connection.OnDisconnect += () =>
@@ -118,21 +117,12 @@ namespace GrapeNetwork.Core.Server
             if (IPEndPoint != null)
             {
                 package.IPConnection = Package.ConvertFromIpAddressToInteger(IPEndPoint.Address.ToString());
-                package.IDConnection = connection.IDConnection;
                 byte[] encodedPackage = connection.transportProtocol.CreateBinaryData(package);
                 if (package.AuthAndGetRSAKey)
                     OnDebugInfo?.Invoke($"Клиенту {connection.RemoteAdressClient} был отправлен RSA Key");
                 if (connection != null)
                     connection.WorkSocket.BeginSend(encodedPackage, 0, encodedPackage.Length, SocketFlags.None, new AsyncCallback(SendCallback), connection);
             }
-        }
-
-        // Отправка пакета данных
-        public void SendPackage(int IDConnection, Package package)
-        {
-            Connection connection = Connections.Find(connection => connection.IDConnection == IDConnection);
-            byte[] encodedPackage = connection.transportProtocol.CreateBinaryData(package);
-            SendPackage(connection, package);
         }
 
         // Отправка пакета данных

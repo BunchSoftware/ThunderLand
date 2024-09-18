@@ -1,12 +1,14 @@
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.UnitWorld.deps.json
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.UnitWorld.dll
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.UnitWorld.pdb
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Model\obj\Debug\netstandard2.1\GrapeNetwork.UnitWorld.csproj.AssemblyReference.cache
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Model\obj\Debug\netstandard2.1\GrapeNetwork.UnitWorld.GeneratedMSBuildEditorConfig.editorconfig
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Model\obj\Debug\netstandard2.1\GrapeNetwork.UnitWorld.AssemblyInfoInputs.cache
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Model\obj\Debug\netstandard2.1\GrapeNetwork.UnitWorld.AssemblyInfo.cs
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Model\obj\Debug\netstandard2.1\GrapeNetwork.UnitWorld.csproj.CoreCompileInputs.cache
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Model\obj\Debug\netstandard2.1\GrapeNetwork.UnitWorld.sourcelink.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\appsettings.Development.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\appsettings.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.UnitWorld.deps.json
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.UnitWorld.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\Library\Debug\netstandard2.1\GrapeNetwork.UnitWorld.pdb
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Model\obj\Debug\netstandard2.1\GrapeNet.8B7001C7.Up2Date
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Model\obj\Debug\netstandard2.1\GrapeNetwork.UnitWorld.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Model\obj\Debug\netstandard2.1\GrapeNetwork.UnitWorld.pdb

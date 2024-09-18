@@ -1,20 +1,22 @@
-﻿using GrapeNetwork.Console.Common;
+﻿using Grape;
+using GrapeNetwork.Console.Common;
 using GrapeNetwork.Server.BuilderServer;
 using GrapeNetwork.Server.Core;
 using GrapeNetwork.Server.Core.Configuration;
 using GrapeNetwork.Server.Core.Protocol;
+using Grpc.Net.Client;
 using System;
 using System.Net;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace GrapeNetwork.Console.LoginServer
 {
     class Program
     {
-        static Server.Core.Server loginServer;
+        static Server.Core.Server loginServer = new Server.Core.Server();
         private static void Main()
         {
-            BuilderServer builderServer = new BuilderServer();
             ConfigServer configServer = new ConfigServer() 
             {       
                 ApplicationProtocol = new Protocol.LoginProtocol.LoginProtocol(),
@@ -33,8 +35,15 @@ namespace GrapeNetwork.Console.LoginServer
                 NameServer = "LoginServer",
                 PortServer = 2200,
                 IPAdressServer = IPAddress.Parse("192.168.1.100"),
+
+                ConfigCommunicationServices = new System.Collections.Generic.List<ConfigCommunicationService>()
+                {
+                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3200),
+                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3201),
+                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3202),
+                },
             };
-            loginServer = builderServer.CreateServer(configServer, TypeProtocol.LoginProtocol);
+            loginServer = BuilderServer.CreateServer(configServer);
             ConsoleManager.WriteLine("Запуск TL Login Server");
             AppDomain.CurrentDomain.ProcessExit += ProcessExit;
             ConsoleManager.SkipLine(1);
@@ -48,6 +57,7 @@ namespace GrapeNetwork.Console.LoginServer
             };
             loginServer.Run();
             ConsoleManager.Debug("Сервер запущен");
+
             ConsoleManager.ReadKey();
             loginServer.Stop();
             ConsoleManager.ReadKey();

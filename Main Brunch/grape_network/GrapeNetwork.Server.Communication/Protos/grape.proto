@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package grape;
+
+service Communication {
+	rpc SendPackage (stream Package) returns (stream Package);
+}
+
+message Package
+{
+	uint32 GroupCommand = 1;
+	uint32 Command = 3;
+	uint32 IPConnection = 2;
+	string NameService = 4;
+}
+

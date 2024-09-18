@@ -1,4 +1,4 @@
-﻿using GrapeNetwork.Packages;
+﻿using GrapeNetwork.Core;
 using System;
 using System.Net;
 using System.Net.Sockets;

@@ -1,6 +1,5 @@
 ﻿using GrapeNetwork.Core.Client;
 using GrapeNetwork.Server.Core.Protocol;
-using GrapeNetwork.Packages;
 using GrapeNetwork.Protocol.LoginProtocol;
 using GrapeNetwork.Protocol.LoginProtocol.Command.Authentication;
 using GrapeNetwork.Protocol.LoginProtocol.Command.Lobby;
@@ -11,6 +10,7 @@ using System.IO;
 using System.Net;
 using GrapeNetwork.Protocol.GameProtocol.Command.Account.Get;
 using GrapeNetwork.Protocol.GameProtocol;
+using GrapeNetwork.Core;
 
 namespace GrapeNetwork.Client.Core
 {
@@ -155,26 +155,15 @@ namespace GrapeNetwork.Client.Core
             BinaryWriter writer = new BinaryWriter(memoryStream);
             writer.Write(login);
             writer.Write(password);
-            Package package = new Package()
+            Package package = new Package(IPAdressClient, 1, 1)
             {
-                IPConnection = Package.ConvertFromIpAddressToInteger(IPAdressClient),
-                IDConnection = 1,
-                GroupCommand = 1,
-                Command = 1,
                 Body = memoryStream.ToArray()
             };
             transportClient.SendPackage(package, true);
         }
         public void ConnectToGameServer()
         {
-            Package packageLogin = new Package()
-            {
-                IPConnection = Package.ConvertFromIpAddressToInteger(IPAdressClient),
-                IDConnection = 1,
-                GroupCommand = 1,
-                ReconnectionOtherServer = true,
-                Command = 7,
-            };
+            Package packageLogin = new Package(IPAdressClient, 1, 7);
             transportClient.SendPackage(packageLogin, true);
 
             transportClient.DisconnectToServer();
@@ -213,12 +202,8 @@ namespace GrapeNetwork.Client.Core
                 }
             };
 
-            Package packageGame = new Package()
+            Package packageGame = new Package(IPAdressClient, 1, 2)
             {
-                IPConnection = Package.ConvertFromIpAddressToInteger(IPAdressClient),
-                IDConnection = 1,
-                GroupCommand = 2,
-                Command = 1,
             };
             transportClient.SendPackage(packageGame, true);
         }
@@ -228,12 +213,8 @@ namespace GrapeNetwork.Client.Core
             BinaryWriter writer = new BinaryWriter(memoryStream);
             writer.Write(login);
             writer.Write(password);
-            Package package = new Package()
+            Package package = new Package(IPAdressClient, 1,4)
             {
-                IPConnection = Package.ConvertFromIpAddressToInteger(IPAdressClient),
-                IDConnection = 1,
-                GroupCommand = 1,
-                Command = 4,
                 Body = memoryStream.ToArray()
             };
             transportClient.SendPackage(package, true);

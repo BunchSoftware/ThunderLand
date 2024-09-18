@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GrapeNetwork.Server.GUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db370cb2ad3b7b7075c2cde875399aaa84619fc7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11b32adb7a862a406201faf80e639250d17d8c6a")]
 [assembly: System.Reflection.AssemblyProductAttribute("GrapeNetwork.Server.GUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GrapeNetwork.Server.GUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

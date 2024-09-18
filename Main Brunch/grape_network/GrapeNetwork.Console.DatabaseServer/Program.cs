@@ -1,24 +1,21 @@
-﻿
-
-using GrapeNetwork.Console.Common;
+﻿using GrapeNetwork.Console.Common;
 using GrapeNetwork.Server.Core.Configuration;
 using GrapeNetwork.Server.Core;
 using System.Net;
 using System;
-using GrapeNetwork.Server.BuilderServer;
 using GrapeNetwork.Protocol.DatabaseProtocol;
+using GrapeNetwork.Server.BuilderServer;
 
 namespace GrapeNetwork.Console.DatabaseServer
 {
     class Program
     {
-        static Server.Core.Server databaseServer;
+        static Server.Core.Server databaseServer = new Server.Core.Server();
         private static void Main()
         {
             ConsoleManager.WriteLine("Запуск TL Database Server");
             AppDomain.CurrentDomain.ProcessExit += ProcessExit;
             ConsoleManager.SkipLine(1);
-            BuilderServer builderServer = new BuilderServer();
             ConfigServer configServer = new ConfigServer()
             {
                 Services = new System.Collections.Generic.List<Service>()
@@ -34,8 +31,14 @@ namespace GrapeNetwork.Console.DatabaseServer
                 NameServer = "DatabaseServer",
                 PortServer = 2202,
                 IPAdressServer = IPAddress.Parse("192.168.1.100"),
+                ConfigCommunicationServices = new System.Collections.Generic.List<ConfigCommunicationService>()
+                {
+                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3200),
+                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3201),
+                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3202),
+                },               
             };
-            databaseServer = builderServer.CreateServer(configServer, TypeProtocol.DatabaseProtocol);
+            databaseServer = BuilderServer.CreateServer(configServer);
             databaseServer.OnDebugInfo += (message) =>
             {
                 ConsoleManager.Debug(message);
