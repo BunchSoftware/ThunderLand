@@ -1,82 +1,63 @@
-using GrapeNetwork.Core.Client;
-using GrapeNetwork.Core.Server;
-using GrapeNetwork.Packages;
-using GrapNetwork.LogWriter;
+
+using GrapeNetwork.Protocol.GameProtocol;
+using GrapeNetwork.Server.BuilderServer;
+using GrapeNetwork.Server.Core;
+using GrapeNetwork.Server.Core.Configuration;
+using GrapeNetwork.Server.Game.Service;
 using System.Net;
-using System.Text;
+using Xunit;
 
 namespace GrapeNetwork.UnitTest.GameServer
 {
     public class UnitTestGameServer
     {
+        static Server.Core.Server gameServer = new Server.Core.Server();
         [Fact]
-        public void TestStartServer()
+        public void TestBuilderServer()
         {
-            TransportServer networkServer = new TransportServer(7777, IPAddress.Parse("192.168.1.100"));
-            Assert.True(networkServer.Start(), "Server Start");
-            networkServer.Stop();
+            ConfigServer configServer = new ConfigServer();
+            configServer.ChangeValueSection("ApplicationProtocol", new GameProtocol());
+            configServer.ChangeValueSection("InternalServices", new List<Service>()
+            {
+                 new AccountService("AccountService"),
+                 new MapService("MapService")
+            });
+            configServer.ChangeValueSection("NameServer", "GameServer");
+            configServer.ChangeValueSection("IPAddressServer", IPAddress.Parse("192.168.1.100"));
+            configServer.ChangeValueSection("PortServer", 2201);
+            configServer.ChangeValueSection("ConfigCommunicationServices", new List<ConfigCommunicationClient>()
+            {
+                    new ConfigCommunicationClient(IPAddress.Parse("192.168.1.100"), 3200),
+                    new ConfigCommunicationClient(IPAddress.Parse("192.168.1.100"), 3201),
+                    new ConfigCommunicationClient(IPAddress.Parse("192.168.1.100"), 3202),
+            });
+            gameServer = BuilderServer.CreateServer(configServer);
+            gameServer.Run();
+            gameServer.Stop();
         }
         [Fact]
-        public void TestStopServer()
+        public void TestReadConfig()
         {
-            TransportServer networkServer = new TransportServer(7777, IPAddress.Parse("192.168.1.100"));
-            networkServer.Stop();
-            Assert.True(!networkServer.IsActive, "Server Stop");
-        }
-        [Fact]
-        public void TestStartStopServer()
-        {
-            TransportServer networkServer = new TransportServer(7777, IPAddress.Parse("192.168.1.100"));
-            networkServer.Start();
-            networkServer.Stop();
-            Assert.True(true);
-        }
-        [Fact]
-        public void TestSendPackageServer()
-        {
-            //TransportServer transportServer = new TransportServer(7777, IPAddress.Parse("192.168.1.100"));
-            //transportServer.OnDebugInfo += (message) =>
-            //{
-            //    LogManager logManager = new LogManager("E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\logs\\game_server_log\\", "serverLog");
-            //    logManager.Debug(message);
-            //};
-            //transportServer.OnExceptionInfo += (exception) =>
-            //{
-            //    LogManager logManager = new LogManager("E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\logs\\game_server_log\\", "serverLog");
-            //    logManager.Error(exception);
-            //};
-            //transportServer.Start();
-
-            //List<PackageProcessingCondition> packageProcessingConditions = new List<PackageProcessingCondition>();
-
-            //TransportClient networkClient = new TransportClient();
-            //networkClient.ConnectToServer(7777, IPAddress.Parse("192.168.1.100"));
-            //packageProcessingConditions.Add(new PackageProcessingCondition(0, 0));
-
-            //networkClient.SetCondition(packageProcessingConditions);
-
-            //Package package = new Package();
-
-            //networkClient.OnRecieveDataEvent += (package) =>
-            //{
-            //    LogManager logManager = new LogManager("E:\\Files\\GitHub\\ThunderLand\\Main Brunch\\logs\\game_server_log\\", "serverLog");
-            //    logManager.Debug(Encoding.UTF8.GetString(package.Body));
-            //};
-
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    package.Body = Encoding.UTF8.GetBytes($"{i} Ура победа !");
-            //    transportServer.SendPackage(networkClient.LocalAdressClient, package);
-            //}
-
-            //networkServer.Stop();
-        }
-        [Fact]
-        public void TestDisposeServer()
-        {
-            TransportServer networkServer = new TransportServer(7777, IPAddress.Parse("192.168.1.100"));
-            networkServer.Dispose();
-            Assert.True(true);
+            ConfigServer configServer = new ConfigServer();
+            configServer.ChangeValueSection("ApplicationProtocol", new GameProtocol());
+            configServer.ChangeValueSection("InternalServices", new List<Service>()
+            {
+                 new AccountService("AccountService"),
+                 new MapService("MapService")
+            });
+            configServer.ChangeValueSection("NameServer", "GameServer");
+            configServer.ChangeValueSection("IPAddressServer", IPAddress.Parse("192.168.1.100"));
+            configServer.ChangeValueSection("PortServer", 2201);
+            configServer.ChangeValueSection("ConfigCommunicationServices", new List<ConfigCommunicationClient>()
+            {
+                    new ConfigCommunicationClient(IPAddress.Parse("192.168.1.100"), 3200),
+                    new ConfigCommunicationClient(IPAddress.Parse("192.168.1.100"), 3201),
+                    new ConfigCommunicationClient(IPAddress.Parse("192.168.1.100"), 3202),
+            });
+            gameServer = new Server.Core.Server();
+            gameServer.ReadConfig(configServer);
+            gameServer.Run();
+            gameServer.Stop();
         }
     }
 }

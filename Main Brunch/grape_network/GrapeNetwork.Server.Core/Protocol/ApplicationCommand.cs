@@ -10,7 +10,6 @@ namespace GrapeNetwork.Server.Core.Protocol
         public uint Command = 0;
         public byte[] CommandData = null;
         public string NameService { get; }
-        public bool RedirectToService = false;
         public Connection Connection;
         public Action OnCommandProcessingComplete;
 

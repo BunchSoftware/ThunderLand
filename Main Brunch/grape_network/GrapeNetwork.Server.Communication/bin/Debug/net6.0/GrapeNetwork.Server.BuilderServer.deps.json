@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "GrapeNetwork.Server.BuilderServer/1.0.0": {
         "dependencies": {
+          "GrapeNetwork.Configurator": "1.0.0",
           "GrapeNetwork.Console.Common": "1.0.0",
           "GrapeNetwork.Server.Core": "1.0.0",
           "Grpc.AspNetCore": "2.65.0",
@@ -157,6 +158,14 @@
           }
         }
       },
+      "GrapeNetwork.Configurator/1.0.0": {
+        "runtime": {
+          "GrapeNetwork.Configurator.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "GrapeNetwork.Console.Common/1.0.0": {
         "dependencies": {
           "GrapeNetwork.Core": "1.0.0",
@@ -205,6 +214,7 @@
       },
       "GrapeNetwork.Server.Core/1.0.0": {
         "dependencies": {
+          "GrapeNetwork.Configurator": "1.0.0",
           "GrapeNetwork.Core": "1.0.0",
           "GrapeNetwork.Server.ClientGrpc": "1.0.0",
           "Grpc.Net.Client": "2.65.0"
@@ -356,6 +366,11 @@
       "sha512": ""
     },
     "GrapeNetwork.Common.Checksum/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Configurator/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

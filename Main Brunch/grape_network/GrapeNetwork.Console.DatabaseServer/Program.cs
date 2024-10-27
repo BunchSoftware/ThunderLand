@@ -5,6 +5,11 @@ using System.Net;
 using System;
 using GrapeNetwork.Protocol.DatabaseProtocol;
 using GrapeNetwork.Server.BuilderServer;
+using System.Collections.Generic;
+using GrapeNetwork.Configurator.Interfaces;
+using GrapeNetwork.Server.Database.Service;
+using GrapeNetwork.Server.Game.Service;
+using GrapeNetwork.Server.Login.Service;
 
 namespace GrapeNetwork.Console.DatabaseServer
 {
@@ -16,28 +21,31 @@ namespace GrapeNetwork.Console.DatabaseServer
             ConsoleManager.WriteLine("Запуск TL Database Server");
             AppDomain.CurrentDomain.ProcessExit += ProcessExit;
             ConsoleManager.SkipLine(1);
-            ConfigServer configServer = new ConfigServer()
+
+            ConfigServer configServer = new ConfigServer();
+            configServer.ChangeValueSection("ApplicationProtocol", new DatabaseProtocol());
+            ConfigService configAccountService = new ConfigService();
+            configAccountService.ChangeValueSection("NameService", "AccountService");
+            configServer.ChangeValueSection("InternalServicesConfig", new List<ConfigService>()
             {
-                Services = new System.Collections.Generic.List<Service>()
-                {
-                    
-                },
-                ConfigServices = new System.Collections.Generic.List<ConfigService>()
-                {
-                    new ConfigService(),
-                    new ConfigService()
-                },
-                ApplicationProtocol = new DatabaseProtocol(),
-                NameServer = "DatabaseServer",
-                PortServer = 2202,
-                IPAdressServer = IPAddress.Parse("192.168.1.100"),
-                ConfigCommunicationServices = new System.Collections.Generic.List<ConfigCommunicationService>()
-                {
-                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3200),
-                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3201),
-                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3202),
-                },               
-            };
+                configAccountService
+            });
+            configServer.ChangeValueSection("RepositoryServices", new List<IRepository<Service>>()
+            {
+                new GameServiceRepository(),
+                new LoginServiceRepository(),
+                new DatabaseServiceRepository()
+            });
+            configServer.ChangeValueSection("NameServer", "DatabaseServer");
+            configServer.ChangeValueSection("IPAddressServer", IPAddress.Parse("192.168.1.100"));
+            configServer.ChangeValueSection("PortServer", 2202);
+            configServer.ChangeValueSection("ConfigCommunicationServices", new List<ConfigCommunicationClient>()
+            {
+                    new ConfigCommunicationClient(IPAddress.Parse("192.168.1.100"), 3200),
+                    new ConfigCommunicationClient(IPAddress.Parse("192.168.1.100"), 3201),
+                    new ConfigCommunicationClient(IPAddress.Parse("192.168.1.100"), 3202),
+            });
+
             databaseServer = BuilderServer.CreateServer(configServer);
             databaseServer.OnDebugInfo += (message) =>
             {
@@ -48,7 +56,6 @@ namespace GrapeNetwork.Console.DatabaseServer
                 ConsoleManager.Error(exception);
             };
             databaseServer.Run();
-            ConsoleManager.Debug("Сервер запущен");
             ConsoleManager.ReadKey();
             databaseServer.Stop();
             ConsoleManager.ReadKey();

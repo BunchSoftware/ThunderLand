@@ -171,6 +171,16 @@
           "bin/placeholder/GrapeNetwork.Common.Checksum.dll": {}
         }
       },
+      "GrapeNetwork.Configurator/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/GrapeNetwork.Configurator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GrapeNetwork.Configurator.dll": {}
+        }
+      },
       "GrapeNetwork.Console.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -211,6 +221,19 @@
           "bin/placeholder/GrapeNetwork.Logging.dll": {}
         }
       },
+      "GrapeNetwork.Protocol.DatabaseProtocol/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "GrapeNetwork.Server.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GrapeNetwork.Protocol.DatabaseProtocol.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GrapeNetwork.Protocol.DatabaseProtocol.dll": {}
+        }
+      },
       "GrapeNetwork.Protocol.GameProtocol/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -230,6 +253,7 @@
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "GrapeNetwork.Core": "1.0.0",
+          "GrapeNetwork.Protocol.DatabaseProtocol": "1.0.0",
           "GrapeNetwork.Server.Core": "1.0.0"
         },
         "compile": {
@@ -257,6 +281,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "GrapeNetwork.Configurator": "1.0.0",
           "GrapeNetwork.Core": "1.0.0",
           "GrapeNetwork.Server.ClientGrpc": "1.0.0",
           "Grpc.Net.Client": "2.65.0"
@@ -545,6 +570,11 @@
       "path": "../GrapeNetwork.Common.Checksum/GrapeNetwork.Common.Checksum.csproj",
       "msbuildProject": "../GrapeNetwork.Common.Checksum/GrapeNetwork.Common.Checksum.csproj"
     },
+    "GrapeNetwork.Configurator/1.0.0": {
+      "type": "project",
+      "path": "../GrapeNetwork.Configurator/GrapeNetwork.Configurator.csproj",
+      "msbuildProject": "../GrapeNetwork.Configurator/GrapeNetwork.Configurator.csproj"
+    },
     "GrapeNetwork.Console.Common/1.0.0": {
       "type": "project",
       "path": "../GrapeNetwork.Console.Common/GrapeNetwork.Console.Common.csproj",
@@ -559,6 +589,11 @@
       "type": "project",
       "path": "../GrapeNetwork.Logging/GrapeNetwork.Logging.csproj",
       "msbuildProject": "../GrapeNetwork.Logging/GrapeNetwork.Logging.csproj"
+    },
+    "GrapeNetwork.Protocol.DatabaseProtocol/1.0.0": {
+      "type": "project",
+      "path": "../GrapeNetwork.Protocol.DatabaseProtocol/GrapeNetwork.Protocol.DatabaseProtocol.csproj",
+      "msbuildProject": "../GrapeNetwork.Protocol.DatabaseProtocol/GrapeNetwork.Protocol.DatabaseProtocol.csproj"
     },
     "GrapeNetwork.Protocol.GameProtocol/1.0.0": {
       "type": "project",

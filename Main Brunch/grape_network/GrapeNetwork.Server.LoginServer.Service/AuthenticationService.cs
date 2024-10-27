@@ -35,7 +35,6 @@ namespace GrapeNetwork.Server.Login.Service
                         command.Execute(new object[] { clientState, server, action });
                         break;
                     }
-
             }
         }
     }

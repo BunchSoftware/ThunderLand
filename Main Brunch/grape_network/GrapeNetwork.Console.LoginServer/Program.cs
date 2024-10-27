@@ -1,11 +1,16 @@
 ﻿using Grape;
+using GrapeNetwork.Configurator.Interfaces;
 using GrapeNetwork.Console.Common;
 using GrapeNetwork.Server.BuilderServer;
 using GrapeNetwork.Server.Core;
 using GrapeNetwork.Server.Core.Configuration;
 using GrapeNetwork.Server.Core.Protocol;
+using GrapeNetwork.Server.Database.Service;
+using GrapeNetwork.Server.Game.Service;
+using GrapeNetwork.Server.Login.Service;
 using Grpc.Net.Client;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,36 +22,42 @@ namespace GrapeNetwork.Console.LoginServer
         static Server.Core.Server loginServer = new Server.Core.Server();
         private static void Main()
         {
-            ConfigServer configServer = new ConfigServer() 
-            {       
-                ApplicationProtocol = new Protocol.LoginProtocol.LoginProtocol(),
-                Services =  new System.Collections.Generic.List<Service>()
-                {
-                    new Server.Login.Service.AuthenticationService("AuthenticationService"),
-                    new Server.Login.Service.RegistrationService("RegistrationService"),
-                    new Server.Login.Service.LobbyService("LobbyService"),
-                },
-                ConfigServices = new System.Collections.Generic.List<ConfigService>()
-                {
-                    new ConfigService(),
-                    new ConfigService(),
-                    new ConfigService()
-                },
-                NameServer = "LoginServer",
-                PortServer = 2200,
-                IPAdressServer = IPAddress.Parse("192.168.1.100"),
-
-                ConfigCommunicationServices = new System.Collections.Generic.List<ConfigCommunicationService>()
-                {
-                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3200),
-                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3201),
-                    new ConfigCommunicationService(IPAddress.Parse("192.168.1.100"), 3202),
-                },
-            };
-            loginServer = BuilderServer.CreateServer(configServer);
             ConsoleManager.WriteLine("Запуск TL Login Server");
+            ConfigServer configServer = new ConfigServer();
+            configServer.ChangeValueSection("ApplicationProtocol", new Protocol.LoginProtocol.LoginProtocol());
+
+            ConfigService configAuthenticationService = new ConfigService();
+            configAuthenticationService.ChangeValueSection("NameService", "AuthenticationService");
+
+            ConfigService configRegistrationService = new ConfigService();
+            configRegistrationService.ChangeValueSection("NameService", "RegistrationService");
+
+            ConfigService configLobbyService = new ConfigService();
+            configLobbyService.ChangeValueSection("NameService", "LobbyService");
+
+            configServer.ChangeValueSection("InternalServicesConfig", new List<ConfigService>()
+            {
+                 configAuthenticationService,
+                 configRegistrationService,
+                 configLobbyService
+            });
+            configServer.ChangeValueSection("RepositoryServices", new List<IRepository<Service>>()
+            {
+                new GameServiceRepository(),
+                new LoginServiceRepository(),
+                new DatabaseServiceRepository()
+            });
+            configServer.ChangeValueSection("NameServer", "LoginServer");
+            configServer.ChangeValueSection("IPAddressServer", IPAddress.Parse("192.168.1.100"));
+            configServer.ChangeValueSection("PortServer", 2200);
+            configServer.ChangeValueSection("ConfigCommunicationServices", new List<ConfigCommunicationClient>()
+            {       
+                new ConfigCommunicationClient(IPAddress.Parse("192.168.1.100"), 3200),
+                new ConfigCommunicationClient(IPAddress.Parse("192.168.1.100"), 3201),
+                new ConfigCommunicationClient(IPAddress.Parse("192.168.1.100"), 3202),
+            });
+            loginServer = BuilderServer.CreateServer(configServer);
             AppDomain.CurrentDomain.ProcessExit += ProcessExit;
-            ConsoleManager.SkipLine(1);
             loginServer.OnDebugInfo += (message) =>
             {
                 ConsoleManager.Debug(message);
@@ -56,8 +67,6 @@ namespace GrapeNetwork.Console.LoginServer
                 ConsoleManager.Error(exception);
             };
             loginServer.Run();
-            ConsoleManager.Debug("Сервер запущен");
-
             ConsoleManager.ReadKey();
             loginServer.Stop();
             ConsoleManager.ReadKey();

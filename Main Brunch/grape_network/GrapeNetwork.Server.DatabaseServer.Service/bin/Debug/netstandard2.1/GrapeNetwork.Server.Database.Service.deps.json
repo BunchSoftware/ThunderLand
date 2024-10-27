@@ -129,6 +129,14 @@
           }
         }
       },
+      "GrapeNetwork.Configurator/1.0.0": {
+        "runtime": {
+          "GrapeNetwork.Configurator.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "GrapeNetwork.Core/1.0.0": {
         "dependencies": {
           "GrapeNetwork.Common.Checksum": "1.0.0"
@@ -165,6 +173,7 @@
       },
       "GrapeNetwork.Server.Core/1.0.0": {
         "dependencies": {
+          "GrapeNetwork.Configurator": "1.0.0",
           "GrapeNetwork.Core": "1.0.0",
           "GrapeNetwork.Server.ClientGrpc": "1.0.0",
           "Grpc.Net.Client": "2.65.0"
@@ -255,6 +264,11 @@
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
     },
     "GrapeNetwork.Common.Checksum/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Configurator/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

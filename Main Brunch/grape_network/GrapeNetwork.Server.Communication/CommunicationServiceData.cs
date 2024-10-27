@@ -6,7 +6,7 @@ namespace GrapeNetwork.Server.BuilderServer
 {
     public class CommunicationServiceData
     {
-        public List<ConfigCommunicationService> config  = new List<ConfigCommunicationService>();
+        public List<ConfigCommunicationClient> config  = new List<ConfigCommunicationClient>();
         public IPAddress IPAdress;
         public int Port;
 

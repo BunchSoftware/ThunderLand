@@ -30,35 +30,50 @@ namespace GrapeNetwork.Server.BuilderServer
 
             Core.Grpc.GrpcServer grpcServer = new Core.Grpc.GrpcServer();
             ConfigGrpcServer configGrpcServer = new ConfigGrpcServer();
-            configGrpcServer.IPAdressServer = configServer.IPAdressServer;
-            configGrpcServer.PortServer = configServer.PortServer + 1000;
-            grpcServer.ReadConfig(configGrpcServer);
+            configGrpcServer.ChangeValueSection("IPAddressServer", configServer.GetSection<IPAddress>("IPAddressServer"));
+            configGrpcServer.ChangeValueSection("PortServer", configServer.GetSection<int>("PortServer") + 1000);
 
-            configServer.GrpcServer = grpcServer;
+            configServer.ChangeValueSection("GrpcServer", grpcServer);
             server.OnDebugInfo += (message) => {
                 if (isBuild == false)
                     ConsoleManager.Debug(message);
             };
-            server.ReadConfig(configServer);
+
+            IPAddress IPAddressServer = configServer.GetSection<IPAddress>("IPAddressServer");
+            int PortServer = configServer.GetSection<int>("PortServer");
 
             WebApplicationBuilder builder = WebApplication.CreateBuilder(new string[] { });
             builder.WebHost.ConfigureKestrel(options =>
             {
-                options.Listen(configServer.IPAdressServer, configServer.PortServer+1000);
+                options.Listen(IPAddressServer, PortServer+1000);
             });
             builder.Services.AddGrpc();
             CommunicationServiceData data = new CommunicationServiceData()
             {
-                config = configServer.ConfigCommunicationServices,
-                IPAdress = configServer.IPAdressServer,
-                Port = configServer.PortServer + 1000
+                config = configServer.GetSection<List<ConfigCommunicationClient>>("ConfigCommunicationServices"),
+                IPAdress = IPAddressServer,
+                Port = PortServer + 1000
             };
             builder.Services.AddSingleton(new CommunicationService(data));
             WebApplication app = builder.Build();
+            IConfiguration configuration = app.Configuration;
 
             app.MapGrpcService<CommunicationService>();
             app.MapGet("/", () => "Hello World!");
-            app.RunAsync();
+
+            Task RunAsync = new Task(() => 
+            {
+                app.RunAsync();
+            });
+            Task StopAsync = new Task(() =>
+            {
+                app.StopAsync();
+            });
+            configGrpcServer.ChangeValueSection("RunAsync", RunAsync);
+            configGrpcServer.ChangeValueSection("StopAsync", StopAsync);
+
+            grpcServer.ReadConfig(configGrpcServer);
+            server.ReadConfig(configServer);
 
             isBuild = true;
 

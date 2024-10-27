@@ -1,4 +1,5 @@
-﻿using GrapeNetwork.Server.Core;
+﻿using GrapeNetwork.Protocol.DatabaseProtocol.Command.Account.Get;
+using GrapeNetwork.Server.Core;
 using GrapeNetwork.Server.Core.Protocol;
 using System;
 using System.IO;
@@ -26,21 +27,25 @@ namespace GrapeNetwork.Protocol.LoginProtocol.Command.Authentication
                 string login = binaryReader.ReadString();
                 string password = binaryReader.ReadString();
 
-                if (login == "Den4o" && password == "win")
-                {
-                    server.DebugInfo($"Клиент {clientState.connection.RemoteAdressClient} направлен в лобби");
-                    clientState.isAuth = true;
-                    clientState.isLobby = true;
-                    ResponseSendClientToLobby commandProcessingLobby = new ResponseSendClientToLobby(1, 2, "AuthenticationService");
-                    commandProcessingLobby.Connection = clientState.connection;
-                    action.Invoke(commandProcessingLobby);
-                }
-                else
-                {
-                    ResponseRejectedLobbyConnection commandProcessingLobbyRejection = new ResponseRejectedLobbyConnection(1, 3, "AuthenticationService");
-                    commandProcessingLobbyRejection.Connection = clientState.connection;
-                    action.Invoke(commandProcessingLobbyRejection);
-                }
+                RequestGetDataAccount requestGetDataAccount = new RequestGetDataAccount(1, 1, "AccountService");
+                requestGetDataAccount.Connection = clientState.connection;
+                action.Invoke(requestGetDataAccount);
+
+                //if (login == "Den4o" && password == "win")
+                //{
+                //    server.DebugInfo($"Клиент {clientState.connection.RemoteAdressClient} направлен в лобби");
+                //    clientState.isAuth = true;
+                //    clientState.isLobby = true;
+                //    ResponseSendClientToLobby commandProcessingLobby = new ResponseSendClientToLobby(1, 2, "AuthenticationService");
+                //    commandProcessingLobby.Connection = clientState.connection;
+                //    action.Invoke(commandProcessingLobby);
+                //}
+                //else
+                //{
+                //    ResponseRejectedLobbyConnection commandProcessingLobbyRejection = new ResponseRejectedLobbyConnection(1, 3, "AuthenticationService");
+                //    commandProcessingLobbyRejection.Connection = clientState.connection;
+                //    action.Invoke(commandProcessingLobbyRejection);
+                //}
             }            
         }
         public static RequestConnectToLoginServer DeserealizeCommand(byte[] data)

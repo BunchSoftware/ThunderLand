@@ -7,6 +7,8 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using GrapeNetwork.Core;
+using GrapeNetwork.Server.Core.Configuration;
+using GrapeNetwork.Configurator.Interfaces;
 
 namespace GrapeNetwork.Server.Core
 {
@@ -14,10 +16,9 @@ namespace GrapeNetwork.Server.Core
     {
         // Настройки сервера
         private TransportServer transportServer;
-        private IPAddress IPAdressServer;
+        private IPAddress IPAddressServer;
         private int PortServer;
         private bool IsLog = true;
-        private int ServerID = 0;
         private string NameServer;
         private int deltaTimeServer = 50;
 
@@ -39,18 +40,21 @@ namespace GrapeNetwork.Server.Core
         // Данные
         protected Queue<ApplicationCommand> queueSendApplicationCommand = new Queue<ApplicationCommand>(); 
         protected List<ClientState> clientStates = new List<ClientState>();
-        protected List<Service> services = new List<Service> ();
+
+        protected List<Service> InternalServices = new List<Service> ();
+        protected List<Service> ExternalServices = new List<Service>();
 
         private ApplicationProtocol ApplicationProtocol;
         private GrpcServer GrpcServer;
 
         public virtual void Run()
         {
-            if (IPAdressServer != null)
+            if (IPAddressServer != null)
             {
-                transportServer = new TransportServer(PortServer, IPAdressServer);
-                GrpcServer.Run();
-                GrpcServer.SendPackage(new Package(), NameServer);
+                transportServer = new TransportServer(PortServer, IPAddressServer);
+
+                if (GrpcServer != null)
+                    GrpcServer.Run();
 
                 transportServer.OnConnectedClient += ConnectedClient;
                 transportServer.OnDisconnectedClient += DisconnectedClient;
@@ -64,7 +68,7 @@ namespace GrapeNetwork.Server.Core
 
                 transportServer.Start();
 
-                foreach (Service service in services)
+                foreach (Service service in InternalServices)
                 {
                     service.OnSendApplicationCommand += AddSendApplicationCommandToQueue;
                     service.Init(this);
@@ -80,9 +84,9 @@ namespace GrapeNetwork.Server.Core
                     commandProcessing.Connection = connection;
                     if (commandProcessing != null)
                     {
-                        for (int i = 0; i < services.Count; i++)
+                        for (int i = 0; i < InternalServices.Count; i++)
                         {
-                            if (services[i].nameService == commandProcessing.NameService)
+                            if (InternalServices[i].nameService == commandProcessing.NameService)
                             {
                                 ClientState clientState = new ClientState(connection);
                                 for (int j = 0; j < clientStates.Count; j++)
@@ -90,7 +94,7 @@ namespace GrapeNetwork.Server.Core
                                     if (clientStates[j].connection == connection)
                                         clientState = clientStates[j];
                                 }
-                                services[i].AddApplicationCommand(commandProcessing, clientState);
+                                InternalServices[i].AddApplicationCommand(commandProcessing, clientState);
                             }
                         }
                     }
@@ -117,39 +121,46 @@ namespace GrapeNetwork.Server.Core
                 throw new Exception();
             }
         }
-        protected virtual void Tick(object nullObj)
+        protected void Tick(object nullObj)
         {
             TickServer?.Invoke();
             for (int i = 0; i < queueSendApplicationCommand.Count; i++)
             {
                 ApplicationCommand applicationCommand = queueSendApplicationCommand.Dequeue();
-                if (applicationCommand.RedirectToService == false)
+                for (int g = 0; g < InternalServices.Count; g++)
                 {
-                    IPEndPoint IPEndPoint = (IPEndPoint)applicationCommand.Connection.WorkSocket.RemoteEndPoint;
-                    Package package = new Package(IPEndPoint.Address, applicationCommand.GroupCommand, applicationCommand.Command);
-                    if (applicationCommand.Connection != null)
-                        transportServer.SendPackage(applicationCommand.Connection, package);
-                }
-                else
-                {
-                    for (int g = 0; g < services.Count; g++)
+                    if (InternalServices[g].nameService == applicationCommand.NameService)
                     {
-                        if (services[g].nameService == applicationCommand.NameService)
+                        ClientState clientState = new ClientState(applicationCommand.Connection);
+                        for (int j = 0; j < clientStates.Count; j++)
                         {
-                            ClientState clientState = new ClientState(applicationCommand.Connection);
-                            for (int j = 0; j < clientStates.Count; j++)
+                            if (clientStates[j].connection == applicationCommand.Connection)
+                                clientState = clientStates[j];
+                        }
+                        InternalServices[i].AddApplicationCommand(applicationCommand, clientState);
+                    }
+                    else if(InternalServices[g].nameService == null || InternalServices[g].nameService == "")
+                    {
+                        IPEndPoint IPEndPoint = (IPEndPoint)applicationCommand.Connection.WorkSocket.RemoteEndPoint;
+                        Package package = new Package(IPEndPoint.Address, applicationCommand.GroupCommand, applicationCommand.Command);
+                        if (applicationCommand.Connection != null)
+                            transportServer.SendPackage(applicationCommand.Connection, package);
+                    }
+                    else
+                    {
+                        if (ExternalServices != null)
+                        {
+                            for (int k = 0; k < ExternalServices.Count; k++)
                             {
-                                if (clientStates[j].connection == applicationCommand.Connection)
-                                    clientState = clientStates[j];
+                                IPEndPoint IPEndPoint = (IPEndPoint)applicationCommand.Connection.WorkSocket.RemoteEndPoint;
+                                Package package = new Package(IPEndPoint.Address, applicationCommand.GroupCommand, applicationCommand.Command);
+                                GrpcServer.SendPackage(package, applicationCommand.NameService);
                             }
-                            services[i].AddApplicationCommand(applicationCommand, clientState);
                         }
                         else
-                        {
-
-                        }
+                            throw new Exception($"Ошибка в написании имени сервиса, ошибка с сервисом {applicationCommand.NameService}");
                     }
-                }
+                }               
             }
         }
         private void AddSendApplicationCommandToQueue(ApplicationCommand applicationCommand)
@@ -160,23 +171,77 @@ namespace GrapeNetwork.Server.Core
         {
             return applicationCommandRegistry;
         }
-        public void ReadConfig(Configuration.ConfigServer configServer)
+        public void ReadConfig(ConfigServer config)
         {
-            services = configServer.Services;
-            for (int i = 0; i < services.Count; i++)
+            if (config != null)
             {
-                services[i].ReadConfig(configServer.ConfigServices[i]);
+                ApplicationProtocol = config.GetSection<ApplicationProtocol>("ApplicationProtocol");
+                IPAddressServer = config.GetSection<IPAddress>("IPAddressServer");
+                PortServer = config.GetSection<int>("PortServer");
+
+                if (ApplicationProtocol == null)
+                    throw new NullReferenceException();
+                if(IPAddressServer == null)
+                    throw new NullReferenceException();
+
+                List<ConfigService> InternalServicesConfig = config.GetSection<List<ConfigService>> ("InternalServicesConfig");
+                if (InternalServicesConfig != null && InternalServicesConfig.Count != 0)
+                {
+                    List<IRepository<Service>> RepositoryServicesList = config.GetSection<List<IRepository<Service>>>("RepositoryServices");
+                    for (int i = 0; i < RepositoryServicesList.Count; i++)
+                    {
+                        List<Service> repositoryServices = (List<Service>)RepositoryServicesList[i].GetObjectList();
+                        for (int j = 0; j < InternalServicesConfig.Count; j++)
+                        {
+                            for (int k = 0; k < repositoryServices.Count; k++)
+                            {
+                                if (InternalServicesConfig[j].GetSection<string>("NameService") == repositoryServices[k].nameService)
+                                {
+                                    Service service = repositoryServices[k];
+                                    service.ReadConfig(InternalServicesConfig[j]);
+                                    InternalServices.Add(repositoryServices[k]);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                List<ConfigService> ExternalSericesConfig = config.GetSection<List<ConfigService>>("ExternalServicesConfig");
+                if (ExternalSericesConfig != null && ExternalSericesConfig.Count != 0)
+                {
+                    List<IRepository<Service>> RepositoryServicesList = config.GetSection<List<IRepository<Service>>>("RepositoryServices");
+                    for (int i = 0; i < RepositoryServicesList.Count; i++)
+                    {
+                        List<Service> repositoryServices = (List<Service>)RepositoryServicesList[i].GetObjectList();
+                        for (int j = 0; j < ExternalSericesConfig.Count; j++)
+                        {
+                            for (int k = 0; k < repositoryServices.Count; k++)
+                            {
+                                if (ExternalSericesConfig[j].GetSection<string>("NameService") == repositoryServices[k].nameService)
+                                {
+                                    Service service = repositoryServices[k];
+                                    service.ReadConfig(ExternalSericesConfig[j]);
+                                    InternalServices.Add(repositoryServices[k]);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                NameServer = config.GetSection<string>("NameServer");
+                GrpcServer = config.GetSection<GrpcServer>("GrpcServer");
+                IsLog = config.GetSection<bool>("IsLog");
             }
-            ApplicationProtocol = configServer.ApplicationProtocol;
-            NameServer = configServer.NameServer;
-            PortServer = configServer.PortServer;
-            IPAdressServer = configServer.IPAdressServer;
-            GrpcServer = configServer.GrpcServer;
+            else
+                throw new NullReferenceException();
+
             OnDebugInfo?.Invoke("Конфигурации сервера прочитаны и сервер настроен");
         }
         public void Stop()
         {
-            GrpcServer.Stop();
+            if(GrpcServer != null)
+                GrpcServer.Stop();
+
             transportServer.Stop();
         }
         private void ConnectedClient(Connection connection) {  OnConnectedClient?.Invoke(connection); }

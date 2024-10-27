@@ -21,7 +21,6 @@ namespace GrapeNetwork.Protocol.GameProtocol.Command.Account.Set
             {
                 ResponseSetDataAccount responseGetDataAccount = new ResponseSetDataAccount(2, 2, "AccountService");
                 responseGetDataAccount.Connection = clientState.connection;
-                responseGetDataAccount.RedirectToService = true;
                 action.Invoke(responseGetDataAccount);
             }
         }

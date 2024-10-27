@@ -11,6 +11,8 @@
           "GrapeNetwork.Console.Common": "1.0.0",
           "GrapeNetwork.Protocol.LoginProtocol": "1.0.0",
           "GrapeNetwork.Server.BuilderServer": "1.0.0",
+          "GrapeNetwork.Server.Database.Service": "1.0.0",
+          "GrapeNetwork.Server.Game.Service": "1.0.0",
           "GrapeNetwork.Server.Login.Service": "1.0.0"
         },
         "runtime": {
@@ -147,9 +149,31 @@
           }
         }
       },
+      "GrapeNetwork.Client.Core/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.AccessLevel.Common": "1.0.0",
+          "GrapeNetwork.Core": "1.0.0",
+          "GrapeNetwork.Protocol.GameProtocol": "1.0.0",
+          "GrapeNetwork.Protocol.LoginProtocol": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Client.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "GrapeNetwork.Common.Checksum/1.0.0": {
         "runtime": {
           "GrapeNetwork.Common.Checksum.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Configurator/1.0.0": {
+        "runtime": {
+          "GrapeNetwork.Configurator.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -189,9 +213,33 @@
           }
         }
       },
+      "GrapeNetwork.Protocol.DatabaseProtocol/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Server.Core": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Protocol.DatabaseProtocol.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Protocol.GameProtocol/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Core": "1.0.0",
+          "GrapeNetwork.Server.Core": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Protocol.GameProtocol.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "GrapeNetwork.Protocol.LoginProtocol/1.0.0": {
         "dependencies": {
           "GrapeNetwork.Core": "1.0.0",
+          "GrapeNetwork.Protocol.DatabaseProtocol": "1.0.0",
           "GrapeNetwork.Server.Core": "1.0.0"
         },
         "runtime": {
@@ -203,6 +251,7 @@
       },
       "GrapeNetwork.Server.BuilderServer/1.0.0": {
         "dependencies": {
+          "GrapeNetwork.Configurator": "1.0.0",
           "GrapeNetwork.Console.Common": "1.0.0",
           "GrapeNetwork.Server.Core": "1.0.0",
           "Grpc.AspNetCore": "2.65.0"
@@ -228,12 +277,38 @@
       },
       "GrapeNetwork.Server.Core/1.0.0": {
         "dependencies": {
+          "GrapeNetwork.Configurator": "1.0.0",
           "GrapeNetwork.Core": "1.0.0",
           "GrapeNetwork.Server.ClientGrpc": "1.0.0",
           "Grpc.Net.Client": "2.65.0"
         },
         "runtime": {
           "GrapeNetwork.Server.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Server.Database.Service/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Protocol.DatabaseProtocol": "1.0.0",
+          "GrapeNetwork.Server.Core": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Server.Database.Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Server.Game.Service/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Protocol.GameProtocol": "1.0.0",
+          "GrapeNetwork.Server.Core": "1.0.0",
+          "GrapeNetwork.Server.Type": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Server.Game.Service.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -246,6 +321,31 @@
         },
         "runtime": {
           "GrapeNetwork.Server.Login.Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.Server.Type/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.UnitWorld": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.Server.Type.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GrapeNetwork.UnitWorld/1.0.0": {
+        "dependencies": {
+          "GrapeNetwork.Client.Core": "1.0.0",
+          "GrapeNetwork.Core": "1.0.0",
+          "GrapeNetwork.Protocol.LoginProtocol": "1.0.0",
+          "GrapeNetwork.Server.Core": "1.0.0"
+        },
+        "runtime": {
+          "GrapeNetwork.UnitWorld.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -383,7 +483,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "GrapeNetwork.Client.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "GrapeNetwork.Common.Checksum/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Configurator/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -399,6 +509,16 @@
       "sha512": ""
     },
     "GrapeNetwork.Logging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Protocol.DatabaseProtocol/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Protocol.GameProtocol/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -423,7 +543,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "GrapeNetwork.Server.Database.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Server.Game.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "GrapeNetwork.Server.Login.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.Server.Type/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrapeNetwork.UnitWorld/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

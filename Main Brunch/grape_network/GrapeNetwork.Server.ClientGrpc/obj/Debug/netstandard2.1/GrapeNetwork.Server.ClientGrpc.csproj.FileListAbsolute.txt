@@ -1,9 +1,3 @@
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.csproj.AssemblyReference.cache
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.GeneratedMSBuildEditorConfig.editorconfig
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.AssemblyInfoInputs.cache
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.AssemblyInfo.cs
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.csproj.CoreCompileInputs.cache
-F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.sourcelink.json
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\bin\Debug\netstandard2.1\appsettings.Development.json
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\bin\Debug\netstandard2.1\appsettings.json
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\bin\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.deps.json
@@ -130,5 +124,11 @@ F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.Client
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\bin\Debug\netstandard2.1\refs\System.Xml.XmlSerializer.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\bin\Debug\netstandard2.1\refs\System.Xml.XPath.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\bin\Debug\netstandard2.1\refs\System.Xml.XPath.XDocument.dll
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.csproj.AssemblyReference.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.GeneratedMSBuildEditorConfig.editorconfig
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.AssemblyInfoInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.AssemblyInfo.cs
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.csproj.CoreCompileInputs.cache
+F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.sourcelink.json
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.dll
 F:\Files\GitHub\ThunderLand\Main Brunch\grape_network\GrapeNetwork.Server.ClientGrpc\obj\Debug\netstandard2.1\GrapeNetwork.Server.ClientGrpc.pdb
